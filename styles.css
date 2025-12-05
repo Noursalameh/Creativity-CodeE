@@ -439,23 +439,21 @@ padding: 5.5rem 4%;
 background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
 }
 
-/* Outer container (اللي يحوي الصورة + النص) */
 .about-container {
-max-width: 1650px;          /* لو بدك أعرض كمان زيدي الرقم */
+max-width: 1650px;        
 margin: 0 auto;
 display: grid;
-grid-template-columns: 55% 45%;  /* الصورة تأخذ مساحة أكبر */ 
+grid-template-columns: 55% 45%;  
 gap: 3.5rem;
 align-items: start;
 }
 
 
 
-/* LEFT: big image block */
 .about-image {
 width: 100%;
 height: 100%;
-min-height: 500px; /* ← بدل 550px */
+min-height: 500px; 
 background: url('WhatsApp\ Image\ 2025-11-22\ at\ 10.13.20_7969aff9.jpg') center/cover;
 border-radius: 16px;
 position: relative;
@@ -473,8 +471,8 @@ pointer-events: none;
 
 .about-badge {
 position: absolute;
-bottom: 20px;  /* كانت 35 */
-right: 20px;   /* يسار → يمين */
+bottom:20px;  
+right: 20px;   
 background: linear-gradient(135deg, #c9a961, #d4b877);
 color: white;
 width: 130px;
@@ -499,7 +497,6 @@ letter-spacing: 0.5px;
 .about-badge .big { font-size: 44px; line-height: 1; }
 .about-badge .small { font-size: 12px; margin-top: 6px; font-weight: 600; opacity: .95; }
 
-/* RIGHT: محتوى النص + زر + البوكسات */
 .about-right { padding-top: 10px; position: relative; }
 
 .about-content h2 {
@@ -526,7 +523,6 @@ margin-bottom: 1.6rem;
 max-width: 100%;
 }
 
-/* زر على اليمين أسفل المحتوى */
 .cta-row {
 display: flex;
 align-items: center;
@@ -548,7 +544,6 @@ transition: transform .22s ease, box-shadow .22s ease;
 }
 .get-quote-btn:hover { transform: translateY(-3px); box-shadow: 0 20px 40px rgba(201,169,97,0.33); }
 
-/* الثلاث بوكسات — خليتهم أعرض ومتناسبين مع المساحة */
 .about-columns {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -563,7 +558,7 @@ align-items: stretch;
 background: #fff;
 padding: 26px 22px;
 border-radius: 10px;
-border-left: 6px solid #c9a961;   /* الخط الذهبي على اليسار مثل الصورة */
+border-left: 6px solid #c9a961;   
 box-shadow: 0 8px 28px rgba(0,0,0,0.04);
 transition: transform .22s ease, box-shadow .22s ease;
 display: flex;
@@ -576,12 +571,11 @@ text-align: left;
 
 .about-column:hover { transform: translateY(-6px); box-shadow: 0 18px 48px rgba(201,169,97,0.12); border-left-color: #d4b877; }
 
-/* aesthetic tweaks */
 .muted { color: #777; font-size: 14px; margin-top: 6px; }
-.spacer { height: 60px; } /* مسافة تحت العُملة لو لزم */
+.spacer { height: 60px; }
 
-/* ensure footer area below badge doesn't overlap text */
-.about-right { padding-bottom: 70px; } /* leave space for the badge overlap */        /* Projects Section */
+.about-right { padding-bottom: 70px; } 
+/* ===== PROJECTS SECTION – فخامة 100% ===== */
 .projects-section {
     padding: 6rem 5%;
     background: white;
@@ -591,28 +585,24 @@ text-align: left;
     text-align: center;
     margin-bottom: 4rem;
 }
-
 .section-header h2 {
-    font-size: clamp(2rem, 4.5vw, 2.5rem);
-    margin-bottom: 1rem;
-    font-weight: 400;
+    font-size: clamp(2rem, 4.5vw, 2.8rem);
     color: #333;
+    font-weight: 500;
     letter-spacing: 1px;
 }
-
 .section-header p {
     color: #666;
-    font-size: clamp(1rem, 2vw, 1.1rem);
     font-style: italic;
+    font-size: 1.1rem;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2.5rem;
     max-width: 1500px;
-    margin: 0 auto 5rem;
-    padding: 0 2rem;
+    margin: 0 auto;
 }
 
 .project-card {
@@ -620,85 +610,70 @@ text-align: left;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 12px 40px rgba(0,0,0,0.12);
-    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
     cursor: pointer;
-    height: fit-content;
 }
-
+.project-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #c9a961, #d4b877);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+.project-card:hover::before { opacity: 0.08; }
 .project-card:hover {
-    transform: translateY(-20px);
+    transform: translateY(-15px) scale(1.02);
     box-shadow: 0 30px 70px rgba(201, 169, 97, 0.35);
 }
 
-/* الصورة هتكون مثالية مهما كان حجمها */
 .project-image {
     position: relative;
-    width: 100%;
-    height: 380px;                    /* ارتفاع مريح وفخم */
+    height: 340px;
     overflow: hidden;
-    border-radius: 24px 24px 0 0;
 }
-
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;                /* الأهم: الصورة تتملي البوكس بدون تمطيط */
-    object-position: center;
-    transition: transform 0.8s ease;
+    object-fit: cover;
+    transition: transform 0.7s ease;
 }
+.project-card:hover img { transform: scale(1.12); }
 
-.project-card:hover img {
-    transform: scale(1.1);
-}
-
-/* التدرج الذهبي الفخم */
 .project-image::after {
     content: '';
     position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, transparent 45%, rgba(0,0,0,0.6) 100%);
-    pointer-events: none;
-    border-radius: 24px 24px 0 0;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.85) 100%);
+    z-index: 1;
 }
 
-/* الـ Label الذهبي */
 .project-label {
     position: absolute;
     bottom: 24px;
     left: 24px;
-    background: rgba(201, 169, 97, 0.98);
+    right: 24px;
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
-    color: white;
-    padding: 1rem 2.2rem;
-    border-radius: 50px;
-    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    color: #333;
+    padding: 1.2rem 1.8rem;
+    border-radius: 15px;
+    font-size: 1.1rem;
     font-weight: 600;
-    z-index: 10;
-    letter-spacing: 0.8px;
+    text-align: center;
+    border-left: 4px solid #c9a961;
     box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+    z-index: 2;
 }
-
-/* للموبايل */
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        padding: 0 1.5rem;
-    }
-    
-    .project-image {
-        height: 340px;
-    }
-    
-    .project-label {
-        padding: 0.9rem 1.8rem;
-        font-size: 1.05rem;
-    }
-}
-
-/* Products Section */
+.project-card:hover .project-label {
+    background: linear-gradient(135deg, #c9a961, #d4b877);
+    color: white;
+    border-left-color: white;
+    transform: translateY(-6px);
+}/* Products Section */
 .products-section {
     padding: 6rem 5%;
     background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
@@ -795,139 +770,49 @@ text-align: left;
     line-height: 1.6;
 }
 
-/* Why Section */
+
 .why-section {
-    padding: 6rem 5% 8rem;
+    padding: 6rem 5% 0.5rem;
     background: white;
+    margin-bottom: 0 
 }
 
-.blogs {
-    padding: 6rem 5%;
-    background: white;
+footer {
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    color: white;
+    padding: 2.5rem 5% 2rem;   
+    margin-top: -2rem;          
 }
+
+.blogs { padding: 6rem 5%; background: white; }
 
 .why-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
     gap: 2.5rem;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 0 auto 1rem;  
 }
 
-.why-card {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.1);
-    transition: all 0.4s ease;
-}
+.why-card { background: white; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 35px rgba(0,0,0,0.1); transition: all 0.4s ease; }
+.why-card:hover { transform: translateY(-10px); box-shadow: 0 15px 50px rgba(201, 169, 97, 0.2); }
 
-.why-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 50px rgba(201, 169, 97, 0.2);
-}
+.why-image { width: 100%; height: 220px; background: linear-gradient(135deg, #d4a574, #c9a961); border-radius: 15px; margin-bottom: 2rem; overflow: hidden; transition: all 0.3s ease; }
+.why-image img { width: 100%; height: 100%; object-fit: cover; }
+.why-card:hover .why-image { transform: scale(1.05); }
 
-.why-image {
-    width: 100%;
-    height: 220px;
-    background: linear-gradient(135deg, #d4a574, #c9a961);
-    border-radius: 15px;
-    margin-bottom: 2rem;
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
-.why-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+.why-card h3 { font-size: clamp(1.15rem, 2.5vw, 1.35rem); margin-bottom: 1.2rem; color: #333; font-weight: 600; }
+.why-card p { color: #666; font-size: clamp(0.9rem, 2vw, 0.95rem); line-height: 1.9; }
 
-.why-card:hover .why-image {
-    transform: scale(1.05);
-}
-
-.why-card h3 {
-    font-size: clamp(1.15rem, 2.5vw, 1.35rem);
-    margin-bottom: 1.2rem;
-    color: #333;
-    font-weight: 600;
-}
-
-.why-card p {
-    color: #666;
-    font-size: clamp(0.9rem, 2vw, 0.95rem);
-    line-height: 1.9;
-}
-
-/* Footer */
-footer {
-    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
-    color: white;
-    padding: 4rem 5% 2rem 5%;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-    gap: 3.5rem;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.footer-section h3 {
-    color: #c9a961;
-    margin-bottom: 1.8rem;
-    font-size: clamp(1.05rem, 2.5vw, 1.25rem);
-    font-weight: 600;
-}
-
-.footer-section p, .footer-section a {
-    color: #ccc;
-    font-size: clamp(0.9rem, 2vw, 0.95rem);
-    line-height: 2;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section li {
-    margin-bottom: 1rem;
-}
-
-.footer-section a:hover {
-    color: #c9a961;
-    padding-left: 5px;
-}
-
-.social-links {
-    display: flex;
-    gap: 1.2rem;
-    margin-top: 1.8rem;
-    flex-wrap: wrap;
-}
-
-.social-links a {
-    width: 45px;
-    height: 45px;
-    background: #333;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
-    font-weight: bold;
-}
-
-.social-links a:hover {
-    background: linear-gradient(135deg, #c9a961, #d4b877);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(201, 169, 97, 0.4);
-}
-
-/* Mobile Menu */
+.footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 3.5rem; max-width: 1400px; margin: 0 auto; }
+.footer-section h3 { color: #c9a961; margin-bottom: 1.8rem; font-size: clamp(1.05rem, 2.5vw, 1.25rem); font-weight: 600; }
+.footer-section p, .footer-section a { color: #ccc; font-size: clamp(0.9rem, 2vw, 0.95rem); line-height: 2; text-decoration: none; transition: all 0.3s; }
+.footer-section ul { list-style: none; }
+.footer-section li { margin-bottom: 1rem; }
+.footer-section a:hover { color: #c9a961; padding-left: 5px; }
+.social-links { display: flex; gap: 1.2rem; margin-top: 1.8rem; flex-wrap: wrap; }
+.social-links a { width: 45px; height: 45px; background: #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+.social-links a:hover { background: linear-gradient(135deg, #c9a961, #d4b877); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(201, 169, 97, 0.4); }/* Mobile Menu */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -1336,7 +1221,6 @@ footer {
 .page-content { display: none; }
 .page-content.active { display: block; }
 
-/* ====================== MOBILE MENU TOGGLE ====================== */
 .menu-toggle {
     display: none;
     cursor: pointer;
@@ -1366,7 +1250,6 @@ footer {
     transform: rotate(-45deg) translate(8px, -8px);
 }
 
-/* ====================== RESPONSIVE BREAKPOINTS ====================== */
 
 /* Large Tablets & Small Laptops */
 @media (max-width: 1200px) {
@@ -1419,7 +1302,7 @@ footer {
     }
 }
 
-/* Mobile Landscape & Small Tablets */
+
 @media (max-width: 768px) {
     /* Show Hamburger */
     .menu-toggle {
@@ -1480,7 +1363,6 @@ footer {
         justify-content: center;
         font-size: 1.1rem;
     }
-/* ==================== FINAL RESPONSIVE (REPLACES ALL OLD ONES) ==================== */
 @media (max-width: 992px) {
     .projects-grid,
     .products-grid,
@@ -1499,7 +1381,7 @@ footer {
     .gallery-grid,
     .gallery-preview-grid,
     .why-grid {
-        grid-template-columns: 1fr !important;   /* ONE CARD PER ROW */
+        grid-template-columns: 1fr !important;   
         gap: 2.2rem !important;
         padding: 0 1rem !important;
     }
@@ -1631,7 +1513,6 @@ footer {
     }
 }
 
-/* ====================== RTL RESPONSIVE FIXES ====================== */
 body.rtl .menu-toggle {
     margin-left: auto;
 }
@@ -1662,7 +1543,6 @@ body.rtl .whatsapp-float {
         left: 18px !important;
     }
 }
-/* ==================== FORCE PERFECT RESPONSIVE BOXES ==================== */
 .projects-grid,
 .products-grid,
 .gallery-grid,
@@ -1687,7 +1567,6 @@ body.rtl .whatsapp-float {
     margin: 0 !important;
 }
 
-/* Fix image height inside cards */
 .project-card img,
 .product-card img,
 .gallery-item img,

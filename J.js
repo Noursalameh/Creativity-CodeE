@@ -83,24 +83,6 @@ function filterGallery(category) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    filterGallery('all');
-    updateProductsLanguage();
-});
-
-// ===== Translation =====
-function updateProductsLanguage() {
-    document.querySelectorAll('.trans').forEach(el => {
-        if (document.body.classList.contains('arabic')) {
-            el.textContent = el.getAttribute('data-ar');
-        } else {
-            el.textContent = el.getAttribute('data-en');
-        }
-    });
-}
-
-document.querySelector('.lang-btn').addEventListener('click', updateProductsLanguage);
-
 // ===== Make Cards Clickable =====
 
 // Product Cards → Products Page
@@ -112,9 +94,16 @@ document.querySelectorAll('.product-card').forEach(card => {
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => showPage('project'));
 });
+
 // Cards on HOME → go to Gallery Page
 document.querySelectorAll('.gallery-preview-item').forEach(card => {
     card.addEventListener('click', () => {
         showPage('gallery');
     });
+});
+
+// ===== Initialize on Page Load =====
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize gallery filter
+    filterGallery('all');
 });
