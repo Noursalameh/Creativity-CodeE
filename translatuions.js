@@ -38,42 +38,42 @@ const translations = {
             },
             yearsLabel: "Years of<br>Excellence"
         },
-        // projects: {
-        //     title: "Our Signature Projects",
-        //     subtitle: "Each design tells a story of creativity, craftsmanship, and passion",
-        //     pageTitle: "Each design tells a story of creativity, craftsmanship, and passion",
-        //     project1: "Luxury Outdoor Deck",
-        //     project2: "Contemporary Wall Cladding",
-        //     project3: "Garden Pergola Paradise",
-        //     discoverBtn: "Discover More",
-        //     project1Desc: "Our luxury outdoor deck projects showcase the perfect blend of functionality and aesthetic appeal. Using premium WPC materials, we create durable, weather-resistant surfaces that maintain their beauty for years to come.",
-        //     project2Desc: "Transform interior and exterior walls with our contemporary cladding solutions. Each installation demonstrates our commitment to modern design principles while ensuring long-lasting performance.",
-        //     project3Desc: "Create stunning outdoor living spaces with our custom pergola designs. Combining traditional craftsmanship with innovative WPC materials for structures that are both beautiful and built to last."
-        // },
-        // products: {
-        //     title: "Featured Products",
-        //     subtitle: "Check out latest updates",
-        //     allProductsTitle: "Our Complete Product Range",
-        //     allProductsSubtitle: "Premium WPC solutions for every application",
-        //     exploreBtn: "Explore More",
-        //     deckingCladding: "Decking Cladding",
-        //     solidBar: "SOLID BAR",
-        //     column: "COLUMN",
-        //     deckingProfile: "Decking Profile",
-        //     wallCladding: "Wall Cladding",
-        //     fencePanel: "Fence Panel",
-        //     pergolaBeam: "Pergola Beam",
-        //     railingSystem: "Railing System",
-        //     trimFascia: "Trim & Fascia",
-        //     louverSystem: "Louver System",
-        //     customProfile: "Custom Profile",
-        //     specs: {
-        //         size: "Size:",
-        //         density: "Density:",
-        //         weight: "Weight:",
-        //         length: "Length:"
-        //     }
-        // },
+        projects: {
+            title: "Our Signature Projects",
+            subtitle: "Each design tells a story of creativity, craftsmanship, and passion",
+            pageTitle: "Each design tells a story of creativity, craftsmanship, and passion",
+            // project1: "Luxury Outdoor Deck",
+            // project2: "Contemporary Wall Cladding",
+            // project3: "Garden Pergola Paradise",
+            discoverBtn: "Discover More",
+            // project1Desc: "Our luxury outdoor deck projects showcase the perfect blend of functionality and aesthetic appeal. Using premium WPC materials, we create durable, weather-resistant surfaces that maintain their beauty for years to come.",
+            // project2Desc: "Transform interior and exterior walls with our contemporary cladding solutions. Each installation demonstrates our commitment to modern design principles while ensuring long-lasting performance.",
+            // project3Desc: "Create stunning outdoor living spaces with our custom pergola designs. Combining traditional craftsmanship with innovative WPC materials for structures that are both beautiful and built to last."
+        },
+        products: {
+            // title: "Featured Products",
+            // subtitle: "Check out latest updates",
+            // allProductsTitle: "Our Complete Product Range",
+            // allProductsSubtitle: "Premium WPC solutions for every application",
+            // exploreBtn: "Explore More",
+            // deckingCladding: "Decking Cladding",
+            // solidBar: "SOLID BAR",
+            // column: "COLUMN",
+            // deckingProfile: "Decking Profile",
+            // wallCladding: "Wall Cladding",
+            // fencePanel: "Fence Panel",
+            // pergolaBeam: "Pergola Beam",
+            // railingSystem: "Railing System",
+            // trimFascia: "Trim & Fascia",
+            // louverSystem: "Louver System",
+            // customProfile: "Custom Profile",
+            specs: {
+                size: "Size:",
+                density: "Density:",
+                weight: "Weight:",
+                length: "Length:"
+            }
+        },
         gallery: {
             title: "Our Gallery",
             subtitle: "Explore our premium WPC projects across different categories",
@@ -258,6 +258,7 @@ class LanguageManager {
         }
         
         this.updateAllContent(t);
+        this.updateDynamicElements(); // Add support for data-ar/data-en elements
     }
     
     updateAllContent(t) {
@@ -269,6 +270,18 @@ class LanguageManager {
         this.updateGallerySection(t);
         this.updateWhySection(t);
         this.updateFooter(t);
+    }
+    
+    // NEW: Handle elements with data-ar and data-en attributes
+    updateDynamicElements() {
+        const isArabic = this.currentLang === 'ar';
+        document.querySelectorAll('.trans').forEach(el => {
+            if (isArabic && el.hasAttribute('data-ar')) {
+                el.textContent = el.getAttribute('data-ar');
+            } else if (el.hasAttribute('data-en')) {
+                el.textContent = el.getAttribute('data-en');
+            }
+        });
     }
     
     updateNavigation(t) {
@@ -372,8 +385,10 @@ class LanguageManager {
     updateProductsSection(t) {
         const featured = document.querySelector('.products-section .section-header');
         if (featured) {
-            featured.querySelector('h2').textContent = t.products.title;
-            featured.querySelector('p').textContent = t.products.subtitle;
+            const h2 = featured.querySelector('h2');
+            const p = featured.querySelector('p');
+            if (h2) h2.textContent = t.products.title;
+            if (p) p.textContent = t.products.subtitle;
         }
         
         const exploreBtn = document.querySelector('.products-section .cta-btn');
@@ -381,8 +396,10 @@ class LanguageManager {
         
         const allProducts = document.querySelector('#products-page .section-header');
         if (allProducts) {
-            allProducts.querySelector('h2').textContent = t.products.allProductsTitle;
-            allProducts.querySelector('p').textContent = t.products.allProductsSubtitle;
+            const h2 = allProducts.querySelector('h2');
+            const p = allProducts.querySelector('p');
+            if (h2) h2.textContent = t.products.allProductsTitle;
+            if (p) p.textContent = t.products.allProductsSubtitle;
         }
         
         const productNames = [
@@ -470,7 +487,8 @@ class LanguageManager {
         }
         
         if (sections[1]) {
-            sections[1].querySelector('h3').textContent = t.footer.productsTitle;
+            const h3 = sections[1].querySelector('h3');
+            if (h3) h3.textContent = t.footer.productsTitle;
             const links = sections[1].querySelectorAll('li a');
             const texts = [t.footer.interiorDesign, t.footer.exteriorDesign, 
                           t.footer.lightingDesign, t.footer.officeDesign];
@@ -480,7 +498,8 @@ class LanguageManager {
         }
         
         if (sections[2]) {
-            sections[2].querySelector('h3').textContent = t.footer.servicesTitle;
+            const h3 = sections[2].querySelector('h3');
+            if (h3) h3.textContent = t.footer.servicesTitle;
             const links = sections[2].querySelectorAll('li a');
             const texts = [t.footer.consultation, t.footer.design, 
                           t.footer.pricing, t.footer.pressInquiries];
@@ -490,7 +509,8 @@ class LanguageManager {
         }
         
         if (sections[3]) {
-            sections[3].querySelector('h3').textContent = t.footer.contactTitle;
+            const h3 = sections[3].querySelector('h3');
+            if (h3) h3.textContent = t.footer.contactTitle;
             const paras = sections[3].querySelectorAll('p');
             if (paras[1]) paras[1].innerHTML = t.footer.address;
         }
