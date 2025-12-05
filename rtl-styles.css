@@ -1,0 +1,266 @@
+/* RTL (Right-to-Left) Styles for Arabic Language */
+
+/* Base RTL adjustments */
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Arabic Font Support - Enhanced */
+body.rtl,
+body.rtl * {
+    font-family: 'Tajawal', 'Cairo', 'Almarai', 'Dubai', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Navigation RTL */
+body.rtl .nav-links {
+    flex-direction: row-reverse;
+}
+
+body.rtl .logo {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+body.rtl .menu-toggle {
+    right: auto;
+    left: 2rem;
+}
+
+/* Hero Section RTL */
+body.rtl .hero-content {
+    text-align: center;
+}
+
+body.rtl .hero-cta-group {
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+body.rtl .cta-btn-primary svg {
+    transform: rotate(180deg);
+    margin-right: 0;
+    margin-left: 0.8rem;
+}
+
+/* About Section RTL */
+body.rtl .about-container {
+    direction: rtl;
+}
+
+body.rtl .about-content {
+    text-align: right;
+}
+
+body.rtl .about-columns {
+    direction: rtl;
+}
+
+body.rtl .about-column {
+    text-align: right;
+    border-left: none;
+    border-right: 6px solid #c9a961;
+}
+
+body.rtl .about-badge {
+    right: auto;
+    left: 20px;
+}
+
+body.rtl .cta-row {
+    justify-content: flex-start;
+}
+
+/* Projects Grid RTL */
+body.rtl .projects-grid,
+body.rtl .products-grid,
+body.rtl .gallery-grid,
+body.rtl .gallery-preview-grid,
+body.rtl .why-grid {
+    direction: rtl;
+}
+
+body.rtl .project-label {
+    left: auto;
+    right: 20px;
+}
+
+/* Product Specs RTL */
+body.rtl .product-specs {
+    text-align: right;
+}
+
+body.rtl .product-info {
+    text-align: right;
+}
+
+/* Gallery Filters RTL */
+body.rtl .gallery-filters,
+body.rtl .gallery-preview-filters {
+    flex-direction: row-reverse;
+}
+
+/* Footer RTL */
+body.rtl .footer-content {
+    direction: rtl;
+}
+
+body.rtl .footer-section {
+    text-align: right;
+}
+
+body.rtl .footer-section ul {
+    padding-left: 0;
+    padding-right: 0;
+    list-style: none;
+}
+
+body.rtl .social-links {
+    justify-content: flex-start;
+}
+
+/* WhatsApp Button RTL */
+body.rtl .whatsapp-float {
+    right: auto;
+    left: 35px;
+}
+
+/* Section Headers RTL */
+body.rtl .section-header {
+    text-align: center;
+}
+
+body.rtl .section-header h2,
+body.rtl .section-header p {
+    text-align: center;
+}
+
+/* Feature Cards RTL */
+body.rtl .features-grid {
+    direction: rtl;
+}
+
+body.rtl .feature-card {
+    text-align: center;
+}
+
+/* Project Details RTL */
+body.rtl .project-detail {
+    text-align: right;
+}
+
+body.rtl .project-mini-grid {
+    direction: rtl;
+}
+
+/* Language Button Enhancement */
+body.rtl .lang-btn {
+    font-weight: 600;
+}
+
+/* Ensure proper text alignment for all elements */
+body.rtl h1, 
+body.rtl h2, 
+body.rtl h3, 
+body.rtl h4,
+body.rtl p,
+body.rtl li {
+    text-align: inherit;
+}
+
+/* Centered elements remain centered */
+body.rtl .hero-content,
+body.rtl .section-header,
+body.rtl .feature-card {
+    text-align: center;
+}
+
+/* Text elements align right */
+body.rtl .about-content,
+body.rtl .footer-section,
+body.rtl .project-detail,
+body.rtl .product-info {
+    text-align: right;
+}
+
+/* Mobile Menu RTL */
+@media (max-width: 968px) {
+    body.rtl .nav-links {
+        right: auto;
+        left: 0;
+        text-align: right;
+    }
+    
+    body.rtl .menu-toggle {
+        left: 1rem;
+        right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    body.rtl .about-badge {
+        left: 15px;
+        right: auto;
+    }
+    
+    body.rtl .whatsapp-float {
+        left: 20px;
+        right: auto;
+    }
+}
+
+/* Smooth Transitions for Language Switch */
+body, 
+nav,
+.hero-content,
+.about-content,
+.section-header,
+.footer-section {
+    transition: direction 0.3s ease;
+}
+
+/* Fix any misaligned elements in RTL */
+body.rtl .hero-badge {
+    text-align: center;
+}
+
+body.rtl .about-column h4 {
+    text-align: right;
+}
+
+body.rtl .why-card h3,
+body.rtl .why-card p {
+    text-align: right;
+}
+
+/* Ensure icons and images don't flip */
+body.rtl img,
+body.rtl svg {
+    transform: none;
+}
+
+/* But keep the arrow icon flipped in RTL */
+body.rtl .cta-btn-primary svg {
+    transform: rotate(180deg);
+}
+
+/* Fix menu toggle in RTL */
+@media (max-width: 968px) {
+    body.rtl .menu-toggle {
+        left: 2rem;
+        right: auto;
+    }
+}
+/* ====== FIX: Add space between menu and EN button in Arabic mode ====== */
+body.rtl .lang-btn {
+    margin-left: 2.5rem !important;   /* This creates the gap you want */
+    margin-right: auto;               /* Keeps it on the left edge */
+}
+
+/* Optional: Make it look even better on mobile too */
+@media (max-width: 768px) {
+    body.rtl .lang-btn {
+        margin-left: 1.5rem !important;
+        margin-top: 2rem;
+    }
+}
