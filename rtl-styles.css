@@ -1,266 +1,349 @@
-/* RTL (Right-to-Left) Styles for Arabic Language */
+/* =====================================================
+تصحيحات التنسيق للغة العربية - RTL Fixes
+===================================================== */
 
-/* Base RTL adjustments */
+/* تطبيق خط عربي احترافي */
 body.rtl {
-    direction: rtl;
-    text-align: right;
-}
-
-/* Arabic Font Support - Enhanced */
-body.rtl,
-body.rtl * {
-    font-family: 'Tajawal', 'Cairo', 'Almarai', 'Dubai', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-}
-
-/* Navigation RTL */
-body.rtl .nav-links {
+    font-family: ‘Tajawal’, ‘Cairo’, ‘Segoe UI’, sans-serif !important;
+    }
+    
+    /* تصحيح اتجاه القوائم */
+    body.rtl .nav-links {
     flex-direction: row-reverse;
-}
-
-body.rtl .logo {
+    }
+    
+    body.rtl .nav-links li {
+    margin-left: 0;
+    margin-right: 2rem;
+    }
+    
+    body.rtl .nav-links li:last-child {
+    margin-right: 0;
+    }
+    
+    /* تصحيح زر اللغة */
+    body.rtl .lang-btn {
+    margin-right: auto;
+    margin-left: 0;
+    }
+    
+    /* تصحيح قائمة الموبايل */
+    body.rtl .menu-toggle {
+    left: 20px;
+    right: auto;
+    }
+    
+    body.rtl .logo {
     margin-right: 0;
     margin-left: auto;
-}
-
-body.rtl .menu-toggle {
-    right: auto;
-    left: 2rem;
-}
-
-/* Hero Section RTL */
-body.rtl .hero-content {
-    text-align: center;
-}
-
-body.rtl .hero-cta-group {
-    justify-content: center;
-    flex-direction: row-reverse;
-}
-
-body.rtl .cta-btn-primary svg {
-    transform: rotate(180deg);
-    margin-right: 0;
-    margin-left: 0.8rem;
-}
-
-/* About Section RTL */
-body.rtl .about-container {
-    direction: rtl;
-}
-
-body.rtl .about-content {
+    }
+    
+    /* تصحيح قسم Hero */
+    body.rtl .hero-content {
     text-align: right;
-}
-
-body.rtl .about-columns {
-    direction: rtl;
-}
-
-body.rtl .about-column {
-    text-align: right;
-    border-left: none;
-    border-right: 6px solid #c9a961;
-}
-
-body.rtl .about-badge {
-    right: auto;
-    left: 20px;
-}
-
-body.rtl .cta-row {
+    }
+    
+    body.rtl .hero-cta-group {
     justify-content: flex-start;
-}
-
-/* Projects Grid RTL */
-body.rtl .projects-grid,
-body.rtl .products-grid,
-body.rtl .gallery-grid,
-body.rtl .gallery-preview-grid,
-body.rtl .why-grid {
-    direction: rtl;
-}
-
-body.rtl .project-label {
-    left: auto;
-    right: 20px;
-}
-
-/* Product Specs RTL */
-body.rtl .product-specs {
-    text-align: right;
-}
-
-body.rtl .product-info {
-    text-align: right;
-}
-
-/* Gallery Filters RTL */
-body.rtl .gallery-filters,
-body.rtl .gallery-preview-filters {
+    }
+    
+    body.rtl .cta-btn-primary svg {
+    transform: rotate(180deg);
+    margin-left: 0;
+    margin-right: 10px;
+    }
+    
+    /* تصحيح قسم About */
+    body.rtl .about-container {
     flex-direction: row-reverse;
-}
-
-/* Footer RTL */
-body.rtl .footer-content {
-    direction: rtl;
-}
-
-body.rtl .footer-section {
+    }
+    
+    body.rtl .about-content {
     text-align: right;
-}
-
-body.rtl .footer-section ul {
     padding-left: 0;
-    padding-right: 0;
-    list-style: none;
-}
-
-body.rtl .social-links {
+    padding-right: 3rem;
+    }
+    
+    body.rtl .about-columns {
+    text-align: right;
+    }
+    
+    body.rtl .about-column h4 {
+    text-align: right;
+    }
+    
+    body.rtl .about-column p {
+    text-align: right;
+    }
+    
+    /* تصحيح بطاقات المشاريع */
+    body.rtl .project-label {
+    text-align: right;
+    }
+    
+    body.rtl .project-section {
+    flex-direction: row-reverse;
+    }
+    
+    body.rtl .content-side {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 3rem;
+    }
+    
+    body.rtl .project-tags {
     justify-content: flex-start;
-}
-
-/* WhatsApp Button RTL */
-body.rtl .whatsapp-float {
-    right: auto;
-    left: 35px;
-}
-
-/* Section Headers RTL */
-body.rtl .section-header {
-    text-align: center;
-}
-
-body.rtl .section-header h2,
-body.rtl .section-header p {
-    text-align: center;
-}
-
-/* Feature Cards RTL */
-body.rtl .features-grid {
-    direction: rtl;
-}
-
-body.rtl .feature-card {
-    text-align: center;
-}
-
-/* Project Details RTL */
-body.rtl .project-detail {
-    text-align: right;
-}
-
-body.rtl .project-mini-grid {
-    direction: rtl;
-}
-
-/* Language Button Enhancement */
-body.rtl .lang-btn {
-    font-weight: 600;
-}
-
-/* Ensure proper text alignment for all elements */
-body.rtl h1, 
-body.rtl h2, 
-body.rtl h3, 
-body.rtl h4,
-body.rtl p,
-body.rtl li {
-    text-align: inherit;
-}
-
-/* Centered elements remain centered */
-body.rtl .hero-content,
-body.rtl .section-header,
-body.rtl .feature-card {
-    text-align: center;
-}
-
-/* Text elements align right */
-body.rtl .about-content,
-body.rtl .footer-section,
-body.rtl .project-detail,
-body.rtl .product-info {
-    text-align: right;
-}
-
-/* Mobile Menu RTL */
-@media (max-width: 968px) {
-    body.rtl .nav-links {
-        right: auto;
-        left: 0;
-        text-align: right;
     }
     
-    body.rtl .menu-toggle {
-        left: 1rem;
-        right: auto;
-    }
-}
-
-@media (max-width: 768px) {
-    body.rtl .about-badge {
-        left: 15px;
-        right: auto;
+    /* تصحيح بطاقات المنتجات */
+    body.rtl .product-info {
+    text-align: right;
     }
     
+    body.rtl .product-info h3 {
+    text-align: right;
+    }
+    
+    body.rtl .product-specs {
+    text-align: right;
+    }
+    
+    body.rtl .product-specs p {
+    text-align: right;
+    }
+    
+    body.rtl .price-tag {
+    text-align: right;
+    }
+    
+    /* تصحيح أزرار PDF */
+    body.rtl .pdf-preview-btn {
+    flex-direction: row-reverse;
+    }
+    
+    body.rtl .pdf-preview-btn span:first-child {
+    margin-left: 8px;
+    margin-right: 0;
+    }
+    
+    /* تصحيح المعرض */
+    body.rtl .gallery-filters {
+    direction: rtl;
+    }
+    
+    body.rtl .gallery-category,
+    body.rtl .gallery-preview-category {
+    text-align: right;
+    }
+    
+    /* تصحيح قسم Why */
+    body.rtl .why-card {
+    text-align: right;
+    }
+    
+    body.rtl .why-card h3 {
+    text-align: right;
+    }
+    
+    body.rtl .why-card p {
+    text-align: right;
+    }
+    
+    /* تصحيح Footer */
+    body.rtl footer {
+    direction: rtl;
+    }
+    
+    body.rtl .footer-content {
+    direction: rtl;
+    }
+    
+    body.rtl .footer-section {
+    text-align: right;
+    }
+    
+    body.rtl .footer-section h3 {
+    text-align: right;
+    }
+    
+    body.rtl .footer-section p {
+    text-align: right;
+    }
+    
+    body.rtl .footer-section ul {
+    text-align: right;
+    padding-right: 0;
+    }
+    
+    body.rtl .footer-section ul li {
+    text-align: right;
+    }
+    
+    body.rtl .social-links {
+    justify-content: flex-start;
+    }
+    
+    /* تصحيح زر واتساب العائم */
     body.rtl .whatsapp-float {
-        left: 20px;
-        right: auto;
+    left: 20px;
+    right: auto;
     }
-}
-
-/* Smooth Transitions for Language Switch */
-body, 
-nav,
-.hero-content,
-.about-content,
-.section-header,
-.footer-section {
-    transition: direction 0.3s ease;
-}
-
-/* Fix any misaligned elements in RTL */
-body.rtl .hero-badge {
-    text-align: center;
-}
-
-body.rtl .about-column h4 {
-    text-align: right;
-}
-
-body.rtl .why-card h3,
-body.rtl .why-card p {
-    text-align: right;
-}
-
-/* Ensure icons and images don't flip */
-body.rtl img,
-body.rtl svg {
-    transform: none;
-}
-
-/* But keep the arrow icon flipped in RTL */
-body.rtl .cta-btn-primary svg {
+    
+    /* تحسينات الخط العربي */
+    body.rtl h1,
+    body.rtl h2,
+    body.rtl h3,
+    body.rtl h4,
+    body.rtl h5,
+    body.rtl h6 {
+    font-weight: 700;
+    letter-spacing: 0;
+    }
+    
+    body.rtl p,
+    body.rtl li,
+    body.rtl a {
+    font-weight: 400;
+    line-height: 1.8;
+    }
+    
+    body.rtl strong {
+    font-weight: 700;
+    }
+    
+    /* تحسين الأزرار */
+    body.rtl button,
+    body.rtl .btn {
+    font-weight: 500;
+    }
+    
+    /* تصحيح الأيقونات */
+    body.rtl .hero-cta-group svg,
+    body.rtl .cta-btn svg {
     transform: rotate(180deg);
-}
-
-/* Fix menu toggle in RTL */
-@media (max-width: 968px) {
-    body.rtl .menu-toggle {
-        left: 2rem;
-        right: auto;
     }
-}
-/* ====== FIX: Add space between menu and EN button in Arabic mode ====== */
-body.rtl .lang-btn {
-    margin-left: 2.5rem !important;   /* This creates the gap you want */
-    margin-right: auto;               /* Keeps it on the left edge */
-}
-
-/* Optional: Make it look even better on mobile too */
-@media (max-width: 768px) {
-    body.rtl .lang-btn {
-        margin-left: 1.5rem !important;
-        margin-top: 2rem;
+    
+    /* تصحيح المسافات في النصوص العربية */
+    body.rtl .hero-title {
+    line-height: 1.3;
     }
-}
+    
+    body.rtl .hero-subtitle {
+    line-height: 1.6;
+    }
+    
+    /* تصحيح قسم المشاريع في صفحة منفصلة */
+    body.rtl .project-page-container {
+    direction: rtl;
+    }
+    
+    body.rtl .hero-section {
+    text-align: center;
+    }
+    
+    body.rtl .project-number {
+    text-align: right;
+    }
+    
+    body.rtl .project-title {
+    text-align: right;
+    }
+    
+    body.rtl .project-description {
+    text-align: right;
+    line-height: 1.8;
+    }
+    
+    /* تصحيح Grid في المشاريع */
+    body.rtl .project-grid {
+    direction: rtl;
+    }
+    
+    body.rtl .images-side {
+    direction: rtl;
+    }
+    
+    /* تحسين المظهر على الشاشات الصغيرة */
+    @media (max-width: 768px) {
+    body.rtl .nav-links {
+    text-align: right;
+    }
+    
+    
+    body.rtl .nav-links li {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+    body.rtl .about-container {
+        flex-direction: column;
+    }
+    
+    body.rtl .about-content {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    body.rtl .hero-content {
+        text-align: center;
+    }
+    
+    body.rtl .hero-cta-group {
+        justify-content: center;
+    }
+    
+    body.rtl .content-side {
+        padding-right: 0;
+        text-align: center;
+    }
+    
+    body.rtl .project-section {
+        flex-direction: column;
+    }
+    
+    body.rtl .project-tags {
+        justify-content: center;
+    }
+    
+    
+    }
+    
+    /* تحسينات إضافية للعربية */
+    body.rtl .section-header {
+    text-align: center;
+    }
+    
+    body.rtl .divider {
+    margin: 1.5rem auto;
+    }
+    
+    /* تصحيح تمركز العناصر */
+    body.rtl .gallery-header,
+    body.rtl .products-page .section-header {
+    text-align: center;
+    }
+    
+    /* ضمان عدم تداخل العناصر */
+    body.rtl * {
+    text-align: inherit;
+    }
+    
+    body.rtl [dir=“ltr”] {
+    direction: ltr;
+    text-align: left;
+    }
+    
+    /* تحسين الأرقام في العربية */
+    body.rtl .price-tag,
+    body.rtl .product-specs p {
+    direction: ltr;
+    text-align: right;
+    unicode-bidi: plaintext;
+    }
+    
+    /* الحفاظ على أسماء المنتجات بالإنجليزية */
+    body.rtl .product-info h3 {
+    direction: ltr;
+    text-align: right;
+    font-family: ‘Segoe UI’, Tahoma, sans-serif;
+    }

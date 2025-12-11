@@ -1,231 +1,340 @@
-// Complete Arabic Translation System
-// Place this in translations.js
+// نظام ترجمة عربية احترافي محسّن
+// Enhanced Arabic Translation System
 
 const translations = {
     en: {
-        nav: {
-            home: "HOME",
-            about: "ABOUT",
-            projects: "PROJECTS",
-            products: "PRODUCTS",
-            gallery: "GALLERY",
-            blogs: "BLOGS",
-            langBtn: "AR"
-        },
-        hero: {
-            badge: "WPC Solutions",
-            title1: "Transforming Spaces",
-            title2: "with Creative Precision",
-            subtitle: "Expert Design, Exceptional Materials, and Sustainable Solutions for Modern Living",
-            exploreBtn: "Explore Our Work",
-            productsBtn: "View Products"
-        },
-        about: {
-            title: "About Creativity Code",
-            paragraph1: "At <strong>Creativity Code</strong>, we bring imagination to life. Based in Jordan, our team specializes in transforming spaces through creative design and the innovative use of <strong>WPC</strong> — a material that combines the warmth of wood with the durability of modern composites.",
-            paragraph2: "We believe that great design is not only about aesthetics, but also about sustainability and functionality. With every project, we aim to create environments that inspire, comfort, and endure.",
-            vision: {
-                title: "Our Vision",
-                text: "To lead the region in creative, sustainable design."
-            },
-            mission: {
-                title: "Our Mission",
-                text: "To redefine outdoor living through innovative WPC solutions"
-            },
-            values: {
-                title: "Our Values",
-                text: "• Creativity <br>• Quality <br>• Sustainability <br>• Integrity"
-            },
-            yearsLabel: "Years of<br>Excellence"
-        },
-        projects: {
-            title: "Our Signature Projects",
-            subtitle: "Each design tells a story of creativity, craftsmanship, and passion",
-            pageTitle: "Each design tells a story of creativity, craftsmanship, and passion",
-            // project1: "Luxury Outdoor Deck",
-            // project2: "Contemporary Wall Cladding",
-            // project3: "Garden Pergola Paradise",
-            discoverBtn: "Discover More",
-            // project1Desc: "Our luxury outdoor deck projects showcase the perfect blend of functionality and aesthetic appeal. Using premium WPC materials, we create durable, weather-resistant surfaces that maintain their beauty for years to come.",
-            // project2Desc: "Transform interior and exterior walls with our contemporary cladding solutions. Each installation demonstrates our commitment to modern design principles while ensuring long-lasting performance.",
-            // project3Desc: "Create stunning outdoor living spaces with our custom pergola designs. Combining traditional craftsmanship with innovative WPC materials for structures that are both beautiful and built to last."
-        },
-        products: {
-            // title: "Featured Products",
-            // subtitle: "Check out latest updates",
-            // allProductsTitle: "Our Complete Product Range",
-            // allProductsSubtitle: "Premium WPC solutions for every application",
-            // exploreBtn: "Explore More",
-            // deckingCladding: "Decking Cladding",
-            // solidBar: "SOLID BAR",
-            // column: "COLUMN",
-            // deckingProfile: "Decking Profile",
-            // wallCladding: "Wall Cladding",
-            // fencePanel: "Fence Panel",
-            // pergolaBeam: "Pergola Beam",
-            // railingSystem: "Railing System",
-            // trimFascia: "Trim & Fascia",
-            // louverSystem: "Louver System",
-            // customProfile: "Custom Profile",
-            specs: {
-                size: "Size:",
-                density: "Density:",
-                weight: "Weight:",
-                length: "Length:"
-            }
-        },
-        gallery: {
-            title: "Our Gallery",
-            subtitle: "Explore our premium WPC projects across different categories",
-            all: "All",
-            flooring: "Flooring",
-            cladding: "Cladding",
-            fences: "Fences",
-            pergola: "Pergola",
-            doors: "Doors",
-            landscaping: "Landscaping"
-        },
-        why: {
-            title: "Why Choose Our Products",
-            card1Title: "Why you need to know about <STRONG>WPC</STRONG>?",
-            card1Text: "<STRONG>WPC</STRONG> is an innovative eco-friendly material combining wood fibers and recycled plastic for exceptional durability and natural aesthetics.",
-            card2Title: "Superior Performance",
-            card2Text: "Our <STRONG>WPC</STRONG> products are UV-resistant, water-resistant, and termite-proof, making them ideal for both indoor and outdoor applications.",
-            card3Title: "Sustainable Choice",
-            card3Text: "<STRONG>WPC</STRONG> products are sustainable and help reduce deforestation while providing the beauty of natural wood with enhanced performance."
-        },
-        footer: {
-            description: "Creativity Code includes specialists in interior/exterior design and innovation for the aesthetic use of wood composites.",
-            productsTitle: "Our Products",
-            interiorDesign: "Interior Design",
-            exteriorDesign: "Exterior Design",
-            lightingDesign: "Lighting Design",
-            officeDesign: "Office Design",
-            servicesTitle: "Our Services",
-            consultation: "Consultation",
-            design: "Design",
-            pricing: "Pricing",
-            pressInquiries: "Press Inquiries",
-            contactTitle: "Contact",
-            address: "Abdulaziz garment, 5th floor<br>St. 90, Amman, Jordan"
-        }
+    nav: {
+    home: "HOME",
+    about: "ABOUT",
+    projects: "PROJECTS",
+    products: "PRODUCTS",
+    gallery: "GALLERY",
+    blogs: "BLOGS",
+    langBtn: "AR"
+    },
+    hero: {
+    badge: "WPC Solutions",
+    title1: "Transforming Spaces",
+    title2: "with Creative Precision",
+    subtitle: "Expert Design, Exceptional Materials, and Sustainable Solutions for Modern Living",
+    exploreBtn: "Explore Our Work",
+    productsBtn: "View Products"
+    },
+    about: {
+    title: "About Creativity Code",
+    paragraph1: "At <strong>Creativity Code</strong>, we bring imagination to life. Based in Jordan, our team specializes in transforming spaces through creative design and the innovative use of <strong>WPC</strong> — a material that combines the warmth of wood with the durability of modern composites.",
+    paragraph2: "We believe that great design is not only about aesthetics, but also about sustainability and functionality. With every project, we aim to create environments that inspire, comfort, and endure.",
+    vision: {
+    title: "Our Vision",
+    text: "To lead the region in creative, sustainable design."
+    },
+    mission: {
+    title: "Our Mission",
+    text: "To redefine outdoor living through innovative WPC solutions"
+    },
+    values: {
+    title: "Our Values",
+    text: "• Creativity <br>• Quality <br>• Sustainability <br>• Integrity"
+    }
+    },
+    projects: {
+    sectionTitle: "Our Signature Projects",
+    sectionSubtitle: "Each design tells a story of creativity, craftsmanship, and passion",
+    pageTitle: "Where Craftsmanship Meets Innovation",
+    pageSubtitle: "Premier WPC Solutions Across Jordan",
+    guestHouse: "Guest House Project",
+    blessedTree: "The Blessed Tree – Awqaf",
+    crownePlaza: "Crowne Plaza Dead Sea",
+    projectNumber: "Project",
+    // تفاصيل كل مشروع
+    project1: {
+    name: "Royal Diving Club",
+    desc: "An architectural masterpiece over the Red Sea. We engineered and installed a stunning over-water bridge using premium WPC materials, creating a seamless connection between land and sea. This marine-grade structure combines natural wood aesthetics with cutting-edge durability, designed to withstand harsh saltwater conditions while offering visitors a breathtaking pathway above the crystal waters.",
+    tags: ["Marine Construction", "WPC Bridge", "Saltwater Resistant"]
+    },
+    project2: {
+    name: "Public Security Chalets",
+    desc: "Transforming recreational spaces with sustainable elegance. Our team supplied premium synthetic wood for the water island features within this exclusive chalet complex. This project showcases our expertise in creating sophisticated aquatic environments where beauty meets functionality, using weather-resistant materials that maintain their pristine appearance year after year.",
+    tags: ["Water Features", "Residential", "Premium WPC"]
+    },
+    project3: {
+    name: "Guest House Petra",
+    desc: "Where ancient heritage meets modern comfort. A comprehensive installation of WPC pergola systems covering guest rooms, restaurant spaces, and outdoor lounges. We've created shaded sanctuaries that honor Petra's timeless legacy while delivering contemporary luxury. Our solutions provide lasting protection from the desert sun, ensuring guest comfort in one of Jordan's most iconic destinations.",
+    tags: ["Hospitality", "Pergola Systems", "Heritage Site"]
+    },
+    project4: {
+    name: "Crown Plaza Dead Sea",
+    desc: "Luxury that endures at the lowest point on Earth. Our installation of synthetic wood pergolas and premium flooring systems at this five-star resort demanded materials capable of withstanding the Dead Sea's unique mineral-rich environment. We delivered elegant, slip-resistant surfaces and stunning shade structures that maintain their beauty while providing guests with safe, comfortable spaces to unwind.",
+    tags: ["Luxury Resort", "Flooring", "Coastal Design"]
+    },
+    project5: {
+    name: "National Center for Police Dogs",
+    desc: "Purpose-built excellence for Jordan's K9 heroes. From concept to completion, we designed and installed a bespoke pergola structure for the main administration building. This functional yet aesthetically striking shade solution complements the facility's professional environment while providing durable, maintenance-free protection for years of service.",
+    tags: ["Government", "Custom Design", "Institutional"]
+    },
+    project6: {
+    name: "American Community Schools",
+    desc: "Building inspiring learning environments. Our complete facade solution brings modern architectural elegance to this educational institution. We designed and installed low-maintenance WPC cladding that creates visual impact while meeting rigorous safety standards and delivering superior thermal insulation for enhanced energy efficiency and student comfort.",
+    tags: ["Education", "Facade Systems", "Energy Efficient"]
+    },
+    project7: {
+    name: "United Nations Facility",
+    desc: "Meeting global standards for international excellence. This prestigious project required meticulous attention to detail and strict adherence to UN specifications. We supplied and installed high-quality WPC materials that reflect the organization's commitment to sustainability while delivering the durability and aesthetic refinement expected of international facilities.",
+    tags: ["International", "Sustainable", "Premium Quality"]
+    },
+    project8: {
+    name: "April Hotel Aqaba",
+    desc: "First impressions that last forever. We conceptualized and executed the hotel's signature main entrance pergola—a striking architectural statement that welcomes guests in style. Combining contemporary design aesthetics with robust WPC construction, this feature provides essential shade in Aqaba's sunny climate while creating an unforgettable arrival experience.",
+    tags: ["Hotel Entrance", "Signature Design", "Aqaba"]
+    },
+    project9: {
+    name: "Armed Forces Hotel",
+    desc: "Strength meets sophistication. Our premium WPC facade installation brings dignified aesthetics to this military hospitality facility. The materials combine exceptional durability with minimal maintenance requirements—perfectly aligned with the exacting standards of armed forces infrastructure while creating an impressive, professional appearance.",
+    tags: ["Military", "Durable Facades", "Low Maintenance"]
+    },
+    project10: {
+    name: "Hallabat Palace – Ministry of Tourism",
+    desc: "Honoring history with modern innovation. At this ancient desert castle, we installed entrance pergolas that balance contemporary functionality with deep respect for archaeological significance. Our synthetic wood structures provide visitor-friendly shade while harmonizing seamlessly with the palace's timeless character and historical importance.",
+    tags: ["Historical Site", "Tourism", "Cultural Heritage"]
+    },
+    project11: {
+    name: "The Blessed Tree – Ministry of Awqaf",
+    desc: "A sacred mission requiring reverent craftsmanship. We provided synthetic wood cladding for the protective metal frame surrounding Jordan's holy Blessed Tree. This spiritually significant project combines cutting-edge material technology with deep respect for religious heritage, preserving this landmark for future generations while maintaining natural aesthetics.",
+    tags: ["Religious Site", "Heritage Protection", "Sacred Architecture"]
+    },
+    project12: {
+    name: "German Jordanian University",
+    desc: "Shaping tomorrow's learning spaces today. Our synthetic wood installation on metal pergola structures creates comfortable outdoor study environments across campus. These modern shading solutions enhance student wellbeing while reflecting the university's forward-thinking commitment to sustainable, innovative building practices and academic excellence.",
+    tags: ["Campus Design", "Academic", "Outdoor Learning"]
+    }
+    },
+    products: {
+    featuredTitle: "Featured Products",
+    featuredSubtitle: "Check out latest updates",
+    pageTitle: "Our Complete Product Range",
+    pageSubtitle: "Premium WPC Solutions for Every Application",
+    pdfBtn: "View Full Price List",
+    // أسماء المنتجات تبقى بالإنجليزية
+    deckingCladdingA: "Decking Cladding",
+    solidBar: "Solid Bar",
+    column: "Column",
+    specs: {
+    size: "Size:",
+    width: "Width:",
+    thickness: "Thickness:",
+    length: "Length:"
+    },
+    priceUnit: "JD / Unit"
+    },
+    gallery: {
+    title: "Our Gallery",
+    subtitle: "Explore our premium WPC projects across different categories",
+    all: "All",
+    flooring: "Flooring",
+    cladding: "Cladding",
+    fences: "Fences",
+    pergola: "Pergola",
+    doors: "Doors",
+    landscaping: "Landscaping",
+    interfaces: "Interface"
+    },
+    why: {
+    title: "Why Choose Our Products",
+    card1Title: "Why you need to know about <STRONG>WPC</STRONG>?",
+    card1Text: "<STRONG>WPC</STRONG> is an innovative eco-friendly material combining wood fibers and recycled plastic for exceptional durability and natural aesthetics.",
+    card2Title: "Superior Performance",
+    card2Text: "Our <STRONG>WPC</STRONG> products are UV-resistant, water-resistant, and termite-proof, making them ideal for both indoor and outdoor applications.",
+    card3Title: "Sustainable Choice",
+    card3Text: "<STRONG>WPC</STRONG> products are sustainable and help reduce deforestation while providing the beauty of natural wood with enhanced performance."
+    },
+    footer: {
+    companyName: "Creativity Code",
+    description: "Creativity Code includes specialists in interior/exterior design and innovation for the aesthetic use of wood composites.",
+    productsTitle: "Our Products",
+    interiorDesign: "Interior Design",
+    exteriorDesign: "Exterior Design",
+    lightingDesign: "Lighting Design",
+    officeDesign: "Office Design",
+    servicesTitle: "Our Services",
+    consultation: "Consultation",
+    design: "Design",
+    pricing: "Pricing",
+    pressInquiries: "Press Inquiries",
+    contactTitle: "Contact",
+    address: "Abdulaziz garment, 5th floor<br>St. 90, Amman, Jordan"
+    }
     },
     ar: {
-        nav: {
-            home: "الرئيسية",
-            about: "من نحن",
-            projects: "المشاريع",
-            products: "المنتجات",
-            gallery: "المعرض",
-            blogs: "المقالات",
-            langBtn: "EN"
-        },
-        hero: {
-            badge: "حلول WPC",
-            title1: "تحويل المساحات",
-            title2: "بدقة إبداعية",
-            subtitle: "تصميم خبير ومواد استثنائية وحلول مستدامة للحياة العصرية",
-            exploreBtn: "استكشف أعمالنا",
-            productsBtn: "عرض المنتجات"
-        },
-        about: {
-            title: "عن كريتيفيتي كود",
-            paragraph1: "في <strong>كريتيفيتي كود</strong>، نحن نحول الخيال إلى واقع. يقع مقرنا في الأردن، ويتخصص فريقنا في تحويل المساحات من خلال التصميم الإبداعي والاستخدام المبتكر لـ <strong>WPC</strong> - مادة تجمع بين دفء الخشب ومتانة المواد المركبة الحديثة.",
-            paragraph2: "نحن نؤمن بأن التصميم الرائع لا يتعلق فقط بالجماليات، بل أيضًا بالاستدامة والوظيفة. مع كل مشروع، نهدف إلى إنشاء بيئات تلهم وتريح وتدوم.",
-            vision: {
-                title: "رؤيتنا",
-                text: "أن نقود المنطقة في التصميم الإبداعي المستدام."
-            },
-            mission: {
-                title: "مهمتنا",
-                text: "إعادة تعريف الحياة الخارجية من خلال حلول WPC المبتكرة"
-            },
-            values: {
-                title: "قيمنا",
-                text: "• الإبداع <br>• الجودة <br>• الاستدامة <br>• النزاهة"
-            },
-            yearsLabel: "سنوات من<br>التميز"
-        },
-        projects: {
-            title: "مشاريعنا المميزة",
-            subtitle: "كل تصميم يروي قصة من الإبداع والحرفية والشغف",
-            pageTitle: "كل تصميم يروي قصة من الإبداع والحرفية والشغف",
-            project1: "سطح خارجي فاخر",
-            project2: "كسوة جدران عصرية",
-            project3: "جنة البرجولا الحديقة",
-            discoverBtn: "اكتشف المزيد",
-            project1Desc: "تُظهر مشاريع السطح الخارجي الفاخرة لدينا المزيج المثالي من الوظيفة والجاذبية الجمالية. باستخدام مواد WPC المتميزة، نقوم بإنشاء أسطح متينة ومقاومة للعوامل الجوية تحافظ على جمالها لسنوات قادمة.",
-            project2Desc: "حوّل الجدران الداخلية والخارجية بحلول الكسوة العصرية الخاصة بنا. يُظهر كل تركيب التزامنا بمبادئ التصميم الحديث مع ضمان الأداء طويل الأمد.",
-            project3Desc: "أنشئ مساحات معيشة خارجية مذهلة بتصاميم البرجولا المخصصة لدينا. الجمع بين الحرفية التقليدية ومواد WPC المبتكرة للهياكل الجميلة والمبنية لتدوم."
-        },
-        products: {
-            title: "المنتجات المميزة",
-            subtitle: "تحقق من آخر التحديثات",
-            allProductsTitle: "مجموعة منتجاتنا الكاملة",
-            allProductsSubtitle: "حلول WPC متميزة لكل تطبيق",
-            exploreBtn: "استكشف المزيد",
-            deckingCladding: "كسوة الأرضيات",
-            solidBar: "قضيب صلب",
-            column: "عمود",
-            deckingProfile: "بروفيل الأرضيات",
-            wallCladding: "كسوة الجدران",
-            fencePanel: "لوحة سياج",
-            pergolaBeam: "عارضة برجولا",
-            railingSystem: "نظام الدرابزين",
-            trimFascia: "تشطيب وواجهة",
-            louverSystem: "نظام الشرائح",
-            customProfile: "بروفيل مخصص",
-            specs: {
-                size: "الحجم:",
-                density: "الكثافة:",
-                weight: "الوزن:",
-                length: "الطول:"
-            }
-        },
-        gallery: {
-            title: "معرضنا",
-            subtitle: "استكشف مشاريع WPC المتميزة عبر فئات مختلفة",
-            all: "الكل",
-            flooring: "الأرضيات",
-            cladding: "الكسوة",
-            fences: "الأسوار",
-            pergola: "البرجولا",
-            doors: "الأبواب",
-            landscaping: "تنسيق الحدائق"
-        },
-        why: {
-            title: "لماذا تختار منتجاتنا",
-            card1Title: "لماذا تحتاج إلى معرفة <STRONG>WPC</STRONG>؟",
-            card1Text: "<STRONG>WPC</STRONG> هي مادة مبتكرة وصديقة للبيئة تجمع بين ألياف الخشب والبلاستيك المعاد تدويره للحصول على متانة استثنائية وجماليات طبيعية.",
-            card2Title: "أداء متفوق",
-            card2Text: "منتجات <STRONG>WPC</STRONG> الخاصة بنا مقاومة للأشعة فوق البنفسجية والماء والنمل الأبيض، مما يجعلها مثالية للتطبيقات الداخلية والخارجية.",
-            card3Title: "اختيار مستدام",
-            card3Text: "منتجات <STRONG>WPC</STRONG> مستدامة وتساعد في تقليل إزالة الغابات مع توفير جمال الخشب الطبيعي مع أداء محسّن."
-        },
-        footer: {
-            description: "كريتيفيتي كود تضم متخصصين في التصميم الداخلي/الخارجي والابتكار للاستخدام الجمالي للمركبات الخشبية.",
-            productsTitle: "منتجاتنا",
-            interiorDesign: "التصميم الداخلي",
-            exteriorDesign: "التصميم الخارجي",
-            lightingDesign: "تصميم الإضاءة",
-            officeDesign: "تصميم المكاتب",
-            servicesTitle: "خدماتنا",
-            consultation: "استشارة",
-            design: "تصميم",
-            pricing: "التسعير",
-            pressInquiries: "استفسارات صحفية",
-            contactTitle: "اتصل بنا",
-            address: "عبد العزيز للألبسة، الطابق الخامس<br>شارع 90، عمان، الأردن"
-        }
+    nav: {
+    home: "الرئيسية",
+    about: "من نحن",
+    projects: "المشاريع",
+    products: "المنتجات",
+    gallery: "المعرض",
+    blogs: "المقالات",
+    langBtn: "EN"
+    },
+    hero: {
+    badge: "حلول WPC المتقدمة",
+    title1: "نحوّل المساحات",
+    title2: "بإبداع ودقة متناهية",
+    subtitle: "تصميمات خبيرة، مواد استثنائية، وحلول مستدامة لحياة عصرية راقية",
+    exploreBtn: "استكشف أعمالنا",
+    productsBtn: "تصفح المنتجات"
+    },
+    about: {
+    title: "عن مركز الإبداع",
+    paragraph1: "في <strong>مركز الإبداع</strong>، نحوّل الخيال إلى واقع ملموس. يقع مقرنا الرئيسي في الأردن، حيث يتخصص فريقنا في تحويل المساحات عبر التصميم الإبداعي والاستخدام المبتكر لمادة <strong>WPC</strong> — مادة تجمع بين دفء الخشب الطبيعي ومتانة المواد المركبة العصرية.",
+    paragraph2: "نؤمن بأن التصميم المتميز لا يقتصر على الجماليات فحسب، بل يشمل الاستدامة والوظيفة العملية. في كل مشروع، نسعى لخلق بيئات تُلهم وتُريح وتدوم طويلاً.",
+    vision: {
+    title: "رؤيتنا",
+    text: "الريادة في التصميم الإبداعي المستدام على مستوى المنطقة"
+    },
+    mission: {
+    title: "رسالتنا",
+    text: "إعادة تعريف مفهوم الحياة الخارجية من خلال حلول WPC المبتكرة"
+    },
+    values: {
+    title: "قيمنا",
+    text: "• الإبداع والابتكار<br>• الجودة العالية<br>• الاستدامة البيئية<br>• النزاهة والمصداقية"
     }
-};
-
-// Language Manager Class
-class LanguageManager {
+    },
+    projects: {
+    sectionTitle: "مشاريعنا المميزة",
+    sectionSubtitle: "كل تصميم يروي قصة من الإبداع والحرفية والشغف",
+    pageTitle: "حيث تلتقي الحرفية بالابتكار",
+    pageSubtitle: "حلول WPC الرائدة في جميع أنحاء الأردن",
+    guestHouse: "مشروع بيت الضيافة",
+    blessedTree: "الشجرة المباركة - الأوقاف",
+    crownePlaza: "كراون بلازا البحر الميت",
+    projectNumber: "المشروع",
+    // تفاصيل كل مشروع
+    project1: {
+    name: "نادي الغوص الملكي",
+    desc: "تحفة معمارية فوق البحر الأحمر. قمنا بتصميم وتركيب جسر مذهل فوق المياه باستخدام مواد WPC الفاخرة، لنخلق اتصالاً سلساً بين البر والبحر. هذا الهيكل البحري الممتاز يجمع بين جماليات الخشب الطبيعي والمتانة المتطورة، مصمم لمقاومة ظروف المياه المالحة القاسية مع توفير ممر خلاب للزوار فوق المياه الكريستالية.",
+    tags: ["إنشاءات بحرية", "جسر WPC", "مقاوم للمياه المالحة"]
+    },
+    project2: {
+    name: "شاليهات الأمن العام",
+    desc: "تحويل المساحات الترفيهية بأناقة مستدامة. قام فريقنا بتوريد الخشب الصناعي الفاخر لمميزات الجزيرة المائية ضمن هذا المجمع الحصري. يعرض هذا المشروع خبرتنا في إنشاء بيئات مائية راقية حيث يلتقي الجمال بالوظيفة العملية، باستخدام مواد مقاومة للعوامل الجوية تحافظ على مظهرها النقي عاماً بعد عام.",
+    tags: ["مميزات مائية", "سكني", "WPC فاخر"]
+    },
+    project3: {
+    name: "بيت الضيافة البتراء",
+    desc: "حيث يلتقي التراث العريق بالراحة العصرية. تركيب شامل لأنظمة برجولات WPC تغطي غرف الضيوف ومساحات المطاعم والصالات الخارجية. أنشأنا ملاذات مظللة تكرّم إرث البتراء الخالد مع تقديم رفاهية معاصرة. توفر حلولنا حماية دائمة من شمس الصحراء، مما يضمن راحة الضيوف في واحدة من أكثر وجهات الأردن شهرة.",
+    tags: ["ضيافة", "أنظمة برجولات", "موقع تراثي"]
+    },
+    project4: {
+    name: "كراون بلازا البحر الميت",
+    desc: "فخامة تدوم في أخفض نقطة على الأرض. تركيبنا لبرجولات الخشب الصناعي وأنظمة الأرضيات الفاخرة في هذا المنتجع الخمس نجوم تطلب مواد قادرة على تحمل البيئة الغنية بالمعادن الفريدة للبحر الميت. قدمنا أسطح أنيقة مقاومة للانزلاق وهياكل تظليل مذهلة تحافظ على جمالها مع توفير مساحات آمنة ومريحة للضيوف للاسترخاء.",
+    tags: ["منتجع فاخر", "أرضيات", "تصميم ساحلي"]
+    },
+    project5: {
+    name: "المركز الوطني لكلاب الشرطة",
+    desc: "تميز مصمم خصيصاً لأبطال الكلاب البوليسية في الأردن. من المفهوم إلى الإنجاز، صممنا وركبنا هيكل برجولا مخصص للمبنى الإداري الرئيسي. هذا الحل التظليلي الوظيفي والجذاب جمالياً يكمل البيئة المهنية للمنشأة مع توفير حماية متينة خالية من الصيانة لسنوات من الخدمة.",
+    tags: ["حكومي", "تصميم مخصص", "مؤسسي"]
+    },
+    project6: {
+    name: "المدرسة الأمريكية المجتمعية",
+    desc: "بناء بيئات تعليمية ملهمة. حل الواجهة الكامل لدينا يجلب الأناقة المعمارية الحديثة لهذه المؤسسة التعليمية. صممنا وركبنا كسوة WPC قليلة الصيانة تخلق تأثيراً بصرياً مع تلبية معايير السلامة الصارمة وتوفير عزل حراري متفوق لكفاءة الطاقة المحسنة وراحة الطلاب.",
+    tags: ["تعليم", "أنظمة واجهات", "كفاءة طاقة"]
+    },
+    project7: {
+    name: "منشأة الأمم المتحدة",
+    desc: "تلبية المعايير العالمية للتميز الدولي. تطلب هذا المشروع المرموق اهتماماً دقيقاً بالتفاصيل والتزاماً صارماً بمواصفات الأمم المتحدة. وردنا وركبنا مواد WPC عالية الجودة تعكس التزام المنظمة بالاستدامة مع تقديم المتانة والرقي الجمالي المتوقع من المنشآت الدولية.",
+    tags: ["دولي", "مستدام", "جودة فاخرة"]
+    },
+    project8: {
+    name: "فندق أبريل العقبة",
+    desc: "انطباعات أولى تدوم للأبد. ابتكرنا ونفذنا برجولا المدخل الرئيسي المميز للفندق - بيان معماري مذهل يرحب بالضيوف بأناقة. بدمج جماليات التصميم المعاصر مع بناء WPC القوي، توفر هذه الميزة ظلاً أساسياً في مناخ العقبة المشمس مع خلق تجربة وصول لا تُنسى.",
+    tags: ["مدخل فندق", "تصميم مميز", "العقبة"]
+    },
+    project9: {
+    name: "فندق القوات المسلحة",
+    desc: "حيث تلتقي القوة بالرقي. تركيب واجهة WPC الفاخر لدينا يجلب جماليات محترمة لهذا المرفق الضيافي العسكري. تجمع المواد بين المتانة الاستثنائية ومتطلبات الصيانة الدنيا - متوافقة تماماً مع المعايير الصارمة للبنية التحتية للقوات المسلحة مع خلق مظهر مهني مذهل.",
+    tags: ["عسكري", "واجهات متينة", "صيانة منخفضة"]
+    },
+    project10: {
+    name: "قصر الحلابات - وزارة السياحة",
+    desc: "تكريم التاريخ بالابتكار الحديث. في هذه القلعة الصحراوية القديمة، ركبنا برجولات المدخل التي توازن الوظيفة المعاصرة مع الاحترام العميق للأهمية الأثرية. توفر هياكل الخشب الصناعي لدينا ظلاً صديقاً للزوار مع الانسجام التام مع طابع القصر الخالد وأهميته التاريخية.",
+    tags: ["موقع تاريخي", "سياحة", "تراث ثقافي"]
+    },
+    project11: {
+    name: "الشجرة المباركة - وزارة الأوقاف",
+    desc: "مهمة مقدسة تتطلب حرفية محترمة. قدمنا كسوة الخشب الصناعي للإطار المعدني الواقي المحيط بشجرة الأردن المباركة المقدسة. يجمع هذا المشروع الروحي الهام بين تكنولوجيا المواد المتطورة والاحترام العميق للتراث الديني، للحفاظ على هذا المعلم للأجيال القادمة مع الحفاظ على الجماليات الطبيعية.",
+    tags: ["موقع ديني", "حماية تراث", "عمارة مقدسة"]
+    },
+    project12: {
+    name: "الجامعة الألمانية الأردنية",
+    desc: "تشكيل مساحات التعلم للغد اليوم. تركيب الخشب الصناعي لدينا على هياكل البرجولا المعدنية يخلق بيئات دراسة خارجية مريحة عبر الحرم الجامعي. تعزز حلول التظليل الحديثة هذه رفاهية الطلاب مع عكس التزام الجامعة التقدمي بممارسات البناء المستدامة والمبتكرة والتميز الأكاديمي.",
+    tags: ["تصميم حرم جامعي", "أكاديمي", "تعلم خارجي"]
+    }
+    },
+    products: {
+    featuredTitle: "منتجات مميزة",
+    featuredSubtitle: "تعرف على أحدث إصداراتنا",
+    pageTitle: "مجموعة منتجاتنا الكاملة",
+    pageSubtitle: "حلول WPC متميزة لكل الاستخدامات",
+    pdfBtn: "عرض قائمة الأسعار الكاملة",
+    // أسماء المنتجات تبقى بالإنجليزية
+    deckingCladdingA: "Decking Cladding",
+    solidBar: "Solid Bar",
+    column: "Column",
+    specs: {
+    size: "المقاس:",
+    width: "العرض:",
+    thickness: "السُمك:",
+    length: "الطول:"
+    },
+    priceUnit: "دينار / وحدة"
+    },
+    gallery: {
+    title: "معرض أعمالنا",
+    subtitle: "استكشف مشاريع WPC المتميزة عبر فئات متنوعة",
+    all: "الكل",
+    flooring: "الأرضيات",
+    cladding: "الكسوات",
+    fences: "الأسوار",
+    pergola: "البرجولات",
+    doors: "الأبواب",
+    landscaping: "تنسيق الحدائق",
+    interfaces: "الواجهات"
+    },
+    why: {
+    title: "لماذا تختار منتجاتنا",
+    card1Title: "لماذا يجب أن تعرف عن <STRONG>WPC</STRONG>؟",
+    card1Text: "<STRONG>WPC</STRONG> مادة مبتكرة صديقة للبيئة تجمع بين ألياف الخشب والبلاستيك المعاد تدويره، لتمنحك متانة استثنائية وجماليات طبيعية.",
+    card2Title: "أداء فائق التميز",
+    card2Text: "منتجات <STRONG>WPC</STRONG> لدينا مقاومة للأشعة فوق البنفسجية والماء والنمل الأبيض، مما يجعلها مثالية للتطبيقات الداخلية والخارجية.",
+    card3Title: "خيار مستدام",
+    card3Text: "منتجات <STRONG>WPC</STRONG> مستدامة بيئياً وتساعد في تقليل قطع الأشجار، مع توفير جمال الخشب الطبيعي وأداء محسّن."
+    },
+    footer: {
+    companyName: "مركز الإبداع",
+    description: "مركز الإبداع يضم نخبة من المتخصصين في التصميم الداخلي والخارجي والابتكار في الاستخدام الجمالي للمركبات الخشبية.",
+    productsTitle: "منتجاتنا",
+    interiorDesign: "التصميم الداخلي",
+    exteriorDesign: "التصميم الخارجي",
+    lightingDesign: "تصميم الإضاءة",
+    officeDesign: "تصميم المكاتب",
+    servicesTitle: "خدماتنا",
+    consultation: "الاستشارات",
+    design: "التصميم",
+    pricing: "الأسعار",
+    pressInquiries: "الاستفسارات الإعلامية",
+    contactTitle: "تواصل معنا",
+    address: "مبنى عبد العزيز للألبسة، الطابق الخامس<br>شارع 90، عمّان، الأردن"
+    }
+    }
+    };
+    
+    // مدير اللغة المحسّن
+    class LanguageManager {
     constructor() {
-        this.currentLang = localStorage.getItem('language') || 'en';
-        this.init();
+    this.currentLang = localStorage.getItem('language') || 'en';
+    this.init();
     }
+    
     
     init() {
         this.applyLanguage(this.currentLang);
@@ -247,10 +356,19 @@ class LanguageManager {
         const html = document.documentElement;
         const body = document.body;
         
+        // تطبيق اتجاه النص واللغة
         if (lang === 'ar') {
             html.setAttribute('dir', 'rtl');
             html.setAttribute('lang', 'ar');
             body.classList.add('rtl');
+            // إضافة فونت عربي
+            if (!document.getElementById('arabic-font')) {
+                const link = document.createElement('link');
+                link.id = 'arabic-font';
+                link.rel = 'stylesheet';
+                link.href = 'https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap';
+                document.head.appendChild(link);
+            }
         } else {
             html.setAttribute('dir', 'ltr');
             html.setAttribute('lang', 'en');
@@ -258,7 +376,6 @@ class LanguageManager {
         }
         
         this.updateAllContent(t);
-        this.updateDynamicElements(); // Add support for data-ar/data-en elements
     }
     
     updateAllContent(t) {
@@ -270,18 +387,6 @@ class LanguageManager {
         this.updateGallerySection(t);
         this.updateWhySection(t);
         this.updateFooter(t);
-    }
-    
-    // NEW: Handle elements with data-ar and data-en attributes
-    updateDynamicElements() {
-        const isArabic = this.currentLang === 'ar';
-        document.querySelectorAll('.trans').forEach(el => {
-            if (isArabic && el.hasAttribute('data-ar')) {
-                el.textContent = el.getAttribute('data-ar');
-            } else if (el.hasAttribute('data-en')) {
-                el.textContent = el.getAttribute('data-en');
-            }
-        });
     }
     
     updateNavigation(t) {
@@ -304,31 +409,32 @@ class LanguageManager {
     }
     
     updateHeroSection(t) {
-        const updates = [
-            ['.hero-badge', t.hero.badge],
-            ['.hero-title .title-line:first-child', t.hero.title1],
-            ['.hero-title .title-line.highlight', t.hero.title2],
-            ['.hero-subtitle', t.hero.subtitle],
-            ['.cta-btn-primary span', t.hero.exploreBtn],
-            ['.cta-btn-secondary', t.hero.productsBtn]
-        ];
+        const selectors = {
+            '.hero-badge': t.hero.badge,
+            '.hero-title .title-line:first-child': t.hero.title1,
+            '.hero-title .title-line.highlight': t.hero.title2,
+            '.hero-subtitle': t.hero.subtitle,
+            '.cta-btn-primary span': t.hero.exploreBtn,
+            '.cta-btn-secondary': t.hero.productsBtn
+        };
         
-        updates.forEach(([selector, text]) => {
+        Object.entries(selectors).forEach(([selector, text]) => {
             const el = document.querySelector(selector);
             if (el) el.textContent = text;
         });
     }
     
     updateAboutSection(t) {
+        // العنوان
         const aboutTitle = document.querySelector('.about-content h2');
-        const aboutParas = document.querySelectorAll('.about-content > p');
-        const badgeSpan = document.querySelector('.about-badge span');
-        
         if (aboutTitle) aboutTitle.textContent = t.about.title;
-        if (aboutParas[0]) aboutParas[0].innerHTML = t.about.paragraph1;
-        if (aboutParas[1]) aboutParas[1].textContent = t.about.paragraph2;
-        if (badgeSpan) badgeSpan.innerHTML = t.about.yearsLabel;
         
+        // الفقرات
+        const aboutParas = document.querySelectorAll('.about-content > p');
+        if (aboutParas[0]) aboutParas[0].innerHTML = t.about.paragraph1;
+        if (aboutParas[1]) aboutParas[1].innerHTML = t.about.paragraph2;
+        
+        // الأعمدة الثلاثة
         const columns = document.querySelectorAll('.about-column');
         const columnData = [
             [t.about.vision.title, t.about.vision.text],
@@ -347,110 +453,158 @@ class LanguageManager {
     }
     
     updateProjectsSection(t) {
-        const sections = [
-            ['.projects-section .section-header h2', t.projects.title],
-            ['.projects-section .section-header p', t.projects.subtitle],
-            ['.projects-section .cta-btn', t.projects.discoverBtn]
+        // قسم المشاريع في الصفحة الرئيسية
+        const homeProjectsHeader = document.querySelector('.section:has(.project-card) .section-header');
+        if (homeProjectsHeader) {
+            const h2 = homeProjectsHeader.querySelector('h2');
+            const p = homeProjectsHeader.querySelector('p');
+            if (h2) h2.textContent = t.projects.sectionTitle;
+            if (p) p.textContent = t.projects.sectionSubtitle;
+        }
+        
+        // عناوين بطاقات المشاريع
+        const projectLabels = document.querySelectorAll('.project-label');
+        const labelTexts = [
+            t.projects.guestHouse,
+            t.projects.blessedTree,
+            t.projects.crownePlaza
         ];
-        
-        sections.forEach(([selector, text]) => {
-            const el = document.querySelector(selector);
-            if (el) el.textContent = text;
-        });
-        
-        const labels = document.querySelectorAll('.project-label');
-        const labelTexts = [t.projects.project1, t.projects.project2, t.projects.project3];
-        labels.forEach((label, i) => {
+        projectLabels.forEach((label, i) => {
             if (labelTexts[i]) label.textContent = labelTexts[i];
         });
         
-        // Project page
-        const pageTitle = document.querySelector('#project-page .project-detail h2');
-        if (pageTitle) pageTitle.textContent = t.projects.pageTitle;
+        // صفحة المشاريع الكاملة
+        const heroTitle = document.querySelector('.hero-section .hero-title');
+        const heroSubtitle = document.querySelector('.hero-section .hero-subtitle');
+        if (heroTitle) heroTitle.textContent = t.projects.pageTitle;
+        if (heroSubtitle) heroSubtitle.textContent = t.projects.pageSubtitle;
         
-        const projectTitles = document.querySelectorAll('.project-detail h3');
-        const projectDescs = document.querySelectorAll('.project-detail > p');
-        const projectData = [
-            [t.projects.project1, t.projects.project1Desc],
-            [t.projects.project2, t.projects.project2Desc],
-            [t.projects.project3, t.projects.project3Desc]
+        // تحديث تفاصيل كل مشروع
+        const projectSections = document.querySelectorAll('.project-section');
+        const projectsData = [
+            t.projects.project1,
+            t.projects.project2,
+            t.projects.project3,
+            t.projects.project4,
+            t.projects.project5,
+            t.projects.project6,
+            t.projects.project7,
+            t.projects.project8,
+            t.projects.project9,
+            t.projects.project10,
+            t.projects.project11,
+            t.projects.project12
         ];
         
-        projectData.forEach((data, i) => {
-            if (projectTitles[i]) projectTitles[i].textContent = data[0];
-            if (projectDescs[i]) projectDescs[i].textContent = data[1];
+        projectSections.forEach((section, i) => {
+            if (projectsData[i]) {
+                // رقم المشروع
+                const projectNumber = section.querySelector('.project-number');
+                if (projectNumber) {
+                    const num = projectNumber.textContent.match(/\d+/);
+                    if (num) {
+                        projectNumber.textContent = `${t.projects.projectNumber} ${num[0]}`;
+                    }
+                }
+                
+                // اسم المشروع
+                const projectTitle = section.querySelector('.project-title');
+                if (projectTitle) projectTitle.textContent = projectsData[i].name;
+                
+                // وصف المشروع
+                const projectDesc = section.querySelector('.project-description');
+                if (projectDesc) projectDesc.textContent = projectsData[i].desc;
+                
+                // التاجات/العلامات
+                const tags = section.querySelectorAll('.tag');
+                if (tags.length > 0 && projectsData[i].tags) {
+                    tags.forEach((tag, j) => {
+                        if (projectsData[i].tags[j]) {
+                            tag.textContent = projectsData[i].tags[j];
+                        }
+                    });
+                }
+            }
         });
     }
     
     updateProductsSection(t) {
-        const featured = document.querySelector('.products-section .section-header');
-        if (featured) {
-            const h2 = featured.querySelector('h2');
-            const p = featured.querySelector('p');
-            if (h2) h2.textContent = t.products.title;
-            if (p) p.textContent = t.products.subtitle;
+        // قسم المنتجات المميزة
+        const featuredHeader = document.querySelector('.products-section .section-header');
+        if (featuredHeader) {
+            const h2 = featuredHeader.querySelector('h2');
+            const p = featuredHeader.querySelector('p');
+            if (h2) h2.textContent = t.products.featuredTitle;
+            if (p) p.textContent = t.products.featuredSubtitle;
         }
         
-        const exploreBtn = document.querySelector('.products-section .cta-btn');
-        if (exploreBtn) exploreBtn.textContent = t.products.exploreBtn;
-        
-        const allProducts = document.querySelector('#products-page .section-header');
-        if (allProducts) {
-            const h2 = allProducts.querySelector('h2');
-            const p = allProducts.querySelector('p');
-            if (h2) h2.textContent = t.products.allProductsTitle;
-            if (p) p.textContent = t.products.allProductsSubtitle;
+        // صفحة المنتجات الكاملة
+        const productsPageHeader = document.querySelector('#products-page .section-header');
+        if (productsPageHeader) {
+            const h2 = productsPageHeader.querySelector('h2');
+            const p = productsPageHeader.querySelector('p');
+            const pdfBtn = productsPageHeader.querySelector('.pdf-preview-btn span:last-child');
+            if (h2) h2.textContent = t.products.pageTitle;
+            if (p) p.textContent = t.products.pageSubtitle;
+            if (pdfBtn) pdfBtn.textContent = t.products.pdfBtn;
         }
         
-        const productNames = [
-            t.products.deckingCladding, t.products.solidBar, t.products.column,
-            t.products.deckingProfile, t.products.wallCladding, t.products.fencePanel,
-            t.products.pergolaBeam, t.products.railingSystem, t.products.trimFascia,
-            t.products.louverSystem, t.products.customProfile
-        ];
-        
-        document.querySelectorAll('.product-card').forEach((card, i) => {
-            const name = card.querySelector('h3');
-            if (name && productNames[i]) name.textContent = productNames[i];
-            
+        // تحديث المواصفات (مع الحفاظ على أسماء المنتجات بالإنجليزية)
+        document.querySelectorAll('.product-card').forEach(card => {
             const specs = card.querySelectorAll('.product-specs p');
-            if (specs.length >= 4) {
-                const getValue = (spec) => spec.innerHTML.split(':')[1] || '';
-                specs[0].innerHTML = `<strong>${t.products.specs.size}</strong> ${getValue(specs[0])}`;
-                if (specs[1]) specs[1].innerHTML = `<strong>${t.products.specs.density}</strong> ${getValue(specs[1])}`;
-                if (specs[2]) specs[2].innerHTML = `<strong>${t.products.specs.weight}</strong> ${getValue(specs[2])}`;
-                if (specs[3]) specs[3].innerHTML = `<strong>${t.products.specs.length}</strong> ${getValue(specs[3])}`;
+            specs.forEach(spec => {
+                const strongTag = spec.querySelector('strong');
+                if (strongTag) {
+                    const originalText = strongTag.textContent.toLowerCase();
+                    if (originalText.includes('size')) strongTag.textContent = t.products.specs.size;
+                    else if (originalText.includes('width')) strongTag.textContent = t.products.specs.width;
+                    else if (originalText.includes('thickness')) strongTag.textContent = t.products.specs.thickness;
+                    else if (originalText.includes('length')) strongTag.textContent = t.products.specs.length;
+                }
+            });
+            
+            // تحديث وحدة السعر
+            const priceTag = card.querySelector('.price-tag');
+            if (priceTag && this.currentLang === 'ar') {
+                const price = priceTag.textContent.match(/[\d.]+/);
+                if (price) {
+                    priceTag.textContent = `${price[0]} ${t.products.priceUnit}`;
+                }
             }
         });
     }
     
     updateGallerySection(t) {
-        const headers = [
-            ['.gallery-preview-section .section-header', t.gallery.title, t.gallery.subtitle],
-            ['#gallery-page .gallery-header', t.gallery.title, t.gallery.subtitle]
+        // العناوين
+        const galleryHeaders = [
+            document.querySelector('.gallery-preview-section .section-header'),
+            document.querySelector('#gallery-page .gallery-header')
         ];
         
-        headers.forEach(([selector, title, subtitle]) => {
-            const header = document.querySelector(selector);
+        galleryHeaders.forEach(header => {
             if (header) {
-                const h2 = header.querySelector('h2');
-                const p = header.querySelector('p');
-                if (h2) h2.textContent = title;
-                if (p) p.textContent = subtitle;
+                const h2 = header.querySelector('h2, .gallery-title');
+                const p = header.querySelector('p, .gallery-subtitle');
+                if (h2) h2.textContent = t.gallery.title;
+                if (p) p.textContent = t.gallery.subtitle;
             }
         });
         
-        const filterCategories = [
-            t.gallery.all, t.gallery.flooring, t.gallery.cladding,
-            t.gallery.fences, t.gallery.pergola, t.gallery.doors, t.gallery.landscaping
-        ];
+        // أزرار الفلترة
+        const filterBtns = document.querySelectorAll('.preview-filter-btn, .filter-btn');
+        const categories = ['all', 'flooring', 'cladding', 'fences', 'pergola', 'doors', 'landscaping'];
         
-        document.querySelectorAll('.filter-btn, .preview-filter-btn').forEach((btn, i) => {
-            if (filterCategories[i]) btn.textContent = filterCategories[i];
+        filterBtns.forEach(btn => {
+            const category = btn.getAttribute('data-category');
+            if (category && t.gallery[category]) {
+                btn.textContent = t.gallery[category];
+            }
         });
         
+        // تسميات الفئات في الصور
         document.querySelectorAll('.gallery-category, .gallery-preview-category').forEach(label => {
-            const category = label.closest('[data-category]')?.dataset.category;
+            const item = label.closest('[data-category]');
+            const category = item?.getAttribute('data-category');
             if (category && t.gallery[category]) {
                 label.textContent = t.gallery[category];
             }
@@ -458,8 +612,8 @@ class LanguageManager {
     }
     
     updateWhySection(t) {
-        const whyTitle = document.querySelector('.why-section .section-header h2');
-        if (whyTitle) whyTitle.textContent = t.why.title;
+        const whyHeader = document.querySelector('.why-section .section-header h2');
+        if (whyHeader) whyHeader.textContent = t.why.title;
         
         const cards = document.querySelectorAll('.why-card');
         const cardData = [
@@ -481,33 +635,47 @@ class LanguageManager {
     updateFooter(t) {
         const sections = document.querySelectorAll('.footer-section');
         
+        // القسم الأول - عن الشركة
         if (sections[0]) {
+            const h3 = sections[0].querySelector('h3');
             const desc = sections[0].querySelector('p');
+            if (h3) h3.textContent = t.footer.companyName;
             if (desc) desc.textContent = t.footer.description;
         }
         
+        // القسم الثاني - المنتجات
         if (sections[1]) {
             const h3 = sections[1].querySelector('h3');
             if (h3) h3.textContent = t.footer.productsTitle;
             const links = sections[1].querySelectorAll('li a');
-            const texts = [t.footer.interiorDesign, t.footer.exteriorDesign, 
-                          t.footer.lightingDesign, t.footer.officeDesign];
+            const texts = [
+                t.footer.interiorDesign,
+                t.footer.exteriorDesign,
+                t.footer.lightingDesign,
+                t.footer.officeDesign
+            ];
             links.forEach((link, i) => {
                 if (texts[i]) link.textContent = texts[i];
             });
         }
         
+        // القسم الثالث - الخدمات
         if (sections[2]) {
             const h3 = sections[2].querySelector('h3');
             if (h3) h3.textContent = t.footer.servicesTitle;
             const links = sections[2].querySelectorAll('li a');
-            const texts = [t.footer.consultation, t.footer.design, 
-                          t.footer.pricing, t.footer.pressInquiries];
+            const texts = [
+                t.footer.consultation,
+                t.footer.design,
+                t.footer.pricing,
+                t.footer.pressInquiries
+            ];
             links.forEach((link, i) => {
                 if (texts[i]) link.textContent = texts[i];
             });
         }
         
+        // القسم الرابع - التواصل
         if (sections[3]) {
             const h3 = sections[3].querySelector('h3');
             if (h3) h3.textContent = t.footer.contactTitle;
@@ -515,13 +683,15 @@ class LanguageManager {
             if (paras[1]) paras[1].innerHTML = t.footer.address;
         }
     }
-}
-
-// Initialize on page load
-if (document.readyState === 'loading') {
+    
+    
+    }
+    
+    // تهيئة النظام عند تحميل الصفحة
+    if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {
-        window.languageManager = new LanguageManager();
-    });
-} else {
     window.languageManager = new LanguageManager();
-}
+    });
+    } else {
+    window.languageManager = new LanguageManager();
+    }
