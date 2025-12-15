@@ -1,280 +1,327 @@
 /* =====================================================
-تصحيحات التنسيق للغة العربية - RTL Fixes
+تصحيحات التنسيق للغة العربية - RTL Fixes (Enhanced Responsive)
 ===================================================== */
 
 /* تطبيق خط عربي احترافي */
 body.rtl {
-    font-family: ‘Tajawal’, ‘Cairo’, ‘Segoe UI’, sans-serif !important;
-    }
-    
-    /* تصحيح اتجاه القوائم */
-    body.rtl .nav-links {
+    font-family: 'Tajawal', 'Cairo', 'Segoe UI', sans-serif !important;
+}
+
+/* ===== تصحيح الهيدر والقوائم ===== */
+body.rtl .nav-links {
     flex-direction: row-reverse;
-    }
-    
-    body.rtl .nav-links li {
+}
+
+body.rtl .nav-links li {
     margin-left: 0;
     margin-right: 2rem;
-    }
-    
-    body.rtl .nav-links li:last-child {
+}
+
+body.rtl .nav-links li:last-child {
     margin-right: 0;
-    }
-    
-    /* تصحيح زر اللغة */
-    body.rtl .lang-btn {
+}
+
+body.rtl .lang-btn {
     margin-right: auto;
     margin-left: 0;
-    }
-    
-    /* تصحيح قائمة الموبايل */
-    body.rtl .menu-toggle {
+}
+
+body.rtl .menu-toggle {
     left: 20px;
     right: auto;
-    }
-    
-    body.rtl .logo {
+}
+
+body.rtl .logo {
     margin-right: 0;
     margin-left: auto;
-    }
-    
-    /* تصحيح قسم Hero */
-    body.rtl .hero-content {
+}
+
+/* ===== قسم Hero ===== */
+body.rtl .hero-content {
     text-align: right;
-    }
-    
-    body.rtl .hero-cta-group {
+}
+
+body.rtl .hero-cta-group {
     justify-content: flex-start;
-    }
-    
-    body.rtl .cta-btn-primary svg {
+}
+
+body.rtl .cta-btn-primary svg {
     transform: rotate(180deg);
     margin-left: 0;
     margin-right: 10px;
-    }
-    
-    /* تصحيح قسم About */
-    body.rtl .about-container {
+}
+
+body.rtl .hero-title {
+    line-height: 1.3;
+}
+
+body.rtl .hero-subtitle {
+    line-height: 1.6;
+}
+
+/* ===== قسم About ===== */
+body.rtl .about-container {
     flex-direction: row-reverse;
+}
+
+body.rtl .about-content {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 3rem;
+}
+
+body.rtl .about-columns {
+    text-align: right;
+}
+
+body.rtl .about-column h4,
+body.rtl .about-column p {
+    text-align: right;
+}
+
+/* ===== المشاريع ===== */
+body.rtl .project-label {
+    text-align: right;
+}
+
+body.rtl .project-section {
+    flex-direction: row-reverse;
+}
+
+body.rtl .content-side {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 3rem;
+}
+
+body.rtl .project-tags {
+    justify-content: flex-start;
+}
+
+body.rtl .project-page-container {
+    direction: rtl;
+}
+
+body.rtl .project-number,
+body.rtl .project-title,
+body.rtl .project-description {
+    text-align: right;
+}
+
+body.rtl .project-description {
+    line-height: 1.8;
+}
+
+body.rtl .project-grid,
+body.rtl .images-side {
+    direction: rtl;
+}
+
+/* ===== المنتجات ===== */
+body.rtl .product-info,
+body.rtl .product-info h3,
+body.rtl .product-specs,
+body.rtl .product-specs p,
+body.rtl .price-tag {
+    text-align: right;
+}
+
+body.rtl .product-info h3 {
+    direction: ltr;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body.rtl .price-tag,
+body.rtl .product-specs p {
+    direction: ltr;
+    unicode-bidi: plaintext;
+}
+
+/* ===== أزرار PDF ===== */
+body.rtl .pdf-preview-btn {
+    flex-direction: row-reverse;
+}
+
+body.rtl .pdf-preview-btn span:first-child {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+/* ===== المعرض ===== */
+body.rtl .gallery-filters {
+    direction: rtl;
+}
+
+body.rtl .gallery-category,
+body.rtl .gallery-preview-category {
+    text-align: right;
+}
+
+body.rtl .gallery-header,
+body.rtl .products-page .section-header {
+    text-align: center;
+}
+
+/* ===== قسم Why ===== */
+body.rtl .why-card,
+body.rtl .why-card h3,
+body.rtl .why-card p {
+    text-align: right;
+}
+
+/* ===== Footer ===== */
+body.rtl footer,
+body.rtl .footer-content {
+    direction: rtl;
+}
+
+body.rtl .footer-section,
+body.rtl .footer-section h3,
+body.rtl .footer-section p,
+body.rtl .footer-section ul,
+body.rtl .footer-section ul li {
+    text-align: right;
+}
+
+body.rtl .footer-section ul {
+    padding-right: 0;
+}
+
+body.rtl .social-links {
+    justify-content: flex-start;
+}
+
+/* ===== زر واتساب العائم ===== */
+body.rtl .whatsapp-float {
+    left: 20px;
+    right: auto;
+}
+
+/* ===== تحسينات الخط العربي ===== */
+body.rtl h1,
+body.rtl h2,
+body.rtl h3,
+body.rtl h4,
+body.rtl h5,
+body.rtl h6 {
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+body.rtl p,
+body.rtl li,
+body.rtl a {
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+body.rtl strong {
+    font-weight: 700;
+}
+
+body.rtl button,
+body.rtl .btn {
+    font-weight: 500;
+}
+
+/* ===== تصحيح الأيقونات ===== */
+body.rtl .hero-cta-group svg,
+body.rtl .cta-btn svg {
+    transform: rotate(180deg);
+}
+
+/* ===== تمركز العناصر ===== */
+body.rtl .section-header,
+body.rtl .hero-section {
+    text-align: center;
+}
+
+body.rtl .divider {
+    margin: 1.5rem auto;
+}
+
+body.rtl * {
+    text-align: inherit;
+}
+
+body.rtl [dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+}
+
+/* =====================================================
+   Responsive Design - الشاشات المتوسطة والصغيرة
+===================================================== */
+
+/* ===== Tablets - الأجهزة اللوحية (768px - 1024px) ===== */
+@media (max-width: 1024px) {
+    body.rtl .nav-links li {
+        margin-right: 1.5rem;
     }
     
     body.rtl .about-content {
-    text-align: right;
-    padding-left: 0;
-    padding-right: 3rem;
-    }
-    
-    body.rtl .about-columns {
-    text-align: right;
-    }
-    
-    body.rtl .about-column h4 {
-    text-align: right;
-    }
-    
-    body.rtl .about-column p {
-    text-align: right;
-    }
-    
-    /* تصحيح بطاقات المشاريع */
-    body.rtl .project-label {
-    text-align: right;
-    }
-    
-    body.rtl .project-section {
-    flex-direction: row-reverse;
+        padding-right: 2rem;
     }
     
     body.rtl .content-side {
-    text-align: right;
-    padding-left: 0;
-    padding-right: 3rem;
+        padding-right: 2rem;
     }
-    
-    body.rtl .project-tags {
-    justify-content: flex-start;
-    }
-    
-    /* تصحيح بطاقات المنتجات */
-    body.rtl .product-info {
-    text-align: right;
-    }
-    
-    body.rtl .product-info h3 {
-    text-align: right;
-    }
-    
-    body.rtl .product-specs {
-    text-align: right;
-    }
-    
-    body.rtl .product-specs p {
-    text-align: right;
-    }
-    
-    body.rtl .price-tag {
-    text-align: right;
-    }
-    
-    /* تصحيح أزرار PDF */
-    body.rtl .pdf-preview-btn {
-    flex-direction: row-reverse;
-    }
-    
-    body.rtl .pdf-preview-btn span:first-child {
-    margin-left: 8px;
-    margin-right: 0;
-    }
-    
-    /* تصحيح المعرض */
-    body.rtl .gallery-filters {
-    direction: rtl;
-    }
-    
-    body.rtl .gallery-category,
-    body.rtl .gallery-preview-category {
-    text-align: right;
-    }
-    
-    /* تصحيح قسم Why */
-    body.rtl .why-card {
-    text-align: right;
-    }
-    
-    body.rtl .why-card h3 {
-    text-align: right;
-    }
-    
-    body.rtl .why-card p {
-    text-align: right;
-    }
-    
-    /* تصحيح Footer */
-    body.rtl footer {
-    direction: rtl;
-    }
-    
-    body.rtl .footer-content {
-    direction: rtl;
-    }
-    
-    body.rtl .footer-section {
-    text-align: right;
-    }
-    
-    body.rtl .footer-section h3 {
-    text-align: right;
-    }
-    
-    body.rtl .footer-section p {
-    text-align: right;
-    }
-    
-    body.rtl .footer-section ul {
-    text-align: right;
-    padding-right: 0;
-    }
-    
-    body.rtl .footer-section ul li {
-    text-align: right;
-    }
-    
-    body.rtl .social-links {
-    justify-content: flex-start;
-    }
-    
-    /* تصحيح زر واتساب العائم */
-    body.rtl .whatsapp-float {
-    left: 20px;
-    right: auto;
-    }
-    
-    /* تحسينات الخط العربي */
-    body.rtl h1,
-    body.rtl h2,
-    body.rtl h3,
-    body.rtl h4,
-    body.rtl h5,
-    body.rtl h6 {
-    font-weight: 700;
-    letter-spacing: 0;
-    }
-    
-    body.rtl p,
-    body.rtl li,
-    body.rtl a {
-    font-weight: 400;
-    line-height: 1.8;
-    }
-    
-    body.rtl strong {
-    font-weight: 700;
-    }
-    
-    /* تحسين الأزرار */
-    body.rtl button,
-    body.rtl .btn {
-    font-weight: 500;
-    }
-    
-    /* تصحيح الأيقونات */
-    body.rtl .hero-cta-group svg,
-    body.rtl .cta-btn svg {
-    transform: rotate(180deg);
-    }
-    
-    /* تصحيح المسافات في النصوص العربية */
-    body.rtl .hero-title {
-    line-height: 1.3;
-    }
-    
-    body.rtl .hero-subtitle {
-    line-height: 1.6;
-    }
-    
-    /* تصحيح قسم المشاريع في صفحة منفصلة */
-    body.rtl .project-page-container {
-    direction: rtl;
-    }
-    
-    body.rtl .hero-section {
-    text-align: center;
-    }
-    
-    body.rtl .project-number {
-    text-align: right;
-    }
-    
-    body.rtl .project-title {
-    text-align: right;
-    }
-    
-    body.rtl .project-description {
-    text-align: right;
-    line-height: 1.8;
-    }
-    
-    /* تصحيح Grid في المشاريع */
-    body.rtl .project-grid {
-    direction: rtl;
-    }
-    
-    body.rtl .images-side {
-    direction: rtl;
-    }
-    
-    /* تحسين المظهر على الشاشات الصغيرة */
-    @media (max-width: 768px) {
+}
+
+/* ===== Mobile Landscape - الموبايل الأفقي (481px - 768px) ===== */
+@media (max-width: 768px) {
+    /* الهيدر */
     body.rtl .nav-links {
-    text-align: right;
+        text-align: right;
+        flex-direction: column;
+        align-items: flex-end;
     }
-    
     
     body.rtl .nav-links li {
         margin-right: 0;
         margin-left: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+        text-align: right;
     }
     
+    body.rtl .menu-toggle {
+        left: 15px;
+    }
+    
+    body.rtl .whatsapp-float {
+        left: 15px;
+        bottom: 80px;
+    }
+    
+    /* Hero Section */
+    body.rtl .hero-content {
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    body.rtl .hero-title {
+        font-size: 2rem;
+        line-height: 1.4;
+    }
+    
+    body.rtl .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    body.rtl .hero-cta-group {
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    body.rtl .hero-cta-group .cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* About Section */
     body.rtl .about-container {
         flex-direction: column;
     }
@@ -282,68 +329,179 @@ body.rtl {
     body.rtl .about-content {
         padding-right: 0;
         text-align: center;
+        margin-bottom: 2rem;
     }
     
-    body.rtl .hero-content {
+    body.rtl .about-columns {
         text-align: center;
     }
     
-    body.rtl .hero-cta-group {
-        justify-content: center;
+    body.rtl .about-column {
+        margin-bottom: 2rem;
+    }
+    
+    /* Projects Section */
+    body.rtl .project-section {
+        flex-direction: column;
     }
     
     body.rtl .content-side {
         padding-right: 0;
         text-align: center;
+        margin-bottom: 2rem;
     }
     
-    body.rtl .project-section {
-        flex-direction: column;
+    body.rtl .project-label,
+    body.rtl .project-number,
+    body.rtl .project-title,
+    body.rtl .project-description {
+        text-align: center;
     }
     
     body.rtl .project-tags {
         justify-content: center;
+        flex-wrap: wrap;
     }
     
-    
+    /* Products Section */
+    body.rtl .product-info,
+    body.rtl .product-info h3,
+    body.rtl .product-specs,
+    body.rtl .price-tag {
+        text-align: center;
     }
     
-    /* تحسينات إضافية للعربية */
-    body.rtl .section-header {
-    text-align: center;
-    }
-    
-    body.rtl .divider {
-    margin: 1.5rem auto;
-    }
-    
-    /* تصحيح تمركز العناصر */
-    body.rtl .gallery-header,
-    body.rtl .products-page .section-header {
-    text-align: center;
-    }
-    
-    /* ضمان عدم تداخل العناصر */
-    body.rtl * {
-    text-align: inherit;
-    }
-    
-    body.rtl [dir=“ltr”] {
-    direction: ltr;
-    text-align: left;
-    }
-    
-    /* تحسين الأرقام في العربية */
-    body.rtl .price-tag,
-    body.rtl .product-specs p {
-    direction: ltr;
-    text-align: right;
-    unicode-bidi: plaintext;
-    }
-    
-    /* الحفاظ على أسماء المنتجات بالإنجليزية */
     body.rtl .product-info h3 {
-    direction: ltr;
-    text-align: right;
-    font-family: ‘Segoe UI’, Tahoma, sans-serif;
+        text-align: center;
     }
+    
+    /* Gallery */
+    body.rtl .gallery-filters {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    body.rtl .gallery-category,
+    body.rtl .gallery-preview-category {
+        text-align: center;
+    }
+    
+    /* Why Cards */
+    body.rtl .why-card {
+        text-align: center;
+        padding: 1.5rem;
+    }
+    
+    /* Footer */
+    body.rtl .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    body.rtl .footer-section {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    body.rtl .footer-section h3,
+    body.rtl .footer-section p,
+    body.rtl .footer-section ul li {
+        text-align: center;
+    }
+    
+    body.rtl .social-links {
+        justify-content: center;
+    }
+}
+
+/* ===== Mobile Portrait - الموبايل العمودي (320px - 480px) ===== */
+@media (max-width: 480px) {
+    body.rtl .hero-title {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+    
+    body.rtl .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    body.rtl .hero-cta-group .cta-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    body.rtl .about-content h2,
+    body.rtl .section-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    body.rtl .about-column h4 {
+        font-size: 1.1rem;
+    }
+    
+    body.rtl .project-title {
+        font-size: 1.5rem;
+    }
+    
+    body.rtl .product-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    body.rtl .why-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    body.rtl .footer-section h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* تقليل المسافات */
+    body.rtl .hero-content {
+        padding: 1rem;
+    }
+    
+    body.rtl .why-card {
+        padding: 1.25rem;
+    }
+    
+    body.rtl .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 70px;
+    }
+}
+
+/* ===== Extra Small Devices - الأجهزة الصغيرة جداً (< 320px) ===== */
+@media (max-width: 320px) {
+    body.rtl .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    body.rtl .hero-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    body.rtl .hero-cta-group .cta-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+    }
+    
+    body.rtl .nav-links li {
+        font-size: 0.9rem;
+    }
+}
+
+/* ===== Large Screens - الشاشات الكبيرة (> 1440px) ===== */
+@media (min-width: 1440px) {
+    body.rtl .about-content {
+        padding-right: 4rem;
+    }
+    
+    body.rtl .content-side {
+        padding-right: 4rem;
+    }
+    
+    body.rtl .nav-links li {
+        margin-right: 2.5rem;
+    }
+}
