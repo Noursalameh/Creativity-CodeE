@@ -44,69 +44,70 @@ const translations = {
     pageSubtitle: "Premier WPC Solutions Across Jordan",
     guestHouse: "Guest House Project",
     blessedTree: "The Blessed Tree – Awqaf",
-    crownePlaza: "Crowne Plaza Dead Sea",
+    ChaletTeresa: "Chalet Teresa",
     projectNumber: "Project",
     // تفاصيل كل مشروع
-    project1: {
-    name: "Royal Diving Club",
-    desc: "An architectural masterpiece over the Red Sea. We engineered and installed a stunning over-water bridge using premium WPC materials, creating a seamless connection between land and sea. This marine-grade structure combines natural wood aesthetics with cutting-edge durability, designed to withstand harsh saltwater conditions while offering visitors a breathtaking pathway above the crystal waters.",
-    tags: ["Marine Construction", "WPC Bridge", "Saltwater Resistant"]
-    },
-    project2: {
-    name: "Public Security Chalets",
-    desc: "Transforming recreational spaces with sustainable elegance. Our team supplied premium synthetic wood for the water island features within this exclusive chalet complex. This project showcases our expertise in creating sophisticated aquatic environments where beauty meets functionality, using weather-resistant materials that maintain their pristine appearance year after year.",
-    tags: ["Water Features", "Residential", "Premium WPC"]
-    },
-    project3: {
-    name: "Guest House Petra",
-    desc: "Where ancient heritage meets modern comfort. A comprehensive installation of WPC pergola systems covering guest rooms, restaurant spaces, and outdoor lounges. We've created shaded sanctuaries that honor Petra's timeless legacy while delivering contemporary luxury. Our solutions provide lasting protection from the desert sun, ensuring guest comfort in one of Jordan's most iconic destinations.",
-    tags: ["Hospitality", "Pergola Systems", "Heritage Site"]
-    },
-    project4: {
-    name: "Crown Plaza Dead Sea",
-    desc: "Luxury that endures at the lowest point on Earth. Our installation of synthetic wood pergolas and premium flooring systems at this five-star resort demanded materials capable of withstanding the Dead Sea's unique mineral-rich environment. We delivered elegant, slip-resistant surfaces and stunning shade structures that maintain their beauty while providing guests with safe, comfortable spaces to unwind.",
-    tags: ["Luxury Resort", "Flooring", "Coastal Design"]
-    },
-    project5: {
-    name: "National Center for Police Dogs",
-    desc: "Purpose-built excellence for Jordan's K9 heroes. From concept to completion, we designed and installed a bespoke pergola structure for the main administration building. This functional yet aesthetically striking shade solution complements the facility's professional environment while providing durable, maintenance-free protection for years of service.",
-    tags: ["Government", "Custom Design", "Institutional"]
-    },
-    project6: {
-    name: "American Community Schools",
-    desc: "Building inspiring learning environments. Our complete facade solution brings modern architectural elegance to this educational institution. We designed and installed low-maintenance WPC cladding that creates visual impact while meeting rigorous safety standards and delivering superior thermal insulation for enhanced energy efficiency and student comfort.",
-    tags: ["Education", "Facade Systems", "Energy Efficient"]
-    },
-    project7: {
-    name: "United Nations Facility",
-    desc: "Meeting global standards for international excellence. This prestigious project required meticulous attention to detail and strict adherence to UN specifications. We supplied and installed high-quality WPC materials that reflect the organization's commitment to sustainability while delivering the durability and aesthetic refinement expected of international facilities.",
-    tags: ["International", "Sustainable", "Premium Quality"]
-    },
-    project8: {
-    name: "April Hotel Aqaba",
-    desc: "First impressions that last forever. We conceptualized and executed the hotel's signature main entrance pergola—a striking architectural statement that welcomes guests in style. Combining contemporary design aesthetics with robust WPC construction, this feature provides essential shade in Aqaba's sunny climate while creating an unforgettable arrival experience.",
-    tags: ["Hotel Entrance", "Signature Design", "Aqaba"]
-    },
-    project9: {
-    name: "Armed Forces Hotel",
-    desc: "Strength meets sophistication. Our premium WPC facade installation brings dignified aesthetics to this military hospitality facility. The materials combine exceptional durability with minimal maintenance requirements—perfectly aligned with the exacting standards of armed forces infrastructure while creating an impressive, professional appearance.",
-    tags: ["Military", "Durable Facades", "Low Maintenance"]
-    },
-    project10: {
-    name: "Hallabat Palace – Ministry of Tourism",
-    desc: "Honoring history with modern innovation. At this ancient desert castle, we installed entrance pergolas that balance contemporary functionality with deep respect for archaeological significance. Our synthetic wood structures provide visitor-friendly shade while harmonizing seamlessly with the palace's timeless character and historical importance.",
-    tags: ["Historical Site", "Tourism", "Cultural Heritage"]
-    },
-    project11: {
-    name: "The Blessed Tree – Ministry of Awqaf",
-    desc: "A sacred mission requiring reverent craftsmanship. We provided synthetic wood cladding for the protective metal frame surrounding Jordan's holy Blessed Tree. This spiritually significant project combines cutting-edge material technology with deep respect for religious heritage, preserving this landmark for future generations while maintaining natural aesthetics.",
-    tags: ["Religious Site", "Heritage Protection", "Sacred Architecture"]
-    },
-    project12: {
-    name: "German Jordanian University",
-    desc: "Shaping tomorrow's learning spaces today. Our synthetic wood installation on metal pergola structures creates comfortable outdoor study environments across campus. These modern shading solutions enhance student wellbeing while reflecting the university's forward-thinking commitment to sustainable, innovative building practices and academic excellence.",
-    tags: ["Campus Design", "Academic", "Outdoor Learning"]
-    }
+    // project1: {
+    // name: "Royal Diving Club",
+    // desc: "An architectural masterpiece over the Red Sea. We engineered and installed a stunning over-water bridge using premium WPC materials, creating a seamless connection between land and sea. This marine-grade structure combines natural wood aesthetics with cutting-edge durability, designed to withstand harsh saltwater conditions while offering visitors a breathtaking pathway above the crystal waters.",
+    // tags: ["Marine Construction", "WPC Bridge", "Saltwater Resistant"]
+    // },
+    // project2: {
+    // name: "Public Security Chalets",
+    // desc: "Transforming recreational spaces with sustainable elegance. Our team supplied premium synthetic wood for the water island features within this exclusive chalet complex. This project showcases our expertise in creating sophisticated aquatic environments where beauty meets functionality, using weather-resistant materials that maintain their pristine appearance year after year.",
+    // tags: ["Water Features", "Residential", "Premium WPC"]
+    // },
+    // project3: {
+    // name: "Guest House Petra",
+    // desc: "Supply and installation of complete WPC pergola systems for guest rooms and restaurant areas.A fully integrated solution designed to enhance comfort and functionality, providing durable shading and a refined outdoor experience that complements Petra’s unique architectural character.",
+    // tags: ["Guest House", "Pergola Systems", "Heritage Petra"]
+    // },
+    // project4: {
+    // name: "Crown Plaza Dead Sea",
+    // desc: "Luxury that endures at the lowest point on Earth. Our installation of synthetic wood pergolas and premium flooring systems at this five-star resort demanded materials capable of withstanding the Dead Sea's unique mineral-rich environment. We delivered elegant, slip-resistant surfaces and stunning shade structures that maintain their beauty while providing guests with safe, comfortable spaces to unwind.",
+    // tags: ["Luxury Resort", "Flooring", "Coastal Design"]
+    // },
+    // project5: {
+    // name: "National Center for Police Dogs",
+    // desc: "Purpose-built excellence for Jordan's K9 heroes. From concept to completion, we designed and installed a bespoke pergola structure for the main administration building. This functional yet aesthetically striking shade solution complements the facility's professional environment while providing durable, maintenance-free protection for years of service.",
+    // tags: ["Government", "Custom Design", "Institutional"]
+    // },
+    // project6: {
+    // name: "American Community Schools",
+    // desc: "Building inspiring learning environments. Our complete facade solution brings modern architectural elegance to this educational institution. We designed and installed low-maintenance WPC cladding that creates visual impact while meeting rigorous safety standards and delivering superior thermal insulation for enhanced energy efficiency and student comfort.",
+    // tags: ["Education", "Facade Systems", "Energy Efficient"]
+    // },
+    // project7: {
+    // name: "United Nations Facility",
+    // desc: "Meeting global standards for international excellence. This prestigious project required meticulous attention to detail and strict adherence to UN specifications. We supplied and installed high-quality WPC materials that reflect the organization's commitment to sustainability while delivering the durability and aesthetic refinement expected of international facilities.",
+    // tags: ["International", "Sustainable", "Premium Quality"]
+    // },
+    // project8: {
+    // name: "April Hotel Aqaba",
+    // desc: "First impressions that last forever. We conceptualized and executed the hotel's signature main entrance pergola—a striking architectural statement that welcomes guests in style. Combining contemporary design aesthetics with robust WPC construction, this feature provides essential shade in Aqaba's sunny climate while creating an unforgettable arrival experience.",
+    // tags: ["Hotel Entrance", "Signature Design", "Aqaba"]
+    // },
+    // project9: {
+    // name: "Armed Forces Hotel",
+    // desc: "Strength meets sophistication. Our premium WPC facade installation brings dignified aesthetics to this military hospitality facility. The materials combine exceptional durability with minimal maintenance requirements—perfectly aligned with the exacting standards of armed forces infrastructure while creating an impressive, professional appearance.",
+    // tags: ["Military", "Durable Facades", "Low Maintenance"]
+    // },
+    // project10: {
+    // name: "Hallabat Palace – Ministry of Tourism",
+    // desc: "Honoring history with modern innovation. At this ancient desert castle, we installed entrance pergolas that balance contemporary functionality with deep respect for archaeological significance. Our synthetic wood structures provide visitor-friendly shade while harmonizing seamlessly with the palace's timeless character and historical importance.",
+    // tags: ["Historical Site", "Tourism", "Cultural Heritage"]
+    // },
+    // project11: {
+    // name: "The Blessed Tree – Ministry of Awqaf",
+    // desc: "A sacred mission requiring reverent craftsmanship. We provided synthetic wood cladding for the protective metal frame surrounding Jordan's holy Blessed Tree. This spiritually significant project combines cutting-edge material technology with deep respect for religious heritage, preserving this landmark for future generations while maintaining natural aesthetics.",
+    // tags: ["Religious Site", "Heritage Protection", "Sacred Architecture"]
+    // },
+    // project12: {
+    // name: "German Jordanian University",
+    // desc: "Shaping tomorrow's learning spaces today. Our synthetic wood installation on metal pergola structures creates comfortable outdoor study environments across campus. These modern shading solutions enhance student wellbeing while reflecting the university's forward-thinking commitment to sustainable, innovative building practices and academic excellence.",
+    // tags: ["Campus Design", "Academic", "Outdoor Learning"]
+    // }
+    // },
     },
     products: {
     featuredTitle: "Featured Products",
@@ -206,69 +207,86 @@ const translations = {
     pageSubtitle: "حلول WPC الرائدة في جميع أنحاء الأردن",
     guestHouse: "مشروع بيت الضيافة",
     blessedTree: "الشجرة المباركة - الأوقاف",
-    crownePlaza: "كراون بلازا البحر الميت",
+    ChaletTeresa: "شاليهات تيريزا",
     projectNumber: "المشروع",
     // تفاصيل كل مشروع
     project1: {
-    name: "نادي الغوص الملكي",
-    desc: "تحفة معمارية فوق البحر الأحمر. قمنا بتصميم وتركيب جسر مذهل فوق المياه باستخدام مواد WPC الفاخرة، لنخلق اتصالاً سلساً بين البر والبحر. هذا الهيكل البحري الممتاز يجمع بين جماليات الخشب الطبيعي والمتانة المتطورة، مصمم لمقاومة ظروف المياه المالحة القاسية مع توفير ممر خلاب للزوار فوق المياه الكريستالية.",
-    tags: ["إنشاءات بحرية", "جسر WPC", "مقاوم للمياه المالحة"]
+        name: "بيت الضيافة البتراء",
+        desc: "حيث يلتقي التراث العريق بالراحة العصرية. قمنا بتوريد وتركيب أنظمة برجولات WPC متكاملة شملت غرف الضيوف ومناطق المطاعم والمساحات الخارجية. نُفّذ المشروع بعناية ليعكس الطابع المعماري الفريد لمنطقة البتراء، مع توفير حلول تظليل متينة ومستدامة تضمن راحة الزوار وتحافظ على هوية الموقع التاريخية.",
+        tags: ["ضيافة", "أنظمة برجولات", "موقع تراثي"]
     },
     project2: {
-    name: "شاليهات الأمن العام",
-    desc: "تحويل المساحات الترفيهية بأناقة مستدامة. قام فريقنا بتوريد الخشب الصناعي الفاخر لمميزات الجزيرة المائية ضمن هذا المجمع الحصري. يعرض هذا المشروع خبرتنا في إنشاء بيئات مائية راقية حيث يلتقي الجمال بالوظيفة العملية، باستخدام مواد مقاومة للعوامل الجوية تحافظ على مظهرها النقي عاماً بعد عام.",
-    tags: ["مميزات مائية", "سكني", "WPC فاخر"]
+        name: "الشجرة المباركة – وزارة الأوقاف",
+        desc: "مشروع ذو طابع ديني وتراثي خاص تطلب أعلى درجات الدقة والاحترام. قمنا بتنفيذ أعمال كسوة من الخشب الصناعي للهيكل المعدني الواقي المحيط بالشجرة المباركة في الأردن، باستخدام مواد حديثة تضمن الحماية والاستدامة مع المحافظة على المظهر الطبيعي والرمزية الدينية والتاريخية للموقع.",
+        tags: ["موقع ديني", "حماية تراث", "عمارة مقدسة"]
     },
     project3: {
-    name: "بيت الضيافة البتراء",
-    desc: "حيث يلتقي التراث العريق بالراحة العصرية. تركيب شامل لأنظمة برجولات WPC تغطي غرف الضيوف ومساحات المطاعم والصالات الخارجية. أنشأنا ملاذات مظللة تكرّم إرث البتراء الخالد مع تقديم رفاهية معاصرة. توفر حلولنا حماية دائمة من شمس الصحراء، مما يضمن راحة الضيوف في واحدة من أكثر وجهات الأردن شهرة.",
-    tags: ["ضيافة", "أنظمة برجولات", "موقع تراثي"]
-    },
-    project4: {
-    name: "كراون بلازا البحر الميت",
-    desc: "فخامة تدوم في أخفض نقطة على الأرض. تركيبنا لبرجولات الخشب الصناعي وأنظمة الأرضيات الفاخرة في هذا المنتجع الخمس نجوم تطلب مواد قادرة على تحمل البيئة الغنية بالمعادن الفريدة للبحر الميت. قدمنا أسطح أنيقة مقاومة للانزلاق وهياكل تظليل مذهلة تحافظ على جمالها مع توفير مساحات آمنة ومريحة للضيوف للاسترخاء.",
-    tags: ["منتجع فاخر", "أرضيات", "تصميم ساحلي"]
-    },
-    project5: {
-    name: "المركز الوطني لكلاب الشرطة",
-    desc: "تميز مصمم خصيصاً لأبطال الكلاب البوليسية في الأردن. من المفهوم إلى الإنجاز، صممنا وركبنا هيكل برجولا مخصص للمبنى الإداري الرئيسي. هذا الحل التظليلي الوظيفي والجذاب جمالياً يكمل البيئة المهنية للمنشأة مع توفير حماية متينة خالية من الصيانة لسنوات من الخدمة.",
-    tags: ["حكومي", "تصميم مخصص", "مؤسسي"]
-    },
-    project6: {
-    name: "المدرسة الأمريكية المجتمعية",
-    desc: "بناء بيئات تعليمية ملهمة. حل الواجهة الكامل لدينا يجلب الأناقة المعمارية الحديثة لهذه المؤسسة التعليمية. صممنا وركبنا كسوة WPC قليلة الصيانة تخلق تأثيراً بصرياً مع تلبية معايير السلامة الصارمة وتوفير عزل حراري متفوق لكفاءة الطاقة المحسنة وراحة الطلاب.",
-    tags: ["تعليم", "أنظمة واجهات", "كفاءة طاقة"]
-    },
-    project7: {
-    name: "منشأة الأمم المتحدة",
-    desc: "تلبية المعايير العالمية للتميز الدولي. تطلب هذا المشروع المرموق اهتماماً دقيقاً بالتفاصيل والتزاماً صارماً بمواصفات الأمم المتحدة. وردنا وركبنا مواد WPC عالية الجودة تعكس التزام المنظمة بالاستدامة مع تقديم المتانة والرقي الجمالي المتوقع من المنشآت الدولية.",
-    tags: ["دولي", "مستدام", "جودة فاخرة"]
-    },
-    project8: {
-    name: "فندق أبريل العقبة",
-    desc: "انطباعات أولى تدوم للأبد. ابتكرنا ونفذنا برجولا المدخل الرئيسي المميز للفندق - بيان معماري مذهل يرحب بالضيوف بأناقة. بدمج جماليات التصميم المعاصر مع بناء WPC القوي، توفر هذه الميزة ظلاً أساسياً في مناخ العقبة المشمس مع خلق تجربة وصول لا تُنسى.",
-    tags: ["مدخل فندق", "تصميم مميز", "العقبة"]
-    },
-    project9: {
-    name: "فندق القوات المسلحة",
-    desc: "حيث تلتقي القوة بالرقي. تركيب واجهة WPC الفاخر لدينا يجلب جماليات محترمة لهذا المرفق الضيافي العسكري. تجمع المواد بين المتانة الاستثنائية ومتطلبات الصيانة الدنيا - متوافقة تماماً مع المعايير الصارمة للبنية التحتية للقوات المسلحة مع خلق مظهر مهني مذهل.",
-    tags: ["عسكري", "واجهات متينة", "صيانة منخفضة"]
-    },
-    project10: {
-    name: "قصر الحلابات - وزارة السياحة",
-    desc: "تكريم التاريخ بالابتكار الحديث. في هذه القلعة الصحراوية القديمة، ركبنا برجولات المدخل التي توازن الوظيفة المعاصرة مع الاحترام العميق للأهمية الأثرية. توفر هياكل الخشب الصناعي لدينا ظلاً صديقاً للزوار مع الانسجام التام مع طابع القصر الخالد وأهميته التاريخية.",
-    tags: ["موقع تاريخي", "سياحة", "تراث ثقافي"]
-    },
-    project11: {
-    name: "الشجرة المباركة - وزارة الأوقاف",
-    desc: "مهمة مقدسة تتطلب حرفية محترمة. قدمنا كسوة الخشب الصناعي للإطار المعدني الواقي المحيط بشجرة الأردن المباركة المقدسة. يجمع هذا المشروع الروحي الهام بين تكنولوجيا المواد المتطورة والاحترام العميق للتراث الديني، للحفاظ على هذا المعلم للأجيال القادمة مع الحفاظ على الجماليات الطبيعية.",
-    tags: ["موقع ديني", "حماية تراث", "عمارة مقدسة"]
-    },
-    project12: {
-    name: "الجامعة الألمانية الأردنية",
-    desc: "تشكيل مساحات التعلم للغد اليوم. تركيب الخشب الصناعي لدينا على هياكل البرجولا المعدنية يخلق بيئات دراسة خارجية مريحة عبر الحرم الجامعي. تعزز حلول التظليل الحديثة هذه رفاهية الطلاب مع عكس التزام الجامعة التقدمي بممارسات البناء المستدامة والمبتكرة والتميز الأكاديمي.",
-    tags: ["تصميم حرم جامعي", "أكاديمي", "تعلم خارجي"]
+        name: "شاليه تيريزا",
+        desc: "تنفيذ متكامل لأعمال المظلات والواجهات والتشطيبات الخارجية، صُمم ليعزز جمال المساحات المفتوحة ويوفّر الخصوصية والراحة. يجمع المشروع بين حلول تظليل عملية ولمسات معمارية عصرية، باستخدام مواد WPC متينة ومقاومة للعوامل الجوية، لخلق بيئة خارجية أنيقة ومستدامة تناسب أجواء الشاليه الهادئة.",
+        tags: ["شاليهات", "مظلات", "أعمال خارجية"]
     }
+    
+    
+    // project1: {
+    // name: "نادي الغوص الملكي",
+    // desc: "تحفة معمارية فوق البحر الأحمر. قمنا بتصميم وتركيب جسر مذهل فوق المياه باستخدام مواد WPC الفاخرة، لنخلق اتصالاً سلساً بين البر والبحر. هذا الهيكل البحري الممتاز يجمع بين جماليات الخشب الطبيعي والمتانة المتطورة، مصمم لمقاومة ظروف المياه المالحة القاسية مع توفير ممر خلاب للزوار فوق المياه الكريستالية.",
+    // tags: ["إنشاءات بحرية", "جسر WPC", "مقاوم للمياه المالحة"]
+    // },
+    // project2: {
+    // name: "شاليهات الأمن العام",
+    // desc: "تحويل المساحات الترفيهية بأناقة مستدامة. قام فريقنا بتوريد الخشب الصناعي الفاخر لمميزات الجزيرة المائية ضمن هذا المجمع الحصري. يعرض هذا المشروع خبرتنا في إنشاء بيئات مائية راقية حيث يلتقي الجمال بالوظيفة العملية، باستخدام مواد مقاومة للعوامل الجوية تحافظ على مظهرها النقي عاماً بعد عام.",
+    // tags: ["مميزات مائية", "سكني", "WPC فاخر"]
+    // },
+    // project3: {
+    // name: "بيت الضيافة البتراء",
+    // desc: "حيث يلتقي التراث العريق بالراحة العصرية. تركيب شامل لأنظمة برجولات WPC تغطي غرف الضيوف ومساحات المطاعم والصالات الخارجية. أنشأنا ملاذات مظللة تكرّم إرث البتراء الخالد مع تقديم رفاهية معاصرة. توفر حلولنا حماية دائمة من شمس الصحراء، مما يضمن راحة الضيوف في واحدة من أكثر وجهات الأردن شهرة.",
+    // tags: ["ضيافة", "أنظمة برجولات", "موقع تراثي"]
+    // },
+    // project4: {
+    // name: "كراون بلازا البحر الميت",
+    // desc: "فخامة تدوم في أخفض نقطة على الأرض. تركيبنا لبرجولات الخشب الصناعي وأنظمة الأرضيات الفاخرة في هذا المنتجع الخمس نجوم تطلب مواد قادرة على تحمل البيئة الغنية بالمعادن الفريدة للبحر الميت. قدمنا أسطح أنيقة مقاومة للانزلاق وهياكل تظليل مذهلة تحافظ على جمالها مع توفير مساحات آمنة ومريحة للضيوف للاسترخاء.",
+    // tags: ["منتجع فاخر", "أرضيات", "تصميم ساحلي"]
+    // },
+    // project5: {
+    // name: "المركز الوطني لكلاب الشرطة",
+    // desc: "تميز مصمم خصيصاً لأبطال الكلاب البوليسية في الأردن. من المفهوم إلى الإنجاز، صممنا وركبنا هيكل برجولا مخصص للمبنى الإداري الرئيسي. هذا الحل التظليلي الوظيفي والجذاب جمالياً يكمل البيئة المهنية للمنشأة مع توفير حماية متينة خالية من الصيانة لسنوات من الخدمة.",
+    // tags: ["حكومي", "تصميم مخصص", "مؤسسي"]
+    // },
+    // project6: {
+    // name: "المدرسة الأمريكية المجتمعية",
+    // desc: "بناء بيئات تعليمية ملهمة. حل الواجهة الكامل لدينا يجلب الأناقة المعمارية الحديثة لهذه المؤسسة التعليمية. صممنا وركبنا كسوة WPC قليلة الصيانة تخلق تأثيراً بصرياً مع تلبية معايير السلامة الصارمة وتوفير عزل حراري متفوق لكفاءة الطاقة المحسنة وراحة الطلاب.",
+    // tags: ["تعليم", "أنظمة واجهات", "كفاءة طاقة"]
+    // },
+    // project7: {
+    // name: "منشأة الأمم المتحدة",
+    // desc: "تلبية المعايير العالمية للتميز الدولي. تطلب هذا المشروع المرموق اهتماماً دقيقاً بالتفاصيل والتزاماً صارماً بمواصفات الأمم المتحدة. وردنا وركبنا مواد WPC عالية الجودة تعكس التزام المنظمة بالاستدامة مع تقديم المتانة والرقي الجمالي المتوقع من المنشآت الدولية.",
+    // tags: ["دولي", "مستدام", "جودة فاخرة"]
+    // },
+    // project8: {
+    // name: "فندق أبريل العقبة",
+    // desc: "انطباعات أولى تدوم للأبد. ابتكرنا ونفذنا برجولا المدخل الرئيسي المميز للفندق - بيان معماري مذهل يرحب بالضيوف بأناقة. بدمج جماليات التصميم المعاصر مع بناء WPC القوي، توفر هذه الميزة ظلاً أساسياً في مناخ العقبة المشمس مع خلق تجربة وصول لا تُنسى.",
+    // tags: ["مدخل فندق", "تصميم مميز", "العقبة"]
+    // },
+    // project9: {
+    // name: "فندق القوات المسلحة",
+    // desc: "حيث تلتقي القوة بالرقي. تركيب واجهة WPC الفاخر لدينا يجلب جماليات محترمة لهذا المرفق الضيافي العسكري. تجمع المواد بين المتانة الاستثنائية ومتطلبات الصيانة الدنيا - متوافقة تماماً مع المعايير الصارمة للبنية التحتية للقوات المسلحة مع خلق مظهر مهني مذهل.",
+    // tags: ["عسكري", "واجهات متينة", "صيانة منخفضة"]
+    // },
+    // project10: {
+    // name: "قصر الحلابات - وزارة السياحة",
+    // desc: "تكريم التاريخ بالابتكار الحديث. في هذه القلعة الصحراوية القديمة، ركبنا برجولات المدخل التي توازن الوظيفة المعاصرة مع الاحترام العميق للأهمية الأثرية. توفر هياكل الخشب الصناعي لدينا ظلاً صديقاً للزوار مع الانسجام التام مع طابع القصر الخالد وأهميته التاريخية.",
+    // tags: ["موقع تاريخي", "سياحة", "تراث ثقافي"]
+    // },
+    // project11: {
+    // name: "الشجرة المباركة - وزارة الأوقاف",
+    // desc: "مهمة مقدسة تتطلب حرفية محترمة. قدمنا كسوة الخشب الصناعي للإطار المعدني الواقي المحيط بشجرة الأردن المباركة المقدسة. يجمع هذا المشروع الروحي الهام بين تكنولوجيا المواد المتطورة والاحترام العميق للتراث الديني، للحفاظ على هذا المعلم للأجيال القادمة مع الحفاظ على الجماليات الطبيعية.",
+    // tags: ["موقع ديني", "حماية تراث", "عمارة مقدسة"]
+    // },
+    // project12: {
+    // name: "الجامعة الألمانية الأردنية",
+    // desc: "تشكيل مساحات التعلم للغد اليوم. تركيب الخشب الصناعي لدينا على هياكل البرجولا المعدنية يخلق بيئات دراسة خارجية مريحة عبر الحرم الجامعي. تعزز حلول التظليل الحديثة هذه رفاهية الطلاب مع عكس التزام الجامعة التقدمي بممارسات البناء المستدامة والمبتكرة والتميز الأكاديمي.",
+    // tags: ["تصميم حرم جامعي", "أكاديمي", "تعلم خارجي"]
+    // }
     },
     products: {
     featuredTitle: "منتجات مميزة",
