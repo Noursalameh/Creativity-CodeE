@@ -24,10 +24,10 @@ function showPage(pageName) {
 
 // ===== Scroll to About =====
 function scrollToAbout() {
-    document.getElementById('about-section')?.scrollIntoView({ behavior: 'smooth' });
-    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-    document.getElementById('nav-about')?.classList.add('active');
-    toggleMenu();
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    // إغلاق المينو
+    document.getElementById('navLinks').classList.remove('active');
+    document.getElementById('menuToggle').classList.remove('active');
 }
 
 // ===== Mobile Menu Toggle =====
