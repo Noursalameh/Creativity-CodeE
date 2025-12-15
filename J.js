@@ -22,12 +22,42 @@ function showPage(pageName) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ===== Scroll to About =====
+// ===== Scroll to About (FIXED) =====
 function scrollToAbout() {
-    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-    // إغلاق المينو
+    const homePage = document.getElementById('home-page');
+    const aboutSection = document.getElementById('about-section');
+    
+    // إغلاق المينو أولاً
     document.getElementById('navLinks').classList.remove('active');
     document.getElementById('menuToggle').classList.remove('active');
+    
+    // إذا مش في الصفحة الرئيسية، روح عليها أولاً
+    if (!homePage || !homePage.classList.contains('active')) {
+        showPage('home');
+        
+        // انتظر حتى تتحمل الصفحة، ثم scroll
+        setTimeout(() => {
+            if (aboutSection) {
+                aboutSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }, 200);
+    } else {
+        // إذا أصلاً في home، scroll مباشرة
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+    
+    // تحديث active state للـ nav
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    const homeNav = document.getElementById('nav-home');
+    if (homeNav) homeNav.classList.add('active');
 }
 
 // ===== Mobile Menu Toggle =====
