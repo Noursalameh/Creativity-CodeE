@@ -295,9 +295,9 @@ const translations = {
     pageSubtitle: "حلول WPC متميزة لكل الاستخدامات",
     pdfBtn: "عرض قائمة الأسعار الكاملة",
     // أسماء المنتجات تبقى بالإنجليزية
-    deckingCladdingA: "Decking Cladding",
+    HOLLOWBARC: "HOLLOW BAR (C)",
     solidBar: "Solid Bar",
-    column: "Column",
+    HOLLOWBARA: "HOLLOW BAR (A)",
     specs: {
     size: "المقاس:",
     width: "العرض:",
