@@ -1,0 +1,147 @@
+[debug] [2025-12-15T08:41:09.407Z] ----------------------------------------------------------------------
+[debug] [2025-12-15T08:41:09.414Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-12-15T08:41:09.415Z] CLI Version:   15.0.0
+[debug] [2025-12-15T08:41:09.415Z] Platform:      win32
+[debug] [2025-12-15T08:41:09.415Z] Node Version:  v24.12.0
+[debug] [2025-12-15T08:41:09.416Z] Time:          Mon Dec 15 2025 11:41:09 GMT+0300 (GMT+03:00)
+[debug] [2025-12-15T08:41:09.416Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-15T08:41:13.579Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-15T08:41:13.580Z] > authorizing via signed-in user (creativitycode970@gmail.com)
+[debug] [2025-12-15T08:41:13.580Z] [iam] checking project creativitycode-805b7 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-12-15T08:41:13.582Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:41:13.582Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:41:13.584Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions [none]
+[debug] [2025-12-15T08:41:13.584Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions x-goog-quota-user=projects/creativitycode-805b7
+[debug] [2025-12-15T08:41:13.584Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-12-15T08:41:14.493Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions 200
+[debug] [2025-12-15T08:41:14.494Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-12-15T08:41:14.497Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:41:14.498Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:41:14.500Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/creativitycode-805b7 [none]
+[debug] [2025-12-15T08:41:15.031Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/creativitycode-805b7 200
+[debug] [2025-12-15T08:41:15.031Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/creativitycode-805b7 {"projectId":"creativitycode-805b7","projectNumber":"815093642578","displayName":"CreativityCode","name":"projects/creativitycode-805b7","resources":{"hostingSite":"creativitycode-805b7"},"state":"ACTIVE","etag":"1_4d765d78-f38f-4b17-ac84-4217083b3ec4"}
+[info] 
+[info] === Deploying to 'creativitycode-805b7'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-12-15T08:41:15.047Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:41:15.047Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:41:15.048Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/creativitycode-805b7/versions [none]
+[debug] [2025-12-15T08:41:15.048Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/creativitycode-805b7/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-12-15T08:41:16.647Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/creativitycode-805b7/versions 200
+[debug] [2025-12-15T08:41:16.647Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/creativitycode-805b7/versions {"name":"projects/815093642578/sites/creativitycode-805b7/versions/b35fdce7fe0d58b2","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[creativitycode-805b7]: beginning deploy... 
+[info] i  hosting[creativitycode-805b7]: found 164735 files in . 
+[debug] [2025-12-15T08:42:14.799Z] [hosting] uploading with 200 concurrency
+[debug] [2025-12-15T08:42:14.800Z] [hosting] hash cache [] not populated
+[debug] [2025-12-15T08:42:14.893Z] Error: EBUSY: resource busy or locked, open 'C:\Users\USER\ntuser.dat.LOG2'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-15T08:42:14.895Z] Error: EBUSY: resource busy or locked, open 'C:\Users\USER\ntuser.dat.LOG1'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-15T08:42:14.897Z] Error: EBUSY: resource busy or locked, open 'C:\Users\USER\NTUSER.DAT'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-15T08:42:14.912Z] Error: EISDIR: illegal operation on a directory, read
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-15T08:50:39.922Z] ----------------------------------------------------------------------
+[debug] [2025-12-15T08:50:39.927Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-12-15T08:50:39.928Z] CLI Version:   15.0.0
+[debug] [2025-12-15T08:50:39.928Z] Platform:      win32
+[debug] [2025-12-15T08:50:39.928Z] Node Version:  v24.12.0
+[debug] [2025-12-15T08:50:39.929Z] Time:          Mon Dec 15 2025 11:50:39 GMT+0300 (GMT+03:00)
+[debug] [2025-12-15T08:50:39.929Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-15T08:50:43.489Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-15T08:50:43.490Z] > authorizing via signed-in user (creativitycode970@gmail.com)
+[debug] [2025-12-15T08:50:43.490Z] [iam] checking project creativitycode-805b7 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-12-15T08:50:43.492Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:50:43.492Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:50:43.494Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions [none]
+[debug] [2025-12-15T08:50:43.494Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions x-goog-quota-user=projects/creativitycode-805b7
+[debug] [2025-12-15T08:50:43.494Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-12-15T08:50:44.392Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions 200
+[debug] [2025-12-15T08:50:44.393Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-12-15T08:50:44.394Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:50:44.394Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:50:44.394Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/creativitycode-805b7 [none]
+[debug] [2025-12-15T08:50:44.891Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/creativitycode-805b7 200
+[debug] [2025-12-15T08:50:44.891Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/creativitycode-805b7 {"projectId":"creativitycode-805b7","projectNumber":"815093642578","displayName":"CreativityCode","name":"projects/creativitycode-805b7","resources":{"hostingSite":"creativitycode-805b7"},"state":"ACTIVE","etag":"1_4d765d78-f38f-4b17-ac84-4217083b3ec4"}
+[info] 
+[info] === Deploying to 'creativitycode-805b7'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-12-15T08:50:44.903Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:50:44.903Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:50:44.903Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/creativitycode-805b7/versions [none]
+[debug] [2025-12-15T08:50:44.903Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/creativitycode-805b7/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-12-15T08:50:46.155Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/creativitycode-805b7/versions 200
+[debug] [2025-12-15T08:50:46.156Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/creativitycode-805b7/versions {"name":"projects/815093642578/sites/creativitycode-805b7/versions/2ea6e591cde3b1fc","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[creativitycode-805b7]: beginning deploy... 
+[info] i  hosting[creativitycode-805b7]: found 164740 files in . 
+[debug] [2025-12-15T08:51:42.088Z] [hosting] uploading with 200 concurrency
+[debug] [2025-12-15T08:51:42.090Z] [hosting] hash cache [] not populated
+[debug] [2025-12-15T08:51:42.181Z] Error: EBUSY: resource busy or locked, open 'C:\Users\USER\ntuser.dat.LOG2'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-15T08:51:42.183Z] Error: EBUSY: resource busy or locked, open 'C:\Users\USER\ntuser.dat.LOG1'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-15T08:51:42.185Z] Error: EBUSY: resource busy or locked, open 'C:\Users\USER\NTUSER.DAT'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-15T08:51:42.211Z] Error: EISDIR: illegal operation on a directory, read
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-15T08:53:06.693Z] ----------------------------------------------------------------------
+[debug] [2025-12-15T08:53:06.700Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-12-15T08:53:06.700Z] CLI Version:   15.0.0
+[debug] [2025-12-15T08:53:06.700Z] Platform:      win32
+[debug] [2025-12-15T08:53:06.701Z] Node Version:  v24.12.0
+[debug] [2025-12-15T08:53:06.701Z] Time:          Mon Dec 15 2025 11:53:06 GMT+0300 (GMT+03:00)
+[debug] [2025-12-15T08:53:06.701Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-12-15T08:53:10.282Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-12-15T08:53:10.282Z] > authorizing via signed-in user (creativitycode970@gmail.com)
+[debug] [2025-12-15T08:53:10.283Z] [iam] checking project creativitycode-805b7 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-12-15T08:53:10.284Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:53:10.285Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:53:10.286Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions [none]
+[debug] [2025-12-15T08:53:10.286Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions x-goog-quota-user=projects/creativitycode-805b7
+[debug] [2025-12-15T08:53:10.286Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-12-15T08:53:11.238Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions 200
+[debug] [2025-12-15T08:53:11.239Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/creativitycode-805b7:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-12-15T08:53:11.240Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:53:11.240Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:53:11.240Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/creativitycode-805b7 [none]
+[debug] [2025-12-15T08:53:11.723Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/creativitycode-805b7 200
+[debug] [2025-12-15T08:53:11.723Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/creativitycode-805b7 {"projectId":"creativitycode-805b7","projectNumber":"815093642578","displayName":"CreativityCode","name":"projects/creativitycode-805b7","resources":{"hostingSite":"creativitycode-805b7"},"state":"ACTIVE","etag":"1_4d765d78-f38f-4b17-ac84-4217083b3ec4"}
+[info] 
+[info] === Deploying to 'creativitycode-805b7'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-12-15T08:53:11.738Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:53:11.739Z] Checked if tokens are valid: true, expires at: 1765790656030
+[debug] [2025-12-15T08:53:11.739Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/creativitycode-805b7/versions [none]
+[debug] [2025-12-15T08:53:11.739Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/creativitycode-805b7/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-12-15T08:53:12.891Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/creativitycode-805b7/versions 200
+[debug] [2025-12-15T08:53:12.892Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/creativitycode-805b7/versions {"name":"projects/815093642578/sites/creativitycode-805b7/versions/cb66ef298b9877fe","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[creativitycode-805b7]: beginning deploy... 
+[info] i  hosting[creativitycode-805b7]: found 164742 files in . 
+[debug] [2025-12-15T08:54:02.722Z] [hosting] uploading with 200 concurrency
+[debug] [2025-12-15T08:54:02.724Z] [hosting] hash cache [] not populated
+[debug] [2025-12-15T08:54:02.802Z] Error: EBUSY: resource busy or locked, open 'C:\Users\USER\ntuser.dat.LOG2'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-15T08:54:02.804Z] Error: EBUSY: resource busy or locked, open 'C:\Users\USER\ntuser.dat.LOG1'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-15T08:54:02.805Z] Error: EBUSY: resource busy or locked, open 'C:\Users\USER\NTUSER.DAT'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-12-15T08:54:02.839Z] Error: EISDIR: illegal operation on a directory, read
+[error] 
+[error] Error: An unexpected error has occurred.
