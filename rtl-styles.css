@@ -1,154 +1,419 @@
-/* =====================================================
-تصحيحات التنسيق للغة العربية - RTL Fixes (Enhanced Responsive)
-===================================================== */
 
-/* تطبيق خط عربي احترافي */
 body.rtl {
-    font-family: 'Tajawal', 'Cairo', 'Segoe UI', sans-serif !important;
+    font-family: 'Tajawal', 'Cairo', 'IBM Plex Sans Arabic', -apple-system, sans-serif !important;
+    text-align: right !important;
+    direction: rtl !important;
 }
 
-/* ===== تصحيح الهيدر والقوائم ===== */
-body.rtl .nav-links {
+body.rtl * {
+    text-align: inherit;
+    direction: inherit;
+}
+
+/* ===== إعدادات عامة للنصوص ===== */
+body.rtl h1, body.rtl h2, body.rtl h3, 
+body.rtl h4, body.rtl h5, body.rtl h6 {
+    font-weight: 700;
+    letter-spacing: 0;
+    text-align: right;
+}
+
+body.rtl p, body.rtl li, body.rtl a,
+body.rtl span, body.rtl div {
+    font-weight: 400;
+    line-height: 1.8;
+    text-align: right;
+}
+
+body.rtl strong {
+    font-weight: 700;
+}
+
+body.rtl button, body.rtl .btn {
+    font-weight: 500;
+}
+
+/* ===== الهيدر والقائمة ===== */
+body.rtl header {
+    direction: rtl;
+}
+
+body.rtl nav {
+    display: flex;
     flex-direction: row-reverse;
-}
-
-body.rtl .nav-links li {
-    margin-left: 0;
-    margin-right: 2rem;
-}
-
-body.rtl .nav-links li:last-child {
-    margin-right: 0;
-}
-
-body.rtl .lang-btn {
-    margin-right: auto;
-    margin-left: 0;
-}
-
-body.rtl .menu-toggle {
-    left: 20px;
-    right: auto;
+    justify-content: space-between;
+    align-items: center;
+    direction: rtl;
+    width: 100%;
 }
 
 body.rtl .logo {
     margin-right: 0;
-    margin-left: auto;
+    margin-left: 0;
+    order: 1;
+}
+
+body.rtl .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    direction: rtl;
+    order: 2;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+body.rtl .nav-links li {
+    margin: 0 1.25rem;
+    display: inline-block;
+}
+
+body.rtl .nav-links li:first-child {
+    margin-right: 0;
+}
+
+body.rtl .nav-links li:last-child {
+    margin-left: 0;
+}
+
+body.rtl .nav-links a {
+    text-align: center;
+    display: inline-block;
+    padding: 0.5rem 0;
+}
+
+body.rtl .lang-btn {
+    margin-right: 0;
+    margin-left: 0;
+    order: 3;
+}
+
+body.rtl .menu-toggle {
+    right: auto;
+    left: 20px;
+    order: 0;
 }
 
 /* ===== قسم Hero ===== */
-body.rtl .hero-content {
+body.rtl .hero {
+    direction: rtl;
     text-align: right;
 }
 
-body.rtl .hero-cta-group {
-    justify-content: flex-start;
+body.rtl .hero-container {
+    direction: rtl;
 }
 
-body.rtl .cta-btn-primary svg {
-    transform: rotate(180deg);
-    margin-left: 0;
-    margin-right: 10px;
+body.rtl .hero-content {
+    text-align: center;
+}
+
+body.rtl .hero-badge {
+    text-align: center;
 }
 
 body.rtl .hero-title {
+    text-align: center;
     line-height: 1.3;
 }
 
 body.rtl .hero-subtitle {
-    line-height: 1.6;
+    text-align: center;
+    line-height: 1.7;
 }
 
-/* ===== قسم About ===== */
-body.rtl .about-container {
+body.rtl .hero-cta-group {
+    justify-content: center;
+    direction: rtl;
+}
+
+body.rtl .cta-btn-primary,
+body.rtl .cta-btn-secondary {
     flex-direction: row-reverse;
 }
 
-body.rtl .about-content {
+body.rtl .cta-btn-primary svg,
+body.rtl .cta-btn svg {
+    transform: rotate(180deg);
+    margin-right: 0.8rem;
+    margin-left: 0;
+}
+
+/* ===== قسم Features ===== */
+body.rtl .features-grid {
+    direction: rtl;
+}
+
+body.rtl .feature-card {
     text-align: right;
-    padding-left: 0;
-    padding-right: 3rem;
+}
+
+body.rtl .feature-card h3,
+body.rtl .feature-card p {
+    text-align: center;
+}
+
+/* ===== قسم About ===== */
+body.rtl .about-section {
+    direction: rtl;
+}
+
+body.rtl .about-container {
+    direction: rtl;
+    grid-template-columns: 45% 55%;
+}
+
+body.rtl .about-image {
+    order: 2;
+}
+
+body.rtl .about-content {
+    order: 1;
+    text-align: right;
+    padding-right: 0;
+    padding-left: 3rem;
+}
+
+body.rtl .about-content h2,
+body.rtl .about-content h1 {
+    text-align: right;
+}
+
+body.rtl .about-content p {
+    text-align: right;
+    line-height: 1.9;
 }
 
 body.rtl .about-columns {
+    direction: rtl;
+}
+
+body.rtl .about-column {
+    text-align: right;
+    border-right: 6px solid #c9a961;
+    border-left: none;
+}
+
+body.rtl .about-column h4 {
     text-align: right;
 }
 
-body.rtl .about-column h4,
 body.rtl .about-column p {
     text-align: right;
 }
 
-/* ===== المشاريع ===== */
+body.rtl .cta-row {
+    justify-content: flex-start;
+}
+
+body.rtl .about-badge {
+    left: 20px;
+    right: auto;
+}
+
+/* ===== قسم المشاريع على الصفحة الرئيسية ===== */
+body.rtl .section {
+    direction: rtl;
+}
+
+body.rtl .section-header {
+    text-align: center;
+}
+
+body.rtl .section-header h2,
+body.rtl .section-header p {
+    text-align: center;
+}
+
+body.rtl .projects-grid,
+body.rtl .grid {
+    direction: rtl;
+}
+
+body.rtl .project-card {
+    text-align: right;
+}
+
 body.rtl .project-label {
     text-align: right;
+    border-right: 4px solid #c9a961;
+    border-left: none;
 }
 
-body.rtl .project-section {
-    flex-direction: row-reverse;
-}
-
-body.rtl .content-side {
-    text-align: right;
-    padding-left: 0;
-    padding-right: 3rem;
-}
-
-body.rtl .project-tags {
-    justify-content: flex-start;
+/* ===== صفحة المشاريع الكاملة ===== */
+body.rtl #project-page {
+    direction: rtl;
 }
 
 body.rtl .project-page-container {
     direction: rtl;
 }
 
-body.rtl .project-number,
-body.rtl .project-title,
-body.rtl .project-description {
-    text-align: right;
+body.rtl .hero-section {
+    text-align: center;
+    direction: rtl;
 }
 
-body.rtl .project-description {
-    line-height: 1.8;
+body.rtl .hero-section .hero-title,
+body.rtl .hero-section .hero-subtitle {
+    text-align: center;
 }
 
-body.rtl .project-grid,
+body.rtl .projects-wrapper {
+    direction: rtl;
+}
+
+body.rtl .project-section {
+    direction: rtl;
+}
+
+body.rtl .project-section:nth-child(odd) {
+    grid-template-columns: 1fr 1fr;
+}
+
+body.rtl .project-section:nth-child(even) {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+}
+
+body.rtl .project-section:nth-child(even) .images-side {
+    order: 2;
+}
+
+body.rtl .project-section:nth-child(even) .content-side {
+    order: 1;
+}
+
 body.rtl .images-side {
     direction: rtl;
 }
 
-/* ===== المنتجات ===== */
-body.rtl .product-info,
-body.rtl .product-info h3,
-body.rtl .product-specs,
-body.rtl .product-specs p,
-body.rtl .price-tag {
+body.rtl .project-grid {
+    direction: rtl;
+}
+
+body.rtl .content-side {
+    text-align: right;
+    padding-right: 0;
+    padding-left: 3rem;
+}
+
+body.rtl .project-number {
+    text-align: right;
+}
+
+body.rtl .project-title {
+    text-align: right;
+}
+
+body.rtl .project-title::after {
+    right: 0;
+    left: auto;
+}
+
+body.rtl .project-description {
+    text-align: right;
+    line-height: 1.9;
+}
+
+body.rtl .project-tags {
+    justify-content: flex-start;
+    direction: rtl;
+}
+
+body.rtl .tag {
+    text-align: center;
+}
+
+/* ===== قسم المنتجات ===== */
+body.rtl .products-section,
+body.rtl .products-page {
+    direction: rtl;
+}
+
+body.rtl .products-grid {
+    direction: rtl;
+}
+
+body.rtl .product-card {
+    text-align: right;
+}
+
+body.rtl .product-info {
     text-align: right;
 }
 
 body.rtl .product-info h3 {
+    text-align: center;
     direction: ltr;
     font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
-body.rtl .price-tag,
-body.rtl .product-specs p {
-    direction: ltr;
-    unicode-bidi: plaintext;
+body.rtl .product-specs {
+    direction: rtl;
+    text-align: right;
 }
 
-/* ===== أزرار PDF ===== */
+body.rtl .product-specs p {
+    direction: rtl;
+    text-align: right;
+    justify-content: space-between;
+}
+
+body.rtl .product-specs strong {
+    text-align: right;
+}
+
+body.rtl .product-specs span {
+    text-align: left;
+    direction: ltr;
+}
+
+body.rtl .price-tag {
+    text-align: center;
+    direction: rtl;
+}
+
 body.rtl .pdf-preview-btn {
     flex-direction: row-reverse;
+    direction: rtl;
 }
 
 body.rtl .pdf-preview-btn span:first-child {
-    margin-left: 8px;
-    margin-right: 0;
+    margin-right: 8px;
+    margin-left: 0;
 }
 
-/* ===== المعرض ===== */
-body.rtl .gallery-filters {
+/* ===== قسم المعرض ===== */
+body.rtl .gallery-section,
+body.rtl .gallery-preview-section {
+    direction: rtl;
+}
+
+body.rtl .gallery-header {
+    text-align: center;
+}
+
+body.rtl .gallery-title,
+body.rtl .gallery-subtitle {
+    text-align: center;
+}
+
+body.rtl .gallery-filters,
+body.rtl .gallery-preview-filters {
+    direction: rtl;
+    justify-content: center;
+}
+
+body.rtl .filter-btn,
+body.rtl .preview-filter-btn {
+    text-align: center;
+}
+
+body.rtl .gallery-grid,
+body.rtl .gallery-preview-grid {
     direction: rtl;
 }
 
@@ -157,34 +422,58 @@ body.rtl .gallery-preview-category {
     text-align: right;
 }
 
-body.rtl .gallery-header,
-body.rtl .products-page .section-header {
-    text-align: center;
+/* ===== قسم Why Choose Us ===== */
+body.rtl .why-section {
+    direction: rtl;
 }
 
-/* ===== قسم Why ===== */
-body.rtl .why-card,
-body.rtl .why-card h3,
-body.rtl .why-card p {
+body.rtl .why-grid {
+    direction: rtl;
+}
+
+body.rtl .why-card {
     text-align: right;
 }
 
-/* ===== Footer ===== */
-body.rtl footer,
+body.rtl .why-card h3 {
+    text-align: right;
+}
+
+body.rtl .why-card p {
+    text-align: right;
+    line-height: 1.9;
+}
+
+/* ===== الفوتر ===== */
+body.rtl footer {
+    direction: rtl;
+}
+
 body.rtl .footer-content {
     direction: rtl;
 }
 
-body.rtl .footer-section,
-body.rtl .footer-section h3,
+body.rtl .footer-section {
+    text-align: right;
+}
+
+body.rtl .footer-section h3 {
+    text-align: right;
+}
+
 body.rtl .footer-section p,
-body.rtl .footer-section ul,
-body.rtl .footer-section ul li {
+body.rtl .footer-section li {
     text-align: right;
 }
 
 body.rtl .footer-section ul {
     padding-right: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+body.rtl .footer-section li a {
+    text-align: right;
 }
 
 body.rtl .social-links {
@@ -193,88 +482,74 @@ body.rtl .social-links {
 
 /* ===== زر واتساب العائم ===== */
 body.rtl .whatsapp-float {
-    left: 20px;
+    left: 35px;
     right: auto;
 }
 
-/* ===== تحسينات الخط العربي ===== */
-body.rtl h1,
-body.rtl h2,
-body.rtl h3,
-body.rtl h4,
-body.rtl h5,
-body.rtl h6 {
-    font-weight: 700;
-    letter-spacing: 0;
-}
-
-body.rtl p,
-body.rtl li,
-body.rtl a {
-    font-weight: 400;
-    line-height: 1.8;
-}
-
-body.rtl strong {
-    font-weight: 700;
-}
-
-body.rtl button,
-body.rtl .btn {
-    font-weight: 500;
-}
-
-/* ===== تصحيح الأيقونات ===== */
-body.rtl .hero-cta-group svg,
-body.rtl .cta-btn svg {
-    transform: rotate(180deg);
-}
-
-/* ===== تمركز العناصر ===== */
-body.rtl .section-header,
-body.rtl .hero-section {
-    text-align: center;
-}
-
+/* ===== عناصر خاصة ===== */
 body.rtl .divider {
     margin: 1.5rem auto;
 }
 
-body.rtl * {
-    text-align: inherit;
+body.rtl .decorative-circle {
+    left: -150px;
+    right: auto;
 }
 
-body.rtl [dir="ltr"] {
-    direction: ltr;
-    text-align: left;
+body.rtl .project-section:nth-child(even) .decorative-circle {
+    right: -150px;
+    left: auto;
 }
 
 /* =====================================================
-   Responsive Design - الشاشات المتوسطة والصغيرة
+   Responsive Design - التصميم المتجاوب
 ===================================================== */
 
-/* ===== Tablets - الأجهزة اللوحية (768px - 1024px) ===== */
+/* ===== الأجهزة اللوحية (768px - 1024px) ===== */
 @media (max-width: 1024px) {
     body.rtl .nav-links li {
-        margin-right: 1.5rem;
+        margin-left: 1.5rem;
     }
     
     body.rtl .about-content {
-        padding-right: 2rem;
+        padding-left: 2rem;
     }
     
     body.rtl .content-side {
-        padding-right: 2rem;
+        padding-left: 2rem;
     }
 }
 
-/* ===== Mobile Landscape - الموبايل الأفقي (481px - 768px) ===== */
+/* ===== الموبايل (481px - 768px) ===== */
 @media (max-width: 768px) {
     /* الهيدر */
+    body.rtl .menu-toggle {
+        right: 15px;
+        left: auto;
+    }
+    
     body.rtl .nav-links {
-        text-align: right;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        left: auto;
+        width: 85%;
+        max-width: 380px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
         flex-direction: column;
-        align-items: flex-end;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        box-shadow: -15px 0 50px rgba(0,0,0,0.3);
+        transition: right 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+    body.rtl .nav-links.active {
+        right: 0;
     }
     
     body.rtl .nav-links li {
@@ -282,16 +557,12 @@ body.rtl [dir="ltr"] {
         margin-left: 0;
         margin-bottom: 1rem;
         width: 100%;
-        text-align: right;
+        text-align: center;
     }
     
-    body.rtl .menu-toggle {
-        left: 15px;
-    }
-    
-    body.rtl .whatsapp-float {
-        left: 15px;
-        bottom: 80px;
+    body.rtl .nav-links a {
+        text-align: center;
+        width: 100%;
     }
     
     /* Hero Section */
@@ -302,83 +573,111 @@ body.rtl [dir="ltr"] {
     
     body.rtl .hero-title {
         font-size: 2rem;
-        line-height: 1.4;
+        text-align: center;
     }
     
     body.rtl .hero-subtitle {
-        font-size: 1rem;
-        line-height: 1.7;
+        text-align: center;
     }
     
     body.rtl .hero-cta-group {
         justify-content: center;
         flex-direction: column;
-        gap: 1rem;
     }
     
-    body.rtl .hero-cta-group .cta-btn {
+    body.rtl .cta-btn-primary,
+    body.rtl .cta-btn-secondary {
         width: 100%;
         justify-content: center;
+        text-align: center;
     }
     
     /* About Section */
     body.rtl .about-container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+    
+    body.rtl .about-image {
+        order: 1;
     }
     
     body.rtl .about-content {
-        padding-right: 0;
+        order: 2;
+        padding-left: 0;
         text-align: center;
-        margin-bottom: 2rem;
+    }
+    
+    body.rtl .about-content h2,
+    body.rtl .about-content h1,
+    body.rtl .about-content p {
+        text-align: center;
     }
     
     body.rtl .about-columns {
-        text-align: center;
+        grid-template-columns: 1fr;
     }
     
     body.rtl .about-column {
-        margin-bottom: 2rem;
+        text-align: center;
+        border-right: none;
+        border-top: 6px solid #c9a961;
+    }
+    
+    body.rtl .about-column h4,
+    body.rtl .about-column p {
+        text-align: center;
+    }
+    
+    body.rtl .cta-row {
+        justify-content: center;
     }
     
     /* Projects Section */
     body.rtl .project-section {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+    
+    body.rtl .project-section:nth-child(even) .images-side,
+    body.rtl .project-section:nth-child(even) .content-side {
+        order: unset;
     }
     
     body.rtl .content-side {
-        padding-right: 0;
+        padding-left: 0;
         text-align: center;
-        margin-bottom: 2rem;
     }
     
-    body.rtl .project-label,
     body.rtl .project-number,
     body.rtl .project-title,
     body.rtl .project-description {
         text-align: center;
     }
     
+    body.rtl .project-title::after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+    
     body.rtl .project-tags {
         justify-content: center;
-        flex-wrap: wrap;
     }
     
     /* Products Section */
     body.rtl .product-info,
-    body.rtl .product-info h3,
-    body.rtl .product-specs,
-    body.rtl .price-tag {
+    body.rtl .product-specs {
         text-align: center;
     }
     
-    body.rtl .product-info h3 {
+    body.rtl .product-specs p {
+        justify-content: center;
         text-align: center;
     }
     
     /* Gallery */
-    body.rtl .gallery-filters {
-        flex-direction: column;
-        gap: 0.5rem;
+    body.rtl .gallery-filters,
+    body.rtl .gallery-preview-filters {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     
     body.rtl .gallery-category,
@@ -389,43 +688,52 @@ body.rtl [dir="ltr"] {
     /* Why Cards */
     body.rtl .why-card {
         text-align: center;
-        padding: 1.5rem;
+    }
+    
+    body.rtl .why-card h3,
+    body.rtl .why-card p {
+        text-align: center;
     }
     
     /* Footer */
     body.rtl .footer-content {
-        flex-direction: column;
-        text-align: center;
+        grid-template-columns: 1fr;
     }
     
     body.rtl .footer-section {
         text-align: center;
-        margin-bottom: 2rem;
     }
     
     body.rtl .footer-section h3,
     body.rtl .footer-section p,
-    body.rtl .footer-section ul li {
+    body.rtl .footer-section li {
         text-align: center;
     }
     
     body.rtl .social-links {
         justify-content: center;
     }
+    
+    body.rtl .whatsapp-float {
+        left: 15px;
+        bottom: 80px;
+    }
 }
 
-/* ===== Mobile Portrait - الموبايل العمودي (320px - 480px) ===== */
+/* ===== الموبايل العمودي (320px - 480px) ===== */
 @media (max-width: 480px) {
     body.rtl .hero-title {
         font-size: 1.75rem;
-        line-height: 1.3;
+        text-align: center;
     }
     
     body.rtl .hero-subtitle {
         font-size: 0.95rem;
+        text-align: center;
     }
     
-    body.rtl .hero-cta-group .cta-btn {
+    body.rtl .cta-btn-primary,
+    body.rtl .cta-btn-secondary {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
     }
@@ -433,75 +741,110 @@ body.rtl [dir="ltr"] {
     body.rtl .about-content h2,
     body.rtl .section-header h2 {
         font-size: 1.75rem;
-    }
-    
-    body.rtl .about-column h4 {
-        font-size: 1.1rem;
+        text-align: center;
     }
     
     body.rtl .project-title {
         font-size: 1.5rem;
-    }
-    
-    body.rtl .product-info h3 {
-        font-size: 1.2rem;
-    }
-    
-    body.rtl .why-card h3 {
-        font-size: 1.3rem;
-    }
-    
-    body.rtl .footer-section h3 {
-        font-size: 1.1rem;
-    }
-    
-    /* تقليل المسافات */
-    body.rtl .hero-content {
-        padding: 1rem;
-    }
-    
-    body.rtl .why-card {
-        padding: 1.25rem;
+        text-align: center;
     }
     
     body.rtl .whatsapp-float {
         width: 50px;
         height: 50px;
+        left: 18px;
         bottom: 70px;
     }
 }
 
-/* ===== Extra Small Devices - الأجهزة الصغيرة جداً (< 320px) ===== */
+/* ===== الأجهزة الصغيرة جداً (< 320px) ===== */
 @media (max-width: 320px) {
     body.rtl .hero-title {
         font-size: 1.5rem;
+        text-align: center;
     }
     
     body.rtl .hero-subtitle {
         font-size: 0.85rem;
+        text-align: center;
     }
     
-    body.rtl .hero-cta-group .cta-btn {
-        padding: 0.7rem 1.2rem;
-        font-size: 0.85rem;
-    }
-    
-    body.rtl .nav-links li {
+    body.rtl .nav-links a {
         font-size: 0.9rem;
+        text-align: center;
     }
 }
 
-/* ===== Large Screens - الشاشات الكبيرة (> 1440px) ===== */
+/* ===== الشاشات الكبيرة (> 1440px) ===== */
 @media (min-width: 1440px) {
     body.rtl .about-content {
-        padding-right: 4rem;
+        padding-left: 4rem;
     }
     
     body.rtl .content-side {
-        padding-right: 4rem;
+        padding-left: 4rem;
     }
     
     body.rtl .nav-links li {
-        margin-right: 2.5rem;
+        margin-left: 2.5rem;
     }
+}
+
+/* ===== إصلاحات خاصة ===== */
+body.rtl [dir="ltr"] {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+body.rtl .product-info h3[dir="ltr"],
+body.rtl .price-tag span {
+    direction: ltr;
+    text-align: center;
+}
+
+/* تحسين القوائم */
+body.rtl ul, body.rtl ol {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+body.rtl ul li, body.rtl ol li {
+    text-align: right;
+}
+
+/* تحسين الأزرار */
+body.rtl button,
+body.rtl .btn,
+body.rtl a.btn {
+    text-align: center;
+}
+
+/* تحسين النماذج */
+body.rtl input,
+body.rtl textarea,
+body.rtl select {
+    text-align: right;
+    direction: rtl;
+}
+
+/* تحسين الجداول */
+body.rtl table {
+    direction: rtl;
+}
+
+body.rtl th,
+body.rtl td {
+    text-align: right;
+}
+
+/* ===== التأكد من عدم وجود تعارضات ===== */
+body.rtl * {
+    box-sizing: border-box;
+}
+
+body.rtl img {
+    max-width: 100%;
+    height: auto;
 }
