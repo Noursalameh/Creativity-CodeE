@@ -128,16 +128,16 @@ const translations = {
     priceUnit: "JD / Unit"
     },
     gallery: {
-    title: "Our Gallery",
-    subtitle: "Explore our premium WPC projects across different categories",
-    all: "All",
-    flooring: "Flooring",
-    cladding: "Cladding",
-    fences: "Fences",
-    pergola: "Pergola",
-    doors: "Doors",
-    landscaping: "Landscaping",
-    interfaces: "Interface"
+        title: "Our Gallery",
+        subtitle: "Explore our premium WPC projects across different categories",
+        all: "All",
+        flooring: "Flooring",
+        cladding: "Cladding",
+        fences: "Fences",  // ✅ بحرف صغير
+        pergola: "Pergola",
+        doors: "Doors",
+        landscaping: "Landscaping",
+        interfaces: "Interface"
     },
     why: {
     title: "Why Choose Our Products",
@@ -307,17 +307,15 @@ const translations = {
     priceUnit: "دينار / وحدة"
     },
     gallery: {
-    title: "معرض أعمالنا",
-    subtitle: "استكشف مشاريع WPC المتميزة عبر فئات متنوعة",
-    all: "الكل",
-    flooring: "الأرضيات",
-    cladding: "الواجهات",
-    // fences: "الأسوار",
-    Fences:"الأسوار",
-    pergola: "المظليات",
-    doors: "الأبواب",
-    landscaping: "تنسيق الحدائق",
-    // interfaces: "الواجهات"
+        title: "معرض أعمالنا",
+        subtitle: "استكشف مشاريع WPC المتميزة عبر فئات متنوعة",
+        all: "الكل",
+        flooring: "الأرضيات",
+        cladding: "الواجهات",
+        fences: "الأسوار",  
+        pergola: "المظليات",
+        doors: "الأبواب",
+        landscaping: "تنسيق الحدائق"
     },
     why: {
     title: "لماذا تختار منتجاتنا",
