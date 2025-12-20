@@ -300,11 +300,11 @@ body.rtl .project-section {
 }
 
 body.rtl .project-section:nth-child(odd) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 55% 45%;
 }
 
 body.rtl .project-section:nth-child(even) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 45% 55%;
     direction: rtl;
 }
 
@@ -318,16 +318,35 @@ body.rtl .project-section:nth-child(even) .content-side {
 
 body.rtl .images-side {
     direction: rtl;
+    min-height: 500px;
 }
 
 body.rtl .project-grid {
     direction: rtl;
+    gap: 1rem;
+}
+
+body.rtl .project-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+body.rtl .main-image {
+    min-height: 400px;
+}
+
+body.rtl .main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 body.rtl .content-side {
     text-align: right;
     padding-right: 0;
-    padding-left: 3rem;
+    padding-left: 2rem;
 }
 
 body.rtl .project-number {
@@ -787,14 +806,63 @@ body.rtl .price-tag span {
         gap: 2rem;
     }
     
+    body.rtl .project-section:nth-child(odd),
+    body.rtl .project-section:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+    
     body.rtl .project-section:nth-child(even) .images-side,
     body.rtl .project-section:nth-child(even) .content-side {
         order: unset;
     }
     
+    /* تكبير الصور في الموبايل */
+    body.rtl .images-side {
+        min-height: 450px;
+        width: 100%;
+    }
+    
+    body.rtl .main-image {
+        min-height: 400px;
+        width: 100%;
+    }
+    
+    body.rtl .main-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    
+    body.rtl .project-grid {
+        gap: 0.75rem;
+        height: 100%;
+    }
+    
+    body.rtl .project-grid img {
+        width: 100%;
+        min-height: 200px;
+        height: 100%;
+        object-fit: cover;
+    }
+    
     body.rtl .content-side {
         padding-left: 0;
+        padding: 1rem 0.5rem;
         text-align: center;
+    }
+    
+    /* تصغير النص شوي */
+    body.rtl .project-title {
+        font-size: 1.6rem;
+    }
+    
+    body.rtl .project-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    body.rtl .project-number {
+        font-size: 0.9rem;
     }
     
     body.rtl .project-number,
@@ -917,9 +985,30 @@ body.rtl .price-tag span {
         text-align: center;
     }
     
+    /* تكبير الصور أكثر في الموبايل الصغير */
+    body.rtl .images-side {
+        min-height: 380px;
+    }
+    
+    body.rtl .main-image {
+        min-height: 350px;
+    }
+    
+    body.rtl .main-image img {
+        height: 350px;
+    }
+    
+    body.rtl .project-grid img {
+        min-height: 180px;
+    }
+    
     body.rtl .project-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         text-align: center;
+    }
+    
+    body.rtl .project-description {
+        font-size: 0.9rem;
     }
     
     body.rtl .whatsapp-float {
@@ -1055,6 +1144,3 @@ body.rtl a:focus {
     }
 }
 
-/* =====================================================
-   End of RTL Stylesheet
-===================================================== */
