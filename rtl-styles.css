@@ -38,13 +38,36 @@ body.rtl header {
     direction: rtl;
 }
 
+/* ===== RTL NAVBAR FIX ===== */
 body.rtl nav {
+    direction: rtl;
+}
+
+body.rtl .nav-inner,
+body.rtl .nav-container {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     direction: rtl;
-    width: 100%;
+}
+
+/* logo */
+body.rtl .logo {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* nav links */
+body.rtl .nav-links {
+    direction: rtl;
+    display: flex;
+    gap: 2rem;
+}
+
+/* language button */
+body.rtl .lang-btn {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 body.rtl .logo {
@@ -91,10 +114,10 @@ body.rtl .lang-btn {
 }
 
 body.rtl .menu-toggle {
+    left: 15px;
     right: auto;
-    left: 20px;
-    order: 0;
 }
+
 
 /* ===== قسم Hero ===== */
 body.rtl .hero {
@@ -522,11 +545,18 @@ body.rtl .project-section:nth-child(even) .decorative-circle {
 
 /* ===== الموبايل (481px - 768px) ===== */
 @media (max-width: 768px) {
-    /* الهيدر */
-    body.rtl .menu-toggle {
-        right: 15px;
-        left: auto;
+    @media (max-width: 768px) {
+        body.rtl .nav-links {
+            right: auto;
+            left: -100%;
+            transition: left 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+        }
+    
+        body.rtl .nav-links.active {
+            left: 0;
+        }
     }
+    
     
     body.rtl .nav-links {
         position: fixed;
