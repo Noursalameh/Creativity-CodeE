@@ -470,7 +470,6 @@ const translations = {
     }
     
     updateProjectsSection(t) {
-        // قسم المشاريع في الصفحة الرئيسية
         const homeProjectsHeader = document.querySelector('.section:has(.project-card) .section-header');
         if (homeProjectsHeader) {
             const h2 = homeProjectsHeader.querySelector('h2');
@@ -478,8 +477,7 @@ const translations = {
             if (h2) h2.textContent = t.projects.sectionTitle;
             if (p) p.textContent = t.projects.sectionSubtitle;
         }
-        
-        // عناوين بطاقات المشاريع
+
         const projectLabels = document.querySelectorAll('.project-label');
         const labelTexts = [
             t.projects.guestHouse,
@@ -489,62 +487,38 @@ const translations = {
         projectLabels.forEach((label, i) => {
             if (labelTexts[i]) label.textContent = labelTexts[i];
         });
-        
-        // صفحة المشاريع الكاملة
+
         const heroTitle = document.querySelector('.hero-section .hero-title');
         const heroSubtitle = document.querySelector('.hero-section .hero-subtitle');
         if (heroTitle) heroTitle.textContent = t.projects.pageTitle;
         if (heroSubtitle) heroSubtitle.textContent = t.projects.pageSubtitle;
-        
-        // تحديث تفاصيل كل مشروع
+
         const projectSections = document.querySelectorAll('.project-section');
-        const projectsData = [
-            t.projects.project1,
-            t.projects.project2,
-            t.projects.project3,
-            t.projects.project4,
-            t.projects.project5,
-            t.projects.project6,
-            t.projects.project7,
-            t.projects.project8,
-            t.projects.project9,
-            t.projects.project10,
-            t.projects.project11,
-            t.projects.project12
-        ];
-        
+        const projectsData = [t.projects.project1, t.projects.project2, t.projects.project3];
+
         projectSections.forEach((section, i) => {
             if (projectsData[i]) {
-                // رقم المشروع
                 const projectNumber = section.querySelector('.project-number');
                 if (projectNumber) {
                     const num = projectNumber.textContent.match(/\d+/);
-                    if (num) {
-                        projectNumber.textContent = `${t.projects.projectNumber} ${num[0]}`;
-                    }
+                    if (num) projectNumber.textContent = `${t.projects.projectNumber} ${num[0]}`;
                 }
-                
-                // اسم المشروع
+
                 const projectTitle = section.querySelector('.project-title');
                 if (projectTitle) projectTitle.textContent = projectsData[i].name;
-                
-                // وصف المشروع
+
                 const projectDesc = section.querySelector('.project-description');
                 if (projectDesc) projectDesc.textContent = projectsData[i].desc;
-                
-                // التاجات/العلامات
+
                 const tags = section.querySelectorAll('.tag');
                 if (tags.length > 0 && projectsData[i].tags) {
                     tags.forEach((tag, j) => {
-                        if (projectsData[i].tags[j]) {
-                            tag.textContent = projectsData[i].tags[j];
-                        }
+                        if (projectsData[i].tags[j]) tag.textContent = projectsData[i].tags[j];
                     });
                 }
             }
         });
     }
-    
     updateProductsSection(t) {
         // قسم المنتجات المميزة
         const featuredHeader = document.querySelector('.products-section .section-header');
