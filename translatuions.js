@@ -470,56 +470,79 @@ const translations = {
     }
     
     updateProjectsSection(t) {
-        const homeProjectsHeader = document.querySelector('.section:has(.project-card) .section-header');
+        // ===== Home Projects Section Header (بدون :has) =====
+        let homeProjectsHeader = null;
+    
+        document.querySelectorAll('.section').forEach(section => {
+            if (section.querySelector('.project-card')) {
+                homeProjectsHeader = section.querySelector('.section-header');
+            }
+        });
+    
         if (homeProjectsHeader) {
             const h2 = homeProjectsHeader.querySelector('h2');
             const p = homeProjectsHeader.querySelector('p');
             if (h2) h2.textContent = t.projects.sectionTitle;
             if (p) p.textContent = t.projects.sectionSubtitle;
         }
-
+    
+        // ===== Project labels on home cards =====
         const projectLabels = document.querySelectorAll('.project-label');
         const labelTexts = [
             t.projects.guestHouse,
             t.projects.blessedTree,
             t.projects.chaletTeresa
         ];
+    
         projectLabels.forEach((label, i) => {
-            if (labelTexts[i]) label.textContent = labelTexts[i];
+            if (labelTexts[i]) {
+                label.textContent = labelTexts[i];
+            }
         });
-
-        const heroTitle = document.querySelector('.hero-section .hero-title');
-        const heroSubtitle = document.querySelector('.hero-section .hero-subtitle');
+    
+        // ===== Projects page hero =====
+        const heroTitle = document.querySelector('#project-page .hero-title');
+        const heroSubtitle = document.querySelector('#project-page .hero-subtitle');
+    
         if (heroTitle) heroTitle.textContent = t.projects.pageTitle;
         if (heroSubtitle) heroSubtitle.textContent = t.projects.pageSubtitle;
-
+    
+        // ===== Individual project sections =====
         const projectSections = document.querySelectorAll('.project-section');
-        const projectsData = [t.projects.project1, t.projects.project2, t.projects.project3];
-
+        const projectsData = [
+            t.projects.project1,
+            t.projects.project2,
+            t.projects.project3
+        ];
+    
         projectSections.forEach((section, i) => {
-            if (projectsData[i]) {
-                const projectNumber = section.querySelector('.project-number');
-                if (projectNumber) {
-                    const num = projectNumber.textContent.match(/\d+/);
-                    if (num) projectNumber.textContent = `${t.projects.projectNumber} ${num[0]}`;
+            if (!projectsData[i]) return;
+    
+            const projectNumber = section.querySelector('.project-number');
+            if (projectNumber) {
+                const num = projectNumber.textContent.match(/\d+/);
+                if (num) {
+                    projectNumber.textContent = `${t.projects.projectNumber} ${num[0]}`;
                 }
-
-                const projectTitle = section.querySelector('.project-title');
-                if (projectTitle) projectTitle.textContent = projectsData[i].name;
-
-                const projectDesc = section.querySelector('.project-description');
-                if (projectDesc) projectDesc.textContent = projectsData[i].desc;
-
-                const tags = section.querySelectorAll('.tag');
-                if (tags.length > 0 && projectsData[i].tags) {
-                    tags.forEach((tag, j) => {
-                        if (projectsData[i].tags[j]) tag.textContent = projectsData[i].tags[j];
-                    });
-                }
+            }
+    
+            const projectTitle = section.querySelector('.project-title');
+            if (projectTitle) projectTitle.textContent = projectsData[i].name;
+    
+            const projectDesc = section.querySelector('.project-description');
+            if (projectDesc) projectDesc.textContent = projectsData[i].desc;
+    
+            const tags = section.querySelectorAll('.tag');
+            if (tags.length && projectsData[i].tags) {
+                tags.forEach((tag, j) => {
+                    if (projectsData[i].tags[j]) {
+                        tag.textContent = projectsData[i].tags[j];
+                    }
+                });
             }
         });
     }
-    updateProductsSection(t) {
+        updateProductsSection(t) {
         // قسم المنتجات المميزة
         const featuredHeader = document.querySelector('.products-section .section-header');
         if (featuredHeader) {

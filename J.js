@@ -345,15 +345,3 @@ const smartImageLoad = () => {
 
 // Initialize
 document.addEventListener('DOMContentLoaded', smartImageLoad);
-// ===== Wait for Language Manager to be ready =====
-window.addEventListener('load', () => {
-    const langBtn = document.querySelector('.lang-btn');
-    if (langBtn && window.languageManager) {
-        langBtn.addEventListener('click', () => {
-            window.languageManager.toggleLanguage();
-        });
-        console.log('Language button connected!'); // For debugging
-    } else {
-        console.error('Language Manager not found!'); // For debugging
-    }
-});
