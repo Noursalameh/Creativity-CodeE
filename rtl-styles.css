@@ -34,79 +34,81 @@ body.rtl button, body.rtl .btn {
 }
 
 /* ===== الهيدر والقائمة ===== */
+/* ===============================
+   RTL NAVBAR – FINAL FIX
+================================ */
+
 body.rtl header {
     direction: rtl;
 }
 
-/* ===== RTL NAVBAR FIX ===== */
 body.rtl nav {
     direction: rtl;
 }
 
-body.rtl .nav-inner,
-body.rtl .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    direction: rtl;
-}
-
-/* logo */
-body.rtl .logo {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-/* nav links */
+/* desktop navbar */
 body.rtl .nav-links {
-    direction: rtl;
     display: flex;
+    align-items: center;
     gap: 2rem;
-}
-
-/* language button */
-body.rtl .lang-btn {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-body.rtl .logo {
-    margin-right: 0;
-    margin-left: 0;
-    order: 1;
-}
-
-body.rtl .nav-links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    direction: rtl;
-    order: 2;
-    margin: 0 auto;
     list-style: none;
     padding: 0;
-}
-
-body.rtl .nav-links li {
-    margin: 0 1.25rem;
-    display: inline-block;
-}
-
-body.rtl .nav-links li:first-child {
-    margin-right: 0;
-}
-
-body.rtl .nav-links li:last-child {
-    margin-left: 0;
+    margin: 0 auto;
 }
 
 body.rtl .nav-links a {
     text-align: center;
-    display: inline-block;
-    padding: 0.5rem 0;
 }
 
+/* language button */
+body.rtl .lang-btn {
+    margin: 0;
+}
+
+/* hamburger */
+body.rtl .menu-toggle {
+    left: 15px;
+    right: auto;
+}
+
+/* ===============================
+   MOBILE NAV – RTL
+================================ */
+@media (max-width: 768px) {
+
+    body.rtl .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        right: auto;
+        width: 85%;
+        max-width: 380px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        transition: left 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+        box-shadow: 15px 0 50px rgba(0,0,0,0.3);
+        z-index: 999;
+    }
+
+    body.rtl .nav-links.active {
+        left: 0;
+    }
+
+    body.rtl .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    body.rtl .nav-links a {
+        width: 100%;
+        text-align: center;
+    }
+}
 body.rtl .lang-btn {
     margin-right: 0;
     margin-left: 0;
@@ -545,18 +547,18 @@ body.rtl .project-section:nth-child(even) .decorative-circle {
 
 /* ===== الموبايل (481px - 768px) ===== */
 @media (max-width: 768px) {
-    @media (max-width: 768px) {
-        body.rtl .nav-links {
-            right: auto;
-            left: -100%;
-            transition: left 0.45s cubic-bezier(0.77, 0, 0.18, 1);
-        }
-    
-        body.rtl .nav-links.active {
-            left: 0;
-        }
+ @media (max-width: 768px) {
+    body.rtl .nav-links {
+        right: auto;
+        left: -100%;
+        transition: left 0.45s cubic-bezier(0.77, 0, 0.18, 1);
     }
-    
+
+    body.rtl .nav-links.active {
+        left: 0;
+    }
+}
+
     
     body.rtl .nav-links {
         position: fixed;
