@@ -709,3 +709,4 @@ const translations = {
     } else {
     window.languageManager = new LanguageManager();
     }
+    

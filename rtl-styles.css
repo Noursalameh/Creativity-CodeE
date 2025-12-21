@@ -1144,3 +1144,19 @@ body.rtl a:focus {
     }
 }
 
+/* Now properly handles both desktop and mobile buttons */
+@media (max-width: 768px) {
+    /* Hide desktop button */
+    body.rtl nav > .lang-btn:not(.nav-links .lang-btn) {
+        display: none !important;
+    }
+    
+    /* Show mobile menu button */
+    body.rtl .nav-links .lang-btn {
+        display: inline-flex !important;
+        order: 999 !important;
+        margin: 2rem auto 0 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+}
