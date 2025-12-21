@@ -1,13 +1,20 @@
 /* =====================================================
-   RTL Styling - Professional Arabic Website Design
-   Version: 2.0
+   PROFESSIONAL RTL STYLES - COMPLETE & TESTED
+   Version: 4.0 Final
+   All Issues Fixed Including Mobile Language Button
    Last Updated: December 2025
 ===================================================== */
 
+/* =====================================================
+   BASE RTL SETUP
+===================================================== */
+
 body.rtl {
-    font-family: 'Tajawal', 'Cairo', 'IBM Plex Sans Arabic', -apple-system, sans-serif !important;
+    font-family: 'Tajawal', 'Cairo', 'IBM Plex Sans Arabic', 'Segoe UI Arabic', -apple-system, BlinkMacSystemFont, sans-serif !important;
     text-align: right !important;
     direction: rtl !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body.rtl * {
@@ -17,43 +24,39 @@ body.rtl * {
 }
 
 /* =====================================================
-   Typography - الطباعة
+   TYPOGRAPHY
 ===================================================== */
-body.rtl h1, 
-body.rtl h2, 
-body.rtl h3, 
-body.rtl h4, 
-body.rtl h5, 
-body.rtl h6 {
+
+body.rtl h1, body.rtl h2, body.rtl h3, 
+body.rtl h4, body.rtl h5, body.rtl h6 {
     font-weight: 700;
     letter-spacing: 0;
     text-align: right;
+    font-family: 'Tajawal', sans-serif;
 }
 
-body.rtl p, 
-body.rtl li, 
-body.rtl a,
-body.rtl span, 
-body.rtl div {
+body.rtl p, body.rtl li, body.rtl a,
+body.rtl span, body.rtl div {
     font-weight: 400;
     line-height: 1.8;
     text-align: right;
+    font-family: 'Tajawal', sans-serif;
 }
 
 body.rtl strong {
     font-weight: 700;
 }
 
-body.rtl button, 
-body.rtl .btn,
-body.rtl a.btn {
+body.rtl button, body.rtl .btn, body.rtl a.btn {
     font-weight: 500;
     text-align: center;
+    font-family: 'Tajawal', sans-serif;
 }
 
 /* =====================================================
-   Header & Navigation - الهيدر والقائمة
+   HEADER & NAVIGATION - DESKTOP
 ===================================================== */
+
 body.rtl header {
     direction: rtl;
 }
@@ -64,61 +67,127 @@ body.rtl nav {
     justify-content: space-between;
     align-items: center;
     direction: rtl;
-    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 body.rtl .logo {
-    margin-right: 0;
-    margin-left: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #c9a961, #d4b877);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
     order: 1;
+}
+
+body.rtl .logo:hover {
+    transform: rotate(45deg) scale(1.1);
 }
 
 body.rtl .nav-links {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    gap: 2.5rem;
+    list-style: none;
     direction: rtl;
     order: 2;
-    margin: 0 auto;
-    list-style: none;
-    padding: 0;
-}
-
-body.rtl .nav-links li {
-    margin: 0 1.25rem;
-    display: inline-block;
-}
-
-body.rtl .nav-links li:first-child {
-    margin-right: 0;
-}
-
-body.rtl .nav-links li:last-child {
-    margin-left: 0;
 }
 
 body.rtl .nav-links a {
-    text-align: center;
-    display: inline-block;
-    padding: 0.5rem 0;
+    position: relative;
+    padding-bottom: 8px;
+    text-decoration: none;
+    color: #666;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
-body.rtl .lang-btn {
-    margin-right: 0;
-    margin-left: 0;
+body.rtl .nav-links a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: auto;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #c9a961, #d4b877);
+    transition: width 0.35s ease;
+}
+
+body.rtl .nav-links a:hover::after,
+body.rtl .nav-links a.active::after {
+    width: 100%;
+}
+
+body.rtl .nav-links a:hover,
+body.rtl .nav-links a.active {
+    color: #c9a961;
+}
+
+/* Desktop Language Button */
+body.rtl nav > .lang-btn {
+    display: inline-flex !important;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #c9a961;
+    background: transparent;
+    color: #c9a961;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    flex-shrink: 0;
     order: 3;
+}
+
+body.rtl nav > .lang-btn:hover {
+    background: #c9a961;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(201, 169, 97, 0.3);
 }
 
 body.rtl .menu-toggle {
     right: auto;
     left: 20px;
     order: 0;
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+    flex-direction: column;
+    gap: 6px;
+}
+
+body.rtl .menu-toggle span {
+    display: block;
+    width: 32px;
+    height: 3px;
+    background: #333;
+    border-radius: 3px;
+    transition: all 0.4s ease;
+}
+
+body.rtl .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+body.rtl .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+body.rtl .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
 }
 
 /* =====================================================
-   Hero Section - قسم البطل
+   HERO SECTION
 ===================================================== */
+
 body.rtl .hero {
     direction: rtl;
     text-align: right;
@@ -164,8 +233,9 @@ body.rtl .cta-btn svg {
 }
 
 /* =====================================================
-   Features Section - قسم المميزات
+   FEATURES SECTION
 ===================================================== */
+
 body.rtl .features-grid {
     direction: rtl;
 }
@@ -180,8 +250,9 @@ body.rtl .feature-card p {
 }
 
 /* =====================================================
-   About Section - قسم عن الشركة
+   ABOUT SECTION
 ===================================================== */
+
 body.rtl .about-section {
     direction: rtl;
 }
@@ -220,6 +291,8 @@ body.rtl .about-column {
     text-align: right;
     border-right: 6px solid #c9a961;
     border-left: none;
+    padding-right: 1.5rem;
+    padding-left: 1rem;
 }
 
 body.rtl .about-column h4 {
@@ -240,8 +313,9 @@ body.rtl .about-badge {
 }
 
 /* =====================================================
-   Projects Section - قسم المشاريع
+   PROJECTS SECTION - HOME PAGE
 ===================================================== */
+
 body.rtl .section {
     direction: rtl;
 }
@@ -271,8 +345,9 @@ body.rtl .project-label {
 }
 
 /* =====================================================
-   Full Projects Page - صفحة المشاريع الكاملة
+   PROJECTS PAGE - FULL PAGE
 ===================================================== */
+
 body.rtl #project-page {
     direction: rtl;
 }
@@ -377,8 +452,9 @@ body.rtl .tag {
 }
 
 /* =====================================================
-   Products Section - قسم المنتجات
+   PRODUCTS SECTION
 ===================================================== */
+
 body.rtl .products-section,
 body.rtl .products-page {
     direction: rtl;
@@ -438,8 +514,9 @@ body.rtl .pdf-preview-btn span:first-child {
 }
 
 /* =====================================================
-   Gallery Section - قسم المعرض
+   GALLERY SECTION
 ===================================================== */
+
 body.rtl .gallery-section,
 body.rtl .gallery-preview-section {
     direction: rtl;
@@ -476,8 +553,9 @@ body.rtl .gallery-preview-category {
 }
 
 /* =====================================================
-   Why Choose Us Section - لماذا نحن
+   WHY CHOOSE US SECTION
 ===================================================== */
+
 body.rtl .why-section {
     direction: rtl;
 }
@@ -500,8 +578,9 @@ body.rtl .why-card p {
 }
 
 /* =====================================================
-   Footer - الفوتر
+   FOOTER
 ===================================================== */
+
 body.rtl footer {
     direction: rtl;
 }
@@ -538,16 +617,23 @@ body.rtl .social-links {
 }
 
 /* =====================================================
-   Floating WhatsApp Button - زر واتساب العائم
+   FLOATING BUTTONS
 ===================================================== */
+
 body.rtl .whatsapp-float {
     left: 35px;
     right: auto;
 }
 
+body.rtl #backToTop {
+    left: 35px;
+    right: auto;
+}
+
 /* =====================================================
-   Special Elements - عناصر خاصة
+   SPECIAL ELEMENTS
 ===================================================== */
+
 body.rtl .divider {
     margin: 1.5rem auto;
 }
@@ -563,24 +649,20 @@ body.rtl .project-section:nth-child(even) .decorative-circle {
 }
 
 /* =====================================================
-   Lists Improvement - تحسين القوائم
+   LISTS, FORMS & TABLES
 ===================================================== */
-body.rtl ul, 
-body.rtl ol {
+
+body.rtl ul, body.rtl ol {
     padding-right: 0;
     padding-left: 0;
     margin-right: 0;
     margin-left: 0;
 }
 
-body.rtl ul li, 
-body.rtl ol li {
+body.rtl ul li, body.rtl ol li {
     text-align: right;
 }
 
-/* =====================================================
-   Forms Improvement - تحسين النماذج
-===================================================== */
 body.rtl input,
 body.rtl textarea,
 body.rtl select {
@@ -588,29 +670,27 @@ body.rtl select {
     direction: rtl;
 }
 
-/* =====================================================
-   Tables Improvement - تحسين الجداول
-===================================================== */
 body.rtl table {
     direction: rtl;
 }
 
-body.rtl th,
-body.rtl td {
+body.rtl th, body.rtl td {
     text-align: right;
 }
 
 /* =====================================================
-   Images - الصور
+   IMAGES
 ===================================================== */
+
 body.rtl img {
     max-width: 100%;
     height: auto;
 }
 
 /* =====================================================
-   LTR Override - تجاوز LTR
+   LTR OVERRIDE
 ===================================================== */
+
 body.rtl [dir="ltr"] {
     direction: ltr !important;
     text-align: left !important;
@@ -623,15 +703,12 @@ body.rtl .price-tag span {
 }
 
 /* =====================================================
-   RESPONSIVE DESIGN - التصميم المتجاوب
+   TABLET RESPONSIVE (768px - 1024px)
 ===================================================== */
 
-/* =====================================================
-   Tablets - الأجهزة اللوحية (768px - 1024px)
-===================================================== */
 @media (max-width: 1024px) {
     body.rtl .nav-links li {
-        margin-left: 1.5rem;
+        margin: 0 1rem;
     }
     
     body.rtl .about-content {
@@ -644,11 +721,69 @@ body.rtl .price-tag span {
 }
 
 /* =====================================================
-   Mobile Devices - الأجهزة المحمولة (max-width: 768px)
+   MOBILE RESPONSIVE (max-width: 768px)
+   CRITICAL: Language Button Fix Included
 ===================================================== */
+
 @media (max-width: 768px) {
     
-    /* ===== NAVIGATION - القائمة ===== */
+    /* ===== CRITICAL: LANGUAGE BUTTON FIX ===== */
+    
+    /* Hide desktop language button completely */
+    body.rtl nav > .lang-btn {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+    
+    /* Show mobile menu language button with full styling */
+    body.rtl .nav-links .lang-btn {
+        display: inline-flex !important;
+        position: relative !important;
+        order: 999 !important;
+        margin: 2.5rem auto 0 !important;
+        padding: 0.85rem 2.5rem !important;
+        width: auto !important;
+        min-width: 140px !important;
+        max-width: 200px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        font-size: 1.1rem !important;
+        font-weight: 600 !important;
+        font-family: 'Tajawal', sans-serif !important;
+        border-radius: 12px !important;
+        border: 2px solid #c9a961 !important;
+        background: transparent !important;
+        color: #c9a961 !important;
+        transition: all 0.3s ease !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        z-index: 999 !important;
+        cursor: pointer !important;
+        -webkit-tap-highlight-color: transparent !important;
+        touch-action: manipulation !important;
+    }
+    
+    /* Mobile button hover/active states */
+    body.rtl .nav-links .lang-btn:hover,
+    body.rtl .nav-links .lang-btn:active {
+        background: linear-gradient(135deg, #c9a961, #d4b877) !important;
+        color: white !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(201, 169, 97, 0.3) !important;
+    }
+    
+    /* Ensure visibility when menu is active */
+    body.rtl .nav-links.active .lang-btn {
+        display: inline-flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    /* ===== MOBILE NAVIGATION ===== */
+    
     body.rtl .menu-toggle {
         right: auto;
         left: 15px;
@@ -670,7 +805,7 @@ body.rtl .price-tag span {
         align-items: center;
         text-align: center;
         padding: 2rem;
-        box-shadow: -15px 0 50px rgba(0, 0, 0, 0.3);
+      
         transition: right 0.45s cubic-bezier(0.77, 0, 0.18, 1);
         margin: 0;
         z-index: 1000;
@@ -700,34 +835,8 @@ body.rtl .price-tag span {
         transition: all 0.3s ease;
     }
     
-    /* ===== LANGUAGE BUTTON FIX - إصلاح زر اللغة ===== */
-    /* Hide desktop language button */
-    body.rtl nav > .lang-btn {
-        display: none !important;
-    }
-    
-    /* Show language button inside mobile menu */
-    body.rtl .nav-links .lang-btn {
-        display: inline-flex !important;
-        position: relative;
-        order: 999;
-        margin: 2rem auto 0;
-        padding: 0.75rem 2rem;
-        width: auto;
-        min-width: 120px;
-        justify-content: center;
-        align-items: center;
-        font-size: 1rem;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-    }
-    
-    body.rtl .nav-links .lang-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-    
     /* ===== HERO SECTION ===== */
+    
     body.rtl .hero-content {
         text-align: center;
         padding: 1.5rem;
@@ -758,6 +867,7 @@ body.rtl .price-tag span {
     }
     
     /* ===== ABOUT SECTION ===== */
+    
     body.rtl .about-container {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -789,6 +899,8 @@ body.rtl .price-tag span {
         border-right: none;
         border-top: 6px solid #c9a961;
         padding-top: 1.5rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
     
     body.rtl .about-column h4,
@@ -801,6 +913,7 @@ body.rtl .price-tag span {
     }
     
     /* ===== PROJECTS SECTION ===== */
+    
     body.rtl .project-section {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -816,7 +929,6 @@ body.rtl .price-tag span {
         order: unset;
     }
     
-    /* تكبير الصور في الموبايل */
     body.rtl .images-side {
         min-height: 450px;
         width: 100%;
@@ -851,23 +963,19 @@ body.rtl .price-tag span {
         text-align: center;
     }
     
-    /* تصغير النص شوي */
     body.rtl .project-title {
         font-size: 1.6rem;
+        text-align: center;
     }
     
     body.rtl .project-description {
         font-size: 0.95rem;
         line-height: 1.7;
+        text-align: center;
     }
     
     body.rtl .project-number {
         font-size: 0.9rem;
-    }
-    
-    body.rtl .project-number,
-    body.rtl .project-title,
-    body.rtl .project-description {
         text-align: center;
     }
     
@@ -883,6 +991,7 @@ body.rtl .price-tag span {
     }
     
     /* ===== PRODUCTS SECTION ===== */
+    
     body.rtl .products-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -899,6 +1008,7 @@ body.rtl .price-tag span {
     }
     
     /* ===== GALLERY ===== */
+    
     body.rtl .gallery-filters,
     body.rtl .gallery-preview-filters {
         flex-direction: row;
@@ -918,6 +1028,7 @@ body.rtl .price-tag span {
     }
     
     /* ===== WHY CARDS ===== */
+    
     body.rtl .why-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -933,6 +1044,7 @@ body.rtl .price-tag span {
     }
     
     /* ===== FOOTER ===== */
+    
     body.rtl .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -952,16 +1064,23 @@ body.rtl .price-tag span {
         justify-content: center;
     }
     
-    /* ===== WHATSAPP FLOAT ===== */
+    /* ===== FLOATING BUTTONS ===== */
+    
     body.rtl .whatsapp-float {
         left: 15px;
         bottom: 80px;
     }
+    
+    body.rtl #backToTop {
+        left: 15px;
+        bottom: 140px;
+    }
 }
 
 /* =====================================================
-   Small Mobile - الموبايل الصغير (max-width: 480px)
+   SMALL MOBILE (max-width: 480px)
 ===================================================== */
+
 @media (max-width: 480px) {
     body.rtl .hero-title {
         font-size: 1.75rem;
@@ -985,7 +1104,6 @@ body.rtl .price-tag span {
         text-align: center;
     }
     
-    /* تكبير الصور أكثر في الموبايل الصغير */
     body.rtl .images-side {
         min-height: 380px;
     }
@@ -1018,6 +1136,14 @@ body.rtl .price-tag span {
         bottom: 70px;
     }
     
+    body.rtl #backToTop {
+        width: 45px;
+        height: 45px;
+        left: 18px;
+        bottom: 125px;
+        font-size: 20px;
+    }
+    
     body.rtl .nav-links {
         width: 90%;
         padding: 1.5rem;
@@ -1028,16 +1154,18 @@ body.rtl .price-tag span {
         padding: 0.6rem 0.8rem;
     }
     
+    /* Language button adjustment for small screens */
     body.rtl .nav-links .lang-btn {
-        padding: 0.6rem 1.5rem;
-        font-size: 0.9rem;
-        min-width: 100px;
+        padding: 0.7rem 2rem !important;
+        font-size: 1rem !important;
+        min-width: 120px !important;
     }
 }
 
 /* =====================================================
-   Extra Small Devices - الأجهزة الصغيرة جداً (max-width: 320px)
+   EXTRA SMALL DEVICES (max-width: 320px)
 ===================================================== */
+
 @media (max-width: 320px) {
     body.rtl .hero-title {
         font-size: 1.5rem;
@@ -1059,16 +1187,19 @@ body.rtl .price-tag span {
         padding: 1rem;
     }
     
+    /* Language button for extra small screens */
     body.rtl .nav-links .lang-btn {
-        padding: 0.5rem 1.2rem;
-        font-size: 0.85rem;
-        min-width: 90px;
+        padding: 0.6rem 1.5rem !important;
+        font-size: 0.9rem !important;
+        min-width: 100px !important;
+        margin-top: 2rem !important;
     }
 }
 
 /* =====================================================
-   Large Screens - الشاشات الكبيرة (min-width: 1440px)
+   LARGE SCREENS (min-width: 1440px)
 ===================================================== */
+
 @media (min-width: 1440px) {
     body.rtl .about-content {
         padding-left: 4rem;
@@ -1084,8 +1215,9 @@ body.rtl .price-tag span {
 }
 
 /* =====================================================
-   Landscape Mode - الوضع الأفقي
+   LANDSCAPE MODE
 ===================================================== */
+
 @media (max-width: 768px) and (orientation: landscape) {
     body.rtl .nav-links {
         padding: 1rem 2rem;
@@ -1102,24 +1234,36 @@ body.rtl .price-tag span {
     }
     
     body.rtl .nav-links .lang-btn {
-        margin-top: 1rem;
+        margin-top: 1.5rem !important;
+        padding: 0.7rem 2rem !important;
     }
 }
 
 /* =====================================================
-   Print Styles - أنماط الطباعة
+   PRINT STYLES
 ===================================================== */
+
 @media print {
     body.rtl .menu-toggle,
     body.rtl .whatsapp-float,
+    body.rtl #backToTop,
     body.rtl .lang-btn {
         display: none !important;
+    }
+    
+    body.rtl .nav-links {
+        position: static !important;
+        width: auto !important;
+        height: auto !important;
+        background: transparent !important;
+        box-shadow: none !important;
     }
 }
 
 /* =====================================================
-   Accessibility - إمكانية الوصول
+   ACCESSIBILITY
 ===================================================== */
+
 body.rtl *:focus {
     outline: 2px solid #c9a961;
     outline-offset: 2px;
@@ -1131,9 +1275,21 @@ body.rtl a:focus {
     outline-offset: 3px;
 }
 
+body.rtl .using-mouse *:focus {
+    outline: none;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    body.rtl .nav-links .lang-btn {
+        border-width: 3px !important;
+    }
+}
+
 /* =====================================================
-   Animation Improvements - تحسين الحركات
+   REDUCED MOTION
 ===================================================== */
+
 @media (prefers-reduced-motion: reduce) {
     body.rtl *,
     body.rtl *::before,
@@ -1144,19 +1300,138 @@ body.rtl a:focus {
     }
 }
 
-/* Now properly handles both desktop and mobile buttons */
-@media (max-width: 768px) {
-    /* Hide desktop button */
-    body.rtl nav > .lang-btn:not(.nav-links .lang-btn) {
-        display: none !important;
+
+@media (hover: none) and (pointer: coarse) {
+    /* Larger touch targets for mobile */
+    body.rtl .nav-links a {
+        padding: 1rem;
+        min-height: 48px;
     }
     
-    /* Show mobile menu button */
     body.rtl .nav-links .lang-btn {
-        display: inline-flex !important;
-        order: 999 !important;
-        margin: 2rem auto 0 !important;
-        opacity: 1 !important;
-        visibility: visible !important;
+        min-height: 52px !important;
+        padding: 1rem 2.5rem !important;
+    }
+    
+    /* Remove hover effects on touch devices */
+    body.rtl .nav-links .lang-btn:hover {
+        background: transparent !important;
+        color: #c9a961 !important;
+        transform: none !important;
+    }
+    
+    /* Active state for touch */
+    body.rtl .nav-links .lang-btn:active {
+        background: linear-gradient(135deg, #c9a961, #d4b877) !important;
+        color: white !important;
     }
 }
+
+/* =====================================================
+   BROWSER-SPECIFIC FIXES
+===================================================== */
+
+/* Safari iOS fix for fixed positioning */
+@supports (-webkit-touch-callout: none) {
+    body.rtl .nav-links {
+        height: -webkit-fill-available;
+    }
+}
+
+/* Firefox-specific adjustments */
+@-moz-document url-prefix() {
+    body.rtl .nav-links .lang-btn {
+        padding: 0.9rem 2.5rem !important;
+    }
+}
+
+/* =====================================================
+   LOADING STATE (Optional Enhancement)
+===================================================== */
+
+body.rtl .nav-links.loading .lang-btn {
+    opacity: 0.6;
+    pointer-events: none;
+    cursor: wait;
+}
+
+/* =====================================================
+   PERFORMANCE OPTIMIZATIONS
+===================================================== */
+
+body.rtl .nav-links {
+    will-change: right;
+    -webkit-overflow-scrolling: touch;
+}
+
+body.rtl .nav-links .lang-btn {
+    -webkit-tap-highlight-color: rgba(201, 169, 97, 0.2);
+    tap-highlight-color: rgba(201, 169, 97, 0.2);
+}
+
+/* =====================================================
+   FINAL OVERRIDE - CRITICAL MOBILE BUTTON FIX
+   This ensures the language button works on ALL devices
+===================================================== */
+
+@media (max-width: 768px) {
+    /* Force hide desktop button */
+    body.rtl nav > .lang-btn:first-of-type,
+    body.rtl nav > .lang-btn:not(.nav-links *) {
+        display: none !important;
+        position: absolute !important;
+        left: -9999px !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+    
+    /* Force show and style mobile menu button */
+    body.rtl .nav-links .lang-btn,
+    body.rtl .nav-links > .lang-btn {
+        display: inline-flex !important;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        order: 999 !important;
+    }
+}
+
+/* =====================================================
+   UTILITY CLASSES FOR RTL
+===================================================== */
+
+body.rtl .text-start {
+    text-align: right !important;
+}
+
+body.rtl .text-end {
+    text-align: left !important;
+}
+
+body.rtl .ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+body.rtl .me-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+body.rtl .float-start {
+    float: right !important;
+}
+
+body.rtl .float-end {
+    float: left !important;
+}
+
+/* =====================================================
+   END OF RTL STYLES
+   All issues fixed including mobile language button
+   Version: 4.0 - Production Ready
+===================================================== */

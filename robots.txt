@@ -23,3 +23,17 @@ Allow: /
 
 User-agent: Slurp
 Allow: /
+# robots.txt
+User-agent: *
+Allow: /
+
+# Disallow admin pages if any
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://creativitycodejo.com/sitemap.xml
+Sitemap: https://creativitycodejo.com/sitemap-images.xml
+
+# Crawl-delay
+Crawl-delay: 1

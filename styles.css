@@ -92,6 +92,7 @@ nav {
 }
 
 .lang-btn {
+    display: inline-flex !important;
     padding: 0.5rem 1.5rem;
     border: 2px solid #c9a961;
     background: transparent;
@@ -1946,4 +1947,16 @@ body.rtl .whatsapp-float {
     padding-top: 80px !important;
     position: relative !important;
     z-index: 10 !important;
+}
+/* Ensure all clickable elements are at least 44x44px */
+@media (max-width: 768px) {
+    .nav-links a,
+    .filter-btn,
+    .preview-filter-btn,
+    .lang-btn,
+    button {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0.75rem 1.5rem;
+    }
 }
