@@ -147,6 +147,7 @@ body.rtl .menu-toggle {
     right: auto;
     left: 20px;
     order: 0;
+    display: none;
     cursor: pointer;
     z-index: 1001;
     flex-direction: column;
@@ -717,14 +718,7 @@ body.rtl .price-tag span {
 
 @media (max-width: 768px) {
     
-    /* ===== CRITICAL: LANGUAGE BUTTON FIX ===== */
-    
-    /* Hide desktop language button completely */
-    body.rtl nav > .lang-btn {
- 
-        visibility: hidden !important;
-        opacity: 0 !important;
-    }
+   
     
     /* Show mobile menu language button with full styling */
     body.rtl .nav-links .lang-btn {
@@ -1237,7 +1231,9 @@ body.rtl .price-tag span {
     body.rtl .menu-toggle,
     body.rtl .whatsapp-float,
     body.rtl #backToTop,
-    body.rtl
+    body.rtl .lang-btn {
+        display: none !important;
+    }
     
     body.rtl .nav-links {
         position: static !important;
@@ -1357,30 +1353,7 @@ body.rtl .nav-links .lang-btn {
     tap-highlight-color: rgba(201, 169, 97, 0.2);
 }
 
-/* =====================================================
-   FINAL OVERRIDE - CRITICAL MOBILE BUTTON FIX
-   This ensures the language button works on ALL devices
-===================================================== */
-.lang-btn {
-    display: inline-flex !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: auto !important;
-    z-index: 9999;
-}
 
-@media (max-width: 768px) {
-    /* Force hide desktop button */
-    body.rtl nav > .lang-btn:first-of-type,
-    body.rtl nav > .lang-btn:not(.nav-links *) {
-        position: absolute !important;
-        left: -9999px !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        pointer-events: none !important;
-    }
-    
-    /* Force show and style mobile menu button */
     body.rtl .nav-links .lang-btn,
     body.rtl .nav-links > .lang-btn {
         display: inline-flex !important;
@@ -1392,7 +1365,6 @@ body.rtl .nav-links .lang-btn {
         pointer-events: auto !important;
         order: 999 !important;
     }
-}
 
 /* =====================================================
    UTILITY CLASSES FOR RTL
@@ -1424,11 +1396,3 @@ body.rtl .float-end {
     float: left !important;
 }
 
-@media (max-width: 768px) {
-    body.rtl .lang-btn {
-        margin-top: 2rem;
-        align-self: center;
-        display: inline-flex !important;
-        z-index: 1002;
-    }
-}
