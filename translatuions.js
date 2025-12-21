@@ -249,10 +249,12 @@ class LanguageManager {
     init() {
         this.applyLanguage(this.currentLang);
         
-        const langBtn = document.querySelector('.lang-btn');
+        const langBtn = document.getElementById('langBtn');
+
         if (langBtn) {
             langBtn.addEventListener('click', () => this.toggleLanguage());
         }
+        
     }
     
     toggleLanguage() {

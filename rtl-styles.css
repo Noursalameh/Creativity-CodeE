@@ -1421,3 +1421,11 @@ body.rtl .float-end {
     float: left !important;
 }
 
+@media (max-width: 768px) {
+    body.rtl .lang-btn {
+        margin-top: 2rem;
+        align-self: center;
+        display: inline-flex !important;
+        z-index: 1002;
+    }
+}
