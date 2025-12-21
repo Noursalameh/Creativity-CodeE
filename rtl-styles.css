@@ -147,7 +147,6 @@ body.rtl .menu-toggle {
     right: auto;
     left: 20px;
     order: 0;
-    display: none;
     cursor: pointer;
     z-index: 1001;
     flex-direction: column;
@@ -722,7 +721,7 @@ body.rtl .price-tag span {
     
     /* Hide desktop language button completely */
     body.rtl nav > .lang-btn {
-        display: none !important;
+ 
         visibility: hidden !important;
         opacity: 0 !important;
     }
@@ -1238,9 +1237,7 @@ body.rtl .price-tag span {
     body.rtl .menu-toggle,
     body.rtl .whatsapp-float,
     body.rtl #backToTop,
-    body.rtl .lang-btn {
-        display: none !important;
-    }
+    body.rtl
     
     body.rtl .nav-links {
         position: static !important;
@@ -1364,12 +1361,18 @@ body.rtl .nav-links .lang-btn {
    FINAL OVERRIDE - CRITICAL MOBILE BUTTON FIX
    This ensures the language button works on ALL devices
 ===================================================== */
+.lang-btn {
+    display: inline-flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    z-index: 9999;
+}
 
 @media (max-width: 768px) {
     /* Force hide desktop button */
     body.rtl nav > .lang-btn:first-of-type,
     body.rtl nav > .lang-btn:not(.nav-links *) {
-        display: none !important;
         position: absolute !important;
         left: -9999px !important;
         visibility: hidden !important;
