@@ -1,13 +1,4 @@
-/* =====================================================
-   PROFESSIONAL RTL STYLES - COMPLETE & TESTED
-   Version: 4.0 Final
-   All Issues Fixed Including Mobile Language Button
-   Last Updated: December 2025
-===================================================== */
 
-/* =====================================================
-   BASE RTL SETUP
-===================================================== */
 
 body.rtl {
     font-family: 'Tajawal', 'Cairo', 'IBM Plex Sans Arabic', 'Segoe UI Arabic', -apple-system, BlinkMacSystemFont, sans-serif !important;
@@ -1430,8 +1421,3 @@ body.rtl .float-end {
     float: left !important;
 }
 
-/* =====================================================
-   END OF RTL STYLES
-   All issues fixed including mobile language button
-   Version: 4.0 - Production Ready
-===================================================== */
