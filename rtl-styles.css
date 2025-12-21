@@ -122,7 +122,6 @@ body.rtl .nav-links a.active {
 
 /* Desktop Language Button */
 body.rtl nav > .lang-btn {
-    display: inline-flex !important;
     padding: 0.5rem 1.5rem;
     border: 2px solid #c9a961;
     background: transparent;

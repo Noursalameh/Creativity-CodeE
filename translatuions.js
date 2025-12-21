@@ -1,7 +1,3 @@
-// =====================================================
-// FIXED TRANSLATION SYSTEM - COMPLETE VERSION
-// Fixes Projects & Products page translation issues
-// =====================================================
 
 const translations = {
     en: {
