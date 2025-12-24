@@ -1152,3 +1152,10 @@ body.rtl .float-end {
         min-height: 380px;
     }
 }
+body.rtl #backToTop {
+    width: 45px;
+    height: 45px;
+    left: 15px;
+    bottom: 80px;
+    font-size: 18px;
+}
