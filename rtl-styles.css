@@ -1,4 +1,13 @@
+/* =====================================================
+   RTL STYLESHEET - PROFESSIONAL VERSION
+   Purpose: Right-to-left layout support for Arabic/RTL languages
+   Author: Architecture & Engineering Portfolio
+   Last Updated: 2025
+===================================================== */
 
+/* =====================================================
+   ROOT & BASE STYLES
+===================================================== */
 
 body.rtl {
     font-family: 'Tajawal', 'Cairo', 'IBM Plex Sans Arabic', 'Segoe UI Arabic', -apple-system, BlinkMacSystemFont, sans-serif !important;
@@ -15,30 +24,43 @@ body.rtl * {
 }
 
 /* =====================================================
-   TYPOGRAPHY
+   TYPOGRAPHY SYSTEM
 ===================================================== */
 
-body.rtl h1, body.rtl h2, body.rtl h3, 
-body.rtl h4, body.rtl h5, body.rtl h6 {
+/* Headings */
+body.rtl h1, 
+body.rtl h2, 
+body.rtl h3, 
+body.rtl h4, 
+body.rtl h5, 
+body.rtl h6 {
     font-weight: 700;
     letter-spacing: 0;
     text-align: right;
     font-family: 'Tajawal', sans-serif;
 }
 
-body.rtl p, body.rtl li, body.rtl a,
-body.rtl span, body.rtl div {
+/* Body Text */
+body.rtl p, 
+body.rtl li, 
+body.rtl a,
+body.rtl span, 
+body.rtl div {
     font-weight: 400;
     line-height: 1.8;
     text-align: right;
     font-family: 'Tajawal', sans-serif;
 }
 
+/* Strong Text */
 body.rtl strong {
     font-weight: 700;
 }
 
-body.rtl button, body.rtl .btn, body.rtl a.btn {
+/* Buttons & Interactive Elements */
+body.rtl button, 
+body.rtl .btn, 
+body.rtl a.btn {
     font-weight: 500;
     text-align: center;
     font-family: 'Tajawal', sans-serif;
@@ -52,6 +74,7 @@ body.rtl header {
     direction: rtl;
 }
 
+/* Navigation Container */
 body.rtl nav {
     display: flex;
     flex-direction: row-reverse;
@@ -62,6 +85,7 @@ body.rtl nav {
     margin: 0 auto;
 }
 
+/* Logo Element */
 body.rtl .logo {
     width: 50px;
     height: 50px;
@@ -77,6 +101,7 @@ body.rtl .logo:hover {
     transform: rotate(45deg) scale(1.1);
 }
 
+/* Navigation Links */
 body.rtl .nav-links {
     display: flex;
     gap: 2.5rem;
@@ -98,6 +123,7 @@ body.rtl .nav-links a {
     white-space: nowrap;
 }
 
+/* Navigation Link Underline Effect */
 body.rtl .nav-links a::after {
     content: '';
     position: absolute;
@@ -142,6 +168,7 @@ body.rtl nav > .lang-btn:hover {
     box-shadow: 0 5px 15px rgba(201, 169, 97, 0.3);
 }
 
+/* Mobile Menu Toggle */
 body.rtl .menu-toggle {
     right: auto;
     left: 20px;
@@ -162,6 +189,7 @@ body.rtl .menu-toggle span {
     transition: all 0.4s ease;
 }
 
+/* Hamburger Animation */
 body.rtl .menu-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
 }
@@ -210,6 +238,7 @@ body.rtl .hero-cta-group {
     direction: rtl;
 }
 
+/* CTA Buttons */
 body.rtl .cta-btn-primary,
 body.rtl .cta-btn-secondary {
     flex-direction: row-reverse;
@@ -273,6 +302,7 @@ body.rtl .about-content p {
     line-height: 1.9;
 }
 
+/* About Columns */
 body.rtl .about-columns {
     direction: rtl;
 }
@@ -285,10 +315,7 @@ body.rtl .about-column {
     padding-left: 1rem;
 }
 
-body.rtl .about-column h4 {
-    text-align: right;
-}
-
+body.rtl .about-column h4,
 body.rtl .about-column p {
     text-align: right;
 }
@@ -360,6 +387,7 @@ body.rtl .projects-wrapper {
     direction: rtl;
 }
 
+/* Project Section Layout */
 body.rtl .project-section {
     direction: rtl;
 }
@@ -381,6 +409,7 @@ body.rtl .project-section:nth-child(even) .content-side {
     order: 1;
 }
 
+/* Images Side */
 body.rtl .images-side {
     direction: rtl;
     min-height: 500px;
@@ -408,6 +437,7 @@ body.rtl .main-image img {
     object-fit: cover;
 }
 
+/* Content Side */
 body.rtl .content-side {
     text-align: right;
     padding-right: 0;
@@ -642,14 +672,16 @@ body.rtl .project-section:nth-child(even) .decorative-circle {
    LISTS, FORMS & TABLES
 ===================================================== */
 
-body.rtl ul, body.rtl ol {
+body.rtl ul, 
+body.rtl ol {
     padding-right: 0;
     padding-left: 0;
     margin-right: 0;
     margin-left: 0;
 }
 
-body.rtl ul li, body.rtl ol li {
+body.rtl ul li, 
+body.rtl ol li {
     text-align: right;
 }
 
@@ -664,7 +696,8 @@ body.rtl table {
     direction: rtl;
 }
 
-body.rtl th, body.rtl td {
+body.rtl th, 
+body.rtl td {
     text-align: right;
 }
 
@@ -678,7 +711,7 @@ body.rtl img {
 }
 
 /* =====================================================
-   LTR OVERRIDE
+   LTR OVERRIDE (for specific elements)
 ===================================================== */
 
 body.rtl [dir="ltr"] {
@@ -693,12 +726,42 @@ body.rtl .price-tag span {
 }
 
 /* =====================================================
-   TABLET RESPONSIVE (768px - 1024px)
+   UTILITY CLASSES
+===================================================== */
+
+body.rtl .text-start {
+    text-align: right !important;
+}
+
+body.rtl .text-end {
+    text-align: left !important;
+}
+
+body.rtl .ms-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+body.rtl .me-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+body.rtl .float-start {
+    float: right !important;
+}
+
+body.rtl .float-end {
+    float: left !important;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN - TABLET (768px - 1024px)
 ===================================================== */
 
 @media (max-width: 1024px) {
-    body.rtl .nav-links li {
-        margin: 0 1rem;
+    body.rtl .nav-links {
+        gap: 1.5rem;
     }
     
     body.rtl .about-content {
@@ -711,68 +774,20 @@ body.rtl .price-tag span {
 }
 
 /* =====================================================
-   MOBILE RESPONSIVE (max-width: 768px)
-   CRITICAL: Language Button Fix Included
+   RESPONSIVE DESIGN - MOBILE (max-width: 768px)
 ===================================================== */
 
 @media (max-width: 768px) {
     
-   
-    
-    /* Show mobile menu language button with full styling */
-    body.rtl .nav-links .lang-btn {
-        display: inline-flex !important;
-        position: relative !important;
-        order: 999 !important;
-        margin: 2.5rem auto 0 !important;
-        padding: 0.85rem 2.5rem !important;
-        width: auto !important;
-        min-width: 140px !important;
-        max-width: 200px !important;
-        justify-content: center !important;
-        align-items: center !important;
-        text-align: center !important;
-        font-size: 1.1rem !important;
-        font-weight: 600 !important;
-        font-family: 'Tajawal', sans-serif !important;
-        border-radius: 12px !important;
-        border: 2px solid #c9a961 !important;
-        background: transparent !important;
-        color: #c9a961 !important;
-        transition: all 0.3s ease !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        pointer-events: auto !important;
-        z-index: 999 !important;
-        cursor: pointer !important;
-        -webkit-tap-highlight-color: transparent !important;
-        touch-action: manipulation !important;
-    }
-    
-    /* Mobile button hover/active states */
-    body.rtl .nav-links .lang-btn:hover,
-    body.rtl .nav-links .lang-btn:active {
-        background: linear-gradient(135deg, #c9a961, #d4b877) !important;
-        color: white !important;
-        transform: translateY(-2px) !important;
-        box-shadow: 0 6px 20px rgba(201, 169, 97, 0.3) !important;
-    }
-    
-    /* Ensure visibility when menu is active */
-    body.rtl .nav-links.active .lang-btn {
-        display: inline-flex !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-    }
-    
-    /* ===== MOBILE NAVIGATION ===== */
-    
+    /* === MOBILE MENU TOGGLE === */
     body.rtl .menu-toggle {
+        display: flex;
         right: auto;
         left: 15px;
         z-index: 1001;
     }
     
+    /* === MOBILE NAVIGATION === */
     body.rtl .nav-links {
         position: fixed;
         top: 0;
@@ -788,11 +803,13 @@ body.rtl .price-tag span {
         align-items: center;
         text-align: center;
         padding: 2rem;
-      
+        gap: 0;
         transition: right 0.45s cubic-bezier(0.77, 0, 0.18, 1);
         margin: 0;
         z-index: 1000;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        will-change: right;
     }
     
     body.rtl .nav-links.active {
@@ -815,11 +832,62 @@ body.rtl .price-tag span {
         display: block;
         padding: 0.75rem 1rem;
         font-size: 1.1rem;
+        min-height: 48px;
         transition: all 0.3s ease;
     }
     
-    /* ===== HERO SECTION ===== */
+    /* === MOBILE LANGUAGE BUTTON - CRITICAL === */
+    body.rtl .nav-links .lang-btn,
+    body.rtl nav .nav-links > .lang-btn {
+        display: inline-flex !important;
+        position: relative !important;
+        order: 999 !important;
+        margin: 2.5rem auto 0 !important;
+        padding: 0.85rem 2.5rem !important;
+        width: auto !important;
+        min-width: 140px !important;
+        max-width: 200px !important;
+        min-height: 52px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        font-size: 1.1rem !important;
+        font-weight: 600 !important;
+        font-family: 'Tajawal', sans-serif !important;
+        border-radius: 12px !important;
+        border: 2px solid #c9a961 !important;
+        background: transparent !important;
+        color: #c9a961 !important;
+        transition: all 0.3s ease !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        z-index: 999 !important;
+        cursor: pointer !important;
+        -webkit-tap-highlight-color: rgba(201, 169, 97, 0.2) !important;
+        tap-highlight-color: rgba(201, 169, 97, 0.2) !important;
+        touch-action: manipulation !important;
+        left: auto !important;
+        right: auto !important;
+    }
     
+    /* Mobile Button Active/Hover States */
+    body.rtl .nav-links .lang-btn:hover,
+    body.rtl .nav-links .lang-btn:active {
+        background: linear-gradient(135deg, #c9a961, #d4b877) !important;
+        color: white !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(201, 169, 97, 0.3) !important;
+    }
+    
+    /* Ensure visibility when menu is active */
+    body.rtl .nav-links.active .lang-btn {
+        display: inline-flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    /* === HERO SECTION === */
     body.rtl .hero-content {
         text-align: center;
         padding: 1.5rem;
@@ -849,8 +917,7 @@ body.rtl .price-tag span {
         text-align: center;
     }
     
-    /* ===== ABOUT SECTION ===== */
-    
+    /* === ABOUT SECTION === */
     body.rtl .about-container {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -895,8 +962,7 @@ body.rtl .price-tag span {
         justify-content: center;
     }
     
-    /* ===== PROJECTS SECTION ===== */
-    
+    /* === PROJECTS SECTION === */
     body.rtl .project-section {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -973,8 +1039,7 @@ body.rtl .price-tag span {
         flex-wrap: wrap;
     }
     
-    /* ===== PRODUCTS SECTION ===== */
-    
+    /* === PRODUCTS SECTION === */
     body.rtl .products-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -990,8 +1055,7 @@ body.rtl .price-tag span {
         text-align: center;
     }
     
-    /* ===== GALLERY ===== */
-    
+    /* === GALLERY === */
     body.rtl .gallery-filters,
     body.rtl .gallery-preview-filters {
         flex-direction: row;
@@ -1010,8 +1074,7 @@ body.rtl .price-tag span {
         gap: 1rem;
     }
     
-    /* ===== WHY CARDS ===== */
-    
+    /* === WHY CARDS === */
     body.rtl .why-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1026,8 +1089,7 @@ body.rtl .price-tag span {
         text-align: center;
     }
     
-    /* ===== FOOTER ===== */
-    
+    /* === FOOTER === */
     body.rtl .footer-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1047,8 +1109,7 @@ body.rtl .price-tag span {
         justify-content: center;
     }
     
-    /* ===== FLOATING BUTTONS ===== */
-    
+    /* === FLOATING BUTTONS === */
     body.rtl .whatsapp-float {
         left: 15px;
         bottom: 80px;
@@ -1061,7 +1122,7 @@ body.rtl .price-tag span {
 }
 
 /* =====================================================
-   SMALL MOBILE (max-width: 480px)
+   RESPONSIVE DESIGN - SMALL MOBILE (max-width: 480px)
 ===================================================== */
 
 @media (max-width: 480px) {
@@ -1090,308 +1151,4 @@ body.rtl .price-tag span {
     body.rtl .images-side {
         min-height: 380px;
     }
-    
-    body.rtl .main-image {
-        min-height: 350px;
-    }
-    
-    body.rtl .main-image img {
-        height: 350px;
-    }
-    
-    body.rtl .project-grid img {
-        min-height: 180px;
-    }
-    
-    body.rtl .project-title {
-        font-size: 1.4rem;
-        text-align: center;
-    }
-    
-    body.rtl .project-description {
-        font-size: 0.9rem;
-    }
-    
-    body.rtl .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        left: 18px;
-        bottom: 70px;
-    }
-    
-    body.rtl #backToTop {
-        width: 45px;
-        height: 45px;
-        left: 18px;
-        bottom: 125px;
-        font-size: 20px;
-    }
-    
-    body.rtl .nav-links {
-        width: 90%;
-        padding: 1.5rem;
-    }
-    
-    body.rtl .nav-links a {
-        font-size: 1rem;
-        padding: 0.6rem 0.8rem;
-    }
-    
-    /* Language button adjustment for small screens */
-    body.rtl .nav-links .lang-btn {
-        padding: 0.7rem 2rem !important;
-        font-size: 1rem !important;
-        min-width: 120px !important;
-    }
 }
-
-/* =====================================================
-   EXTRA SMALL DEVICES (max-width: 320px)
-===================================================== */
-
-@media (max-width: 320px) {
-    body.rtl .hero-title {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    
-    body.rtl .hero-subtitle {
-        font-size: 0.85rem;
-        text-align: center;
-    }
-    
-    body.rtl .nav-links a {
-        font-size: 0.9rem;
-        text-align: center;
-    }
-    
-    body.rtl .nav-links {
-        width: 95%;
-        padding: 1rem;
-    }
-    
-    /* Language button for extra small screens */
-    body.rtl .nav-links .lang-btn {
-        padding: 0.6rem 1.5rem !important;
-        font-size: 0.9rem !important;
-        min-width: 100px !important;
-        margin-top: 2rem !important;
-    }
-}
-
-/* =====================================================
-   LARGE SCREENS (min-width: 1440px)
-===================================================== */
-
-@media (min-width: 1440px) {
-    body.rtl .about-content {
-        padding-left: 4rem;
-    }
-    
-    body.rtl .content-side {
-        padding-left: 4rem;
-    }
-    
-    body.rtl .nav-links li {
-        margin: 0 2rem;
-    }
-}
-
-/* =====================================================
-   LANDSCAPE MODE
-===================================================== */
-
-@media (max-width: 768px) and (orientation: landscape) {
-    body.rtl .nav-links {
-        padding: 1rem 2rem;
-        justify-content: flex-start;
-    }
-    
-    body.rtl .nav-links li {
-        margin-bottom: 0.75rem;
-    }
-    
-    body.rtl .nav-links a {
-        padding: 0.5rem 1rem;
-        font-size: 0.95rem;
-    }
-    
-    body.rtl .nav-links .lang-btn {
-        margin-top: 1.5rem !important;
-        padding: 0.7rem 2rem !important;
-    }
-}
-
-/* =====================================================
-   PRINT STYLES
-===================================================== */
-
-@media print {
-    body.rtl .menu-toggle,
-    body.rtl .whatsapp-float,
-    body.rtl #backToTop,
-    body.rtl .lang-btn {
-        display: none !important;
-    }
-    
-    body.rtl .nav-links {
-        position: static !important;
-        width: auto !important;
-        height: auto !important;
-        background: transparent !important;
-        box-shadow: none !important;
-    }
-}
-
-/* =====================================================
-   ACCESSIBILITY
-===================================================== */
-
-body.rtl *:focus {
-    outline: 2px solid #c9a961;
-    outline-offset: 2px;
-}
-
-body.rtl button:focus,
-body.rtl a:focus {
-    outline: 2px solid #c9a961;
-    outline-offset: 3px;
-}
-
-body.rtl .using-mouse *:focus {
-    outline: none;
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    body.rtl .nav-links .lang-btn {
-        border-width: 3px !important;
-    }
-}
-
-/* =====================================================
-   REDUCED MOTION
-===================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-    body.rtl *,
-    body.rtl *::before,
-    body.rtl *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-
-@media (hover: none) and (pointer: coarse) {
-    /* Larger touch targets for mobile */
-    body.rtl .nav-links a {
-        padding: 1rem;
-        min-height: 48px;
-    }
-    
-    body.rtl .nav-links .lang-btn {
-        min-height: 52px !important;
-        padding: 1rem 2.5rem !important;
-    }
-    
-    /* Remove hover effects on touch devices */
-    body.rtl .nav-links .lang-btn:hover {
-        background: transparent !important;
-        color: #c9a961 !important;
-        transform: none !important;
-    }
-    
-    /* Active state for touch */
-    body.rtl .nav-links .lang-btn:active {
-        background: linear-gradient(135deg, #c9a961, #d4b877) !important;
-        color: white !important;
-    }
-}
-
-/* =====================================================
-   BROWSER-SPECIFIC FIXES
-===================================================== */
-
-/* Safari iOS fix for fixed positioning */
-@supports (-webkit-touch-callout: none) {
-    body.rtl .nav-links {
-        height: -webkit-fill-available;
-    }
-}
-
-/* Firefox-specific adjustments */
-@-moz-document url-prefix() {
-    body.rtl .nav-links .lang-btn {
-        padding: 0.9rem 2.5rem !important;
-    }
-}
-
-/* =====================================================
-   LOADING STATE (Optional Enhancement)
-===================================================== */
-
-body.rtl .nav-links.loading .lang-btn {
-    opacity: 0.6;
-    pointer-events: none;
-    cursor: wait;
-}
-
-/* =====================================================
-   PERFORMANCE OPTIMIZATIONS
-===================================================== */
-
-body.rtl .nav-links {
-    will-change: right;
-    -webkit-overflow-scrolling: touch;
-}
-
-body.rtl .nav-links .lang-btn {
-    -webkit-tap-highlight-color: rgba(201, 169, 97, 0.2);
-    tap-highlight-color: rgba(201, 169, 97, 0.2);
-}
-
-
-    body.rtl .nav-links .lang-btn,
-    body.rtl .nav-links > .lang-btn {
-        display: inline-flex !important;
-        position: relative !important;
-        left: auto !important;
-        right: auto !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        pointer-events: auto !important;
-        order: 999 !important;
-    }
-
-/* =====================================================
-   UTILITY CLASSES FOR RTL
-===================================================== */
-
-body.rtl .text-start {
-    text-align: right !important;
-}
-
-body.rtl .text-end {
-    text-align: left !important;
-}
-
-body.rtl .ms-auto {
-    margin-right: auto !important;
-    margin-left: 0 !important;
-}
-
-body.rtl .me-auto {
-    margin-left: auto !important;
-    margin-right: 0 !important;
-}
-
-body.rtl .float-start {
-    float: right !important;
-}
-
-body.rtl .float-end {
-    float: left !important;
-}
-
