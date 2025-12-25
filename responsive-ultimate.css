@@ -1,7 +1,32 @@
-responsive-/* =====================================================
+/* =====================================================
 ULTIMATE RESPONSIVE FIXES - ALL DEVICES
 من 320px (أصغر جهاز) إلى 2560px+ (شاشات كبيرة)
 ===================================================== */
+
+/* =====================================================
+CRITICAL FIX - إصلاح السكرولينج
+===================================================== */
+
+html {
+    overflow-x: hidden;
+    overflow-y: auto !important; /* السماح بالسكرول العمودي */
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto !important; /* السماح بالسكرول العمودي */
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* منع السكرول الأفقي فقط */
+body.no-scroll {
+    overflow-y: hidden !important; /* فقط عند فتح القائمة */
+}
 
 /* =====================================================
 1. CONTAINER SYSTEM - نظام الحاويات
@@ -11,40 +36,40 @@ ULTIMATE RESPONSIVE FIXES - ALL DEVICES
 .about-container,
 .project-page-container,
 .hero-container {
- width: 100%;
- max-width: 100%;
- padding-left: clamp(1rem, 5vw, 5%);
- padding-right: clamp(1rem, 5vw, 5%);
- margin-left: auto;
- margin-right: auto;
+    width: 100%;
+    max-width: 100%;
+    padding-left: clamp(1rem, 5vw, 5%);
+    padding-right: clamp(1rem, 5vw, 5%);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Large Screens - شاشات كبيرة */
 @media (min-width: 1920px) {
- .container,
- .about-container,
- .project-page-container {
-     max-width: 1800px;
- }
+    .container,
+    .about-container,
+    .project-page-container {
+        max-width: 1800px;
+    }
 }
 
 /* =====================================================
 2. GRID SYSTEMS - نظام الشبكات
 ===================================================== */
 
-/* تثبيت جميع الشبكات */
 .projects-grid,
 .products-grid,
 .gallery-grid,
 .gallery-preview-grid,
 .why-grid,
 .features-grid {
- display: grid;
- width: 100%;
- max-width: 100%;
- gap: clamp(1.2rem, 3vw, 2.5rem);
- padding: 0 clamp(0.5rem, 2vw, 1.5rem);
- margin: 0 auto;
+    display: grid;
+    width: 100%;
+    max-width: 100%;
+    gap: clamp(1.2rem, 3vw, 2.5rem);
+    padding: 0 clamp(0.5rem, 2vw, 1.5rem);
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* =====================================================
@@ -53,503 +78,595 @@ ULTIMATE RESPONSIVE FIXES - ALL DEVICES
 
 /* === Extra Large Screens (2560px+) - شاشات ضخمة === */
 @media (min-width: 2560px) {
- body {
-     font-size: 20px;
- }
- 
- .hero-title {
-     font-size: 6rem !important;
- }
- 
- .projects-grid,
- .products-grid,
- .gallery-grid,
- .gallery-preview-grid,
- .why-grid {
-     grid-template-columns: repeat(4, 1fr) !important;
-     max-width: 2400px;
-     gap: 3rem;
- }
- 
- .about-container {
-     max-width: 2200px;
- }
+    body {
+        font-size: 20px;
+    }
+    
+    .hero-title {
+        font-size: 6rem !important;
+    }
+    
+    .projects-grid,
+    .products-grid,
+    .gallery-grid,
+    .gallery-preview-grid,
+    .why-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        max-width: 2400px;
+        gap: 3rem;
+    }
+    
+    .about-container {
+        max-width: 2200px;
+    }
 }
 
 /* === Ultra Wide (1920px - 2560px) - شاشات واسعة جداً === */
 @media (min-width: 1920px) and (max-width: 2559px) {
- .projects-grid,
- .products-grid,
- .gallery-grid,
- .gallery-preview-grid,
- .why-grid {
-     grid-template-columns: repeat(4, 1fr) !important;
-     max-width: 1800px;
-     gap: 2.5rem;
- }
- 
- .hero-title {
-     font-size: 5rem !important;
- }
+    .projects-grid,
+    .products-grid,
+    .gallery-grid,
+    .gallery-preview-grid,
+    .why-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        max-width: 1800px;
+        gap: 2.5rem;
+    }
+    
+    .hero-title {
+        font-size: 5rem !important;
+    }
 }
 
 /* === Large Desktop (1440px - 1919px) - سطح مكتب كبير === */
 @media (min-width: 1440px) and (max-width: 1919px) {
- .projects-grid,
- .products-grid,
- .gallery-grid,
- .gallery-preview-grid,
- .why-grid {
-     grid-template-columns: repeat(3, 1fr) !important;
-     max-width: 1400px;
-     gap: 2.5rem;
- }
- 
- .hero-title {
-     font-size: 4.5rem !important;
- }
+    .projects-grid,
+    .products-grid,
+    .gallery-grid,
+    .gallery-preview-grid,
+    .why-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        max-width: 1400px;
+        gap: 2.5rem;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem !important;
+    }
 }
 
 /* === Desktop (1200px - 1439px) - سطح مكتب عادي === */
 @media (min-width: 1200px) and (max-width: 1439px) {
- .projects-grid,
- .products-grid,
- .gallery-grid,
- .gallery-preview-grid,
- .why-grid {
-     grid-template-columns: repeat(3, 1fr) !important;
-     max-width: 1200px;
-     gap: 2rem;
- }
- 
- .about-container {
-     grid-template-columns: 50% 50%;
-     gap: 3rem;
- }
- 
- .hero-title {
-     font-size: 4rem !important;
- }
+    .projects-grid,
+    .products-grid,
+    .gallery-grid,
+    .gallery-preview-grid,
+    .why-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        max-width: 1200px;
+        gap: 2rem;
+    }
+    
+    .about-container {
+        grid-template-columns: 50% 50%;
+        gap: 3rem;
+    }
+    
+    .hero-title {
+        font-size: 4rem !important;
+    }
 }
 
 /* === Large Tablet / Small Desktop (992px - 1199px) === */
 @media (min-width: 992px) and (max-width: 1199px) {
- .projects-grid,
- .products-grid,
- .gallery-grid,
- .gallery-preview-grid,
- .why-grid {
-     grid-template-columns: repeat(2, 1fr) !important;
-     gap: 2rem;
-     padding: 0 2rem;
- }
- 
- .about-container {
-     grid-template-columns: 1fr;
-     gap: 2.5rem;
- }
- 
- .about-content {
-     text-align: center;
-     padding: 0 2rem;
- }
- 
- .about-columns {
-     grid-template-columns: repeat(2, 1fr);
- }
- 
- .hero-title {
-     font-size: 3.5rem !important;
- }
- 
- .nav-links {
-     gap: 1.8rem;
- }
- 
- .nav-links a {
-     font-size: 0.9rem;
- }
+    .projects-grid,
+    .products-grid,
+    .gallery-grid,
+    .gallery-preview-grid,
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+    
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .about-content {
+        text-align: center;
+        padding: 0 2rem;
+    }
+    
+    .about-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-title {
+        font-size: 3.5rem !important;
+    }
+    
+    .nav-links {
+        gap: 1.8rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
+    }
 }
 
 /* === Tablet (768px - 991px) - تابلت === */
 @media (min-width: 768px) and (max-width: 991px) {
- /* Show hamburger menu */
- .menu-toggle {
-     display: flex !important;
- }
- 
- /* Hide desktop nav */
- .nav-links {
-     position: fixed;
-     top: 0;
-     right: -100%;
-     width: 85%;
-     max-width: 380px;
-     height: 100vh;
-     background: rgba(255, 255, 255, 0.98);
-     backdrop-filter: blur(20px);
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     transition: right 0.45s ease;
-     z-index: 1000;
-     padding: 2rem;
-     box-shadow: -15px 0 50px rgba(0,0,0,0.3);
- }
- 
- .nav-links.active {
-     right: 0;
- }
- 
- .nav-links li {
-     width: 100%;
-     text-align: center;
-     margin-bottom: 1.5rem;
- }
- 
- .nav-links a {
-     font-size: 1.2rem;
-     padding: 1rem;
-     width: 100%;
-     display: block;
- }
- 
- /* Mobile language button */
- .nav-links .lang-btn {
-     margin-top: 2rem;
-     font-size: 1.1rem;
-     padding: 0.8rem 2rem;
- }
- 
- /* Grids */
- .projects-grid,
- .products-grid,
- .gallery-grid,
- .gallery-preview-grid,
- .why-grid {
-     grid-template-columns: repeat(2, 1fr) !important;
-     gap: 1.8rem;
-     padding: 0 1.5rem;
- }
- 
- .about-container {
-     grid-template-columns: 1fr;
-     text-align: center;
- }
- 
- .about-columns {
-     grid-template-columns: 1fr;
-     gap: 1.5rem;
- }
- 
- .hero {
-     padding: 5rem 3% 7rem;
-     min-height: 85vh;
- }
- 
- .hero-title {
-     font-size: 3rem !important;
- }
- 
- .hero-subtitle {
-     font-size: 1.1rem;
- }
- 
- .features-grid {
-     grid-template-columns: repeat(2, 1fr);
-     gap: 1.5rem;
- }
- 
- .project-section {
-     grid-template-columns: 1fr !important;
-     gap: 2rem;
- }
- 
- .project-section:nth-child(even) {
-     direction: ltr !important;
- }
+    /* Show hamburger menu */
+    .menu-toggle {
+        display: flex !important;
+    }
+    
+    /* Hide desktop nav */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 380px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.45s ease;
+        z-index: 1000;
+        padding: 2rem;
+        box-shadow: -15px 0 50px rgba(0,0,0,0.3);
+        overflow-y: auto; /* السماح بالسكرول داخل القائمة */
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .nav-links a {
+        font-size: 1.2rem;
+        padding: 1rem;
+        width: 100%;
+        display: block;
+    }
+    
+    .nav-links .lang-btn {
+        margin-top: 2rem;
+        font-size: 1.1rem;
+        padding: 0.8rem 2rem;
+    }
+    
+    .projects-grid,
+    .products-grid,
+    .gallery-grid,
+    .gallery-preview-grid,
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.8rem;
+        padding: 0 1.5rem;
+    }
+    
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .about-columns {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .hero {
+        padding: 5rem 3% 7rem;
+        min-height: 85vh;
+    }
+    
+    .hero-title {
+        font-size: 3rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .project-section {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+    
+    .project-section:nth-child(even) {
+        direction: ltr !important;
+    }
 }
 
 /* === Large Mobile / Small Tablet (640px - 767px) === */
 @media (min-width: 640px) and (max-width: 767px) {
- .menu-toggle {
-     display: flex !important;
- }
- 
- .nav-links {
-     position: fixed;
-     top: 0;
-     right: -100%;
-     width: 90%;
-     max-width: 350px;
-     height: 100vh;
-     background: rgba(255, 255, 255, 0.98);
-     flex-direction: column;
-     justify-content: center;
-     transition: right 0.45s ease;
-     z-index: 1000;
-     padding: 2rem;
- }
- 
- .nav-links.active {
-     right: 0;
- }
- 
- .projects-grid,
- .products-grid,
- .gallery-grid,
- .gallery-preview-grid,
- .why-grid {
-     grid-template-columns: repeat(2, 1fr) !important;
-     gap: 1.5rem;
-     padding: 0 1rem;
- }
- 
- .hero-title {
-     font-size: 2.5rem !important;
- }
- 
- .hero-subtitle {
-     font-size: 1rem;
- }
- 
- .about-columns {
-     grid-template-columns: 1fr;
- }
- 
- .features-grid {
-     grid-template-columns: 1fr;
- }
+    .menu-toggle {
+        display: flex !important;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 90%;
+        max-width: 350px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        transition: right 0.45s ease;
+        z-index: 1000;
+        padding: 2rem;
+        overflow-y: auto;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .projects-grid,
+    .products-grid,
+    .gallery-grid,
+    .gallery-preview-grid,
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .about-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* === Mobile (480px - 639px) - جوال عادي === */
 @media (min-width: 480px) and (max-width: 639px) {
- .menu-toggle {
-     display: flex !important;
- }
- 
- .nav-links {
-     position: fixed;
-     right: -100%;
-     width: 100%;
-     height: 100vh;
-     flex-direction: column;
-     transition: right 0.45s ease;
-     z-index: 1000;
- }
- 
- .nav-links.active {
-     right: 0;
- }
- 
- .projects-grid,
- .products-grid,
- .gallery-grid,
- .gallery-preview-grid,
- .why-grid,
- .features-grid,
- .about-columns {
-     grid-template-columns: 1fr !important;
-     gap: 1.5rem;
-     padding: 0 1rem;
- }
- 
- .hero {
-     padding: 4rem 1rem 6rem;
-     min-height: 80vh;
- }
- 
- .hero-title {
-     font-size: 2.2rem !important;
-     line-height: 1.3;
- }
- 
- .hero-subtitle {
-     font-size: 0.95rem;
- }
- 
- .cta-btn-primary,
- .cta-btn-secondary {
-     width: 100%;
-     padding: 1rem 2rem;
-     font-size: 1rem;
- }
- 
- .about-container {
-     grid-template-columns: 1fr;
-     padding: 0 1rem;
- }
- 
- .project-card img,
- .product-card img,
- .gallery-item img,
- .gallery-preview-item img,
- .why-card img {
-     height: 240px !important;
- }
+    .menu-toggle {
+        display: flex !important;
+    }
+    
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        transition: right 0.45s ease;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .projects-grid,
+    .products-grid,
+    .gallery-grid,
+    .gallery-preview-grid,
+    .why-grid,
+    .features-grid,
+    .about-columns {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .hero {
+        padding: 4rem 1rem 6rem;
+        min-height: 80vh;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem !important;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .cta-btn-primary,
+    .cta-btn-secondary {
+        width: 100%;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    
+    .about-container {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    .project-card img,
+    .product-card img,
+    .gallery-item img,
+    .gallery-preview-item img,
+    .why-card img {
+        height: 240px !important;
+    }
 }
 
 /* === Small Mobile (360px - 479px) - جوال صغير === */
 @media (min-width: 360px) and (max-width: 479px) {
- body {
-     font-size: 14px;
- }
- 
- .menu-toggle {
-     display: flex !important;
- }
- 
- .nav-links {
-     position: fixed;
-     right: -100%;
-     width: 100%;
-     transition: right 0.45s ease;
- }
- 
- .nav-links.active {
-     right: 0;
- }
- 
- .projects-grid,
- .products-grid,
- .gallery-grid,
- .gallery-preview-grid,
- .why-grid,
- .features-grid,
- .about-columns {
-     grid-template-columns: 1fr !important;
-     gap: 1.2rem;
-     padding: 0 0.8rem;
- }
- 
- .hero {
-     padding: 3.5rem 0.8rem 5rem;
- }
- 
- .hero-title {
-     font-size: 1.9rem !important;
-     line-height: 1.3;
- }
- 
- .hero-subtitle {
-     font-size: 0.9rem;
- }
- 
- .cta-btn-primary,
- .cta-btn-secondary {
-     padding: 0.9rem 1.5rem;
-     font-size: 0.95rem;
- }
- 
- .nav-links a {
-     font-size: 1.1rem;
- }
- 
- .project-card img,
- .product-card img,
- .gallery-item img,
- .gallery-preview-item img,
- .why-card img {
-     height: 220px !important;
- }
- 
- .whatsapp-float {
-     width: 50px;
-     height: 50px;
-     bottom: 20px;
-     right: 20px;
- }
+    body {
+        font-size: 14px;
+    }
+    
+    .menu-toggle {
+        display: flex !important;
+    }
+    
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        width: 100%;
+        transition: right 0.45s ease;
+        overflow-y: auto;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .projects-grid,
+    .products-grid,
+    .gallery-grid,
+    .gallery-preview-grid,
+    .why-grid,
+    .features-grid,
+    .about-columns {
+        grid-template-columns: 1fr !important;
+        gap: 1.2rem;
+        padding: 0 0.8rem;
+    }
+    
+    .hero {
+        padding: 3.5rem 0.8rem 5rem;
+    }
+    
+    .hero-title {
+        font-size: 1.9rem !important;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .cta-btn-primary,
+    .cta-btn-secondary {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .nav-links a {
+        font-size: 1.1rem;
+    }
+    
+    .project-card img,
+    .product-card img,
+    .gallery-item img,
+    .gallery-preview-item img,
+    .why-card img {
+        height: 220px !important;
+    }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
 }
 
 /* === Extra Small Mobile (320px - 359px) - أصغر جوال === */
 @media (max-width: 359px) {
- body {
-     font-size: 13px;
- }
- 
- .menu-toggle {
-     display: flex !important;
- }
- 
- .projects-grid,
- .products-grid,
- .gallery-grid,
- .gallery-preview-grid,
- .why-grid,
- .features-grid,
- .about-columns {
-     grid-template-columns: 1fr !important;
-     gap: 1rem;
-     padding: 0 0.5rem;
- }
- 
- .hero {
-     padding: 3rem 0.5rem 4rem;
- }
- 
- .hero-title {
-     font-size: 1.7rem !important;
-     line-height: 1.2;
- }
- 
- .hero-subtitle {
-     font-size: 0.85rem;
- }
- 
- .cta-btn-primary,
- .cta-btn-secondary {
-     padding: 0.8rem 1.2rem;
-     font-size: 0.9rem;
- }
- 
- .nav-links a {
-     font-size: 1rem;
-     padding: 0.8rem;
- }
- 
- .project-card img,
- .product-card img,
- .gallery-item img,
- .gallery-preview-item img,
- .why-card img {
-     height: 200px !important;
- }
- 
- .whatsapp-float {
-     width: 45px;
-     height: 45px;
-     bottom: 15px;
-     right: 15px;
-     font-size: 20px;
- }
- 
- .section-header h2 {
-     font-size: 1.5rem !important;
- }
- 
- .footer-content {
-     padding: 0 0.5rem;
- }
+    body {
+        font-size: 13px;
+    }
+    
+    .menu-toggle {
+        display: flex !important;
+    }
+    
+    .projects-grid,
+    .products-grid,
+    .gallery-grid,
+    .gallery-preview-grid,
+    .why-grid,
+    .features-grid,
+    .about-columns {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .hero {
+        padding: 3rem 0.5rem 4rem;
+    }
+    
+    .hero-title {
+        font-size: 1.7rem !important;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+    
+    .cta-btn-primary,
+    .cta-btn-secondary {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+    
+    .project-card img,
+    .product-card img,
+    .gallery-item img,
+    .gallery-preview-item img,
+    .why-card img {
+        height: 200px !important;
+    }
+    
+    .whatsapp-float {
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 20px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .footer-content {
+        padding: 0 0.5rem;
+    }
 }
 
 /* =====================================================
-4. IMAGES & MEDIA - الصور والوسائط
+4. IMAGES & MEDIA - الصور والوسائط (FIXED)
 ===================================================== */
 
 img,
 video {
- max-width: 100%;
- height: auto;
- display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
+/* تثبيت حجم الصور في الكاردات - CRITICAL FIX */
 .project-card img,
 .product-card img,
 .gallery-item img,
 .gallery-preview-item img,
 .why-card img {
- width: 100% !important;
- object-fit: cover;
+    width: 100% !important;
+    height: 280px !important; /* ارتفاع ثابت */
+    object-fit: cover !important; /* ملء الصورة بدون تشويه */
+    object-position: center !important;
+}
+
+/* إصلاح containers الصور */
+.project-card .card-image,
+.product-card .product-image,
+.gallery-item,
+.gallery-preview-item,
+.why-card .why-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    background: #f5f5f5;
+}
+
+/* Mobile sizes - أحجام للجوال */
+@media (max-width: 768px) {
+    .project-card img,
+    .product-card img,
+    .gallery-item img,
+    .gallery-preview-item img,
+    .why-card img {
+        height: 240px !important;
+    }
+    
+    .project-card .card-image,
+    .product-card .product-image,
+    .gallery-item,
+    .gallery-preview-item,
+    .why-card .why-image {
+        height: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card img,
+    .product-card img,
+    .gallery-item img,
+    .gallery-preview-item img,
+    .why-card img {
+        height: 220px !important;
+    }
+    
+    .project-card .card-image,
+    .product-card .product-image,
+    .gallery-item,
+    .gallery-preview-item,
+    .why-card .why-image {
+        height: 220px;
+    }
+}
+
+@media (max-width: 360px) {
+    .project-card img,
+    .product-card img,
+    .gallery-item img,
+    .gallery-preview-item img,
+    .why-card img {
+        height: 200px !important;
+    }
+    
+    .project-card .card-image,
+    .product-card .product-image,
+    .gallery-item,
+    .gallery-preview-item,
+    .why-card .why-image {
+        height: 200px;
+    }
+}
+
+/* Large screens - شاشات كبيرة */
+@media (min-width: 1440px) {
+    .project-card img,
+    .product-card img,
+    .gallery-item img,
+    .gallery-preview-item img,
+    .why-card img {
+        height: 320px !important;
+    }
+    
+    .project-card .card-image,
+    .product-card .product-image,
+    .gallery-item,
+    .gallery-preview-item,
+    .why-card .why-image {
+        height: 320px;
+    }
 }
 
 /* =====================================================
@@ -557,42 +674,35 @@ video {
 ===================================================== */
 
 @media (max-width: 991px) {
- button,
- a,
- .nav-links a,
- .filter-btn,
- .preview-filter-btn,
- .lang-btn,
- .cta-btn,
- .cta-btn-primary,
- .cta-btn-secondary {
-     min-height: 44px;
-     min-width: 44px;
-     padding: 0.75rem 1.5rem;
-     -webkit-tap-highlight-color: rgba(201, 169, 97, 0.2);
- }
+    button,
+    a,
+    .nav-links a,
+    .filter-btn,
+    .preview-filter-btn,
+    .lang-btn,
+    .cta-btn,
+    .cta-btn-primary,
+    .cta-btn-secondary {
+        min-height: 44px;
+        min-width: 44px;
+        padding: 0.75rem 1.5rem;
+        -webkit-tap-highlight-color: rgba(201, 169, 97, 0.2);
+    }
 }
 
 /* =====================================================
 6. OVERFLOW FIXES - إصلاح الفيضان
 ===================================================== */
 
-body,
-html {
- overflow-x: hidden;
- width: 100%;
- max-width: 100%;
-}
-
 * {
- box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 section,
 .section {
- width: 100%;
- max-width: 100%;
- overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* =====================================================
@@ -602,24 +712,24 @@ section,
 .hero-cta-group,
 .gallery-filters,
 .gallery-preview-filters {
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
- gap: clamp(0.5rem, 2vw, 1.5rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
 }
 
 @media (max-width: 768px) {
- .hero-cta-group {
-     flex-direction: column;
-     align-items: center;
-     width: 100%;
- }
- 
- .cta-btn-primary,
- .cta-btn-secondary {
-     width: 100%;
-     max-width: 350px;
- }
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .cta-btn-primary,
+    .cta-btn-secondary {
+        width: 100%;
+        max-width: 350px;
+    }
 }
 
 /* =====================================================
@@ -628,9 +738,9 @@ section,
 
 h1, h2, h3, h4, h5, h6,
 p, li, a, span {
- word-wrap: break-word;
- overflow-wrap: break-word;
- hyphens: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 /* =====================================================
@@ -642,7 +752,7 @@ p, li, a, span {
 .products-section,
 .gallery-section,
 .why-section {
- padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 5%);
+    padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 5%);
 }
 
 /* =====================================================
@@ -650,13 +760,13 @@ p, li, a, span {
 ===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
- *,
- *::before,
- *::after {
-     animation-duration: 0.01ms !important;
-     animation-iteration-count: 1 !important;
-     transition-duration: 0.01ms !important;
- }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 /* =====================================================
@@ -664,19 +774,19 @@ p, li, a, span {
 ===================================================== */
 
 @media print {
- .menu-toggle,
- .nav-links,
- .whatsapp-float,
- #backToTop,
- .hero-video,
- button {
-     display: none !important;
- }
- 
- body {
-     font-size: 12pt;
-     line-height: 1.5;
- }
+    .menu-toggle,
+    .nav-links,
+    .whatsapp-float,
+    #backToTop,
+    .hero-video,
+    button {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
 }
 
 /* =====================================================
@@ -684,21 +794,15 @@ p, li, a, span {
 ===================================================== */
 
 @media (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi) {
- img {
-     image-rendering: -webkit-optimize-contrast;
- }
+       (min-resolution: 192dpi) {
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
 }
 
 /* =====================================================
 13. CRITICAL FIXES - إصلاحات حرجة
 ===================================================== */
-
-/* Fix horizontal scroll */
-body, html {
- position: relative;
- overflow-x: hidden !important;
-}
 
 /* Fix grid overflow */
 .projects-grid,
@@ -706,8 +810,8 @@ body, html {
 .gallery-grid,
 .gallery-preview-grid,
 .why-grid {
- max-width: 100% !important;
- overflow: visible;
+    max-width: 100% !important;
+    overflow: visible;
 }
 
 /* Fix image overflow */
@@ -716,7 +820,7 @@ body, html {
 .gallery-item,
 .gallery-preview-item,
 .why-card {
- overflow: hidden;
+    overflow: hidden;
 }
 
 /* Fix button overflow */
@@ -724,16 +828,21 @@ body, html {
 .cta-btn-secondary,
 .filter-btn,
 .preview-filter-btn {
- white-space: nowrap;
- text-overflow: ellipsis;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 @media (max-width: 480px) {
- .cta-btn-primary,
- .cta-btn-secondary {
-     white-space: normal;
- }
+    .cta-btn-primary,
+    .cta-btn-secondary {
+        white-space: normal;
+    }
 }
+
+/* =====================================================
+14. FOOTER FIXES - إصلاح الفوتر
+===================================================== */
+
 @media (max-width: 768px) {
     .footer-section {
         text-align: center;
@@ -747,7 +856,167 @@ body, html {
 @media (max-width: 480px) {
     .footer-section a {
         font-size: 0.85rem;
-    } .footer-section a .icon {
+    }
+    
+    .footer-section a .icon {
         font-size: 1.2em;
     }
+}
+
+/* =====================================================
+15. MOBILE MENU OVERLAY - خلفية القائمة
+===================================================== */
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* =====================================================
+16. CARD FIXES - إصلاح الكاردات والعناصر الطافية
+===================================================== */
+
+/* إخفاء كل العناصر الديكورية المزعجة */
+.decorative-circle,
+.project-card .icon,
+.product-card .icon,
+.project-card .badge,
+.product-card .badge,
+.card-badge,
+.floating-badge,
+[class*="circle"],
+[class*="badge"]:not(.hero-badge):not(.project-label) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* تنظيف الكاردات من أي عناصر إضافية */
+.project-card,
+.product-card,
+.gallery-item,
+.gallery-preview-item,
+.why-card {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* إزالة أي pseudo elements غريبة */
+.project-card::before,
+.project-card::after,
+.product-card::before,
+.product-card::after,
+.gallery-item::before,
+.gallery-item::after,
+.gallery-preview-item::before,
+.gallery-preview-item::after,
+.why-card::before,
+.why-card::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* إصلاح child elements */
+.project-card > *:not(.card-image):not(.product-image):not(.product-info):not(.product-specs):not(h3):not(p):not(.price-tag),
+.product-card > *:not(.card-image):not(.product-image):not(.product-info):not(.product-specs):not(h3):not(p):not(.price-tag) {
+    position: relative !important;
+    z-index: auto !important;
+}
+
+/* WhatsApp Button - بس هاد نخليه يظهر */
+.whatsapp-float {
+    display: flex !important;
+    position: fixed !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    z-index: 9998 !important;
+    pointer-events: auto;
+}
+
+/* تثبيت الصور */
+.project-card img,
+.product-card img,
+.gallery-item img,
+.gallery-preview-item img,
+.why-card img {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* المحتوى النصي */
+.project-card .card-content,
+.product-card .card-content,
+.product-card .product-info,
+.why-card .card-content {
+    position: relative;
+    z-index: 2;
+    background: white;
+}
+
+/* Project/Product Labels - بس هدول نخليهم */
+.project-label,
+.product-label,
+.gallery-category,
+.gallery-preview-category {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Hover effects */
+.project-card:hover,
+.product-card:hover,
+.gallery-item:hover,
+.why-card:hover {
+    z-index: 10;
+}
+
+/* منع pointer events على الصور */
+.project-card img,
+.product-card img {
+    pointer-events: none;
+}
+
+/* السماح بالـ clicks على الكاردات */
+.project-card,
+.product-card {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* إصلاح أي عناصر positioned بشكل absolute */
+.project-card [style*="position: absolute"],
+.product-card [style*="position: absolute"] {
+    display: none !important;
+}
+
+/* تأكد من عدم وجود overlays */
+.project-card > div:not(.card-image):not(.product-image):not(.product-info):first-child,
+.product-card > div:not(.card-image):not(.product-image):not(.product-info):first-child {
+    position: static !important;
 }
