@@ -4,28 +4,29 @@ ULTIMATE RESPONSIVE FIXES - ALL DEVICES
 ===================================================== */
 
 /* =====================================================
-CRITICAL FIX - إصلاح السكرولينج
+BASIC SETUP - إعداد أساسي بدون تعقيد
 ===================================================== */
 
-html {
-    overflow-x: hidden;
-    overflow-y: auto !important; /* السماح بالسكرول العمودي */
-    scroll-behavior: smooth;
-}
-
-body {
-    overflow-x: hidden;
-    overflow-y: auto !important; /* السماح بالسكرول العمودي */
-    width: 100%;
-    max-width: 100vw;
-    position: relative;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* منع السكرول الأفقي فقط */
-body.no-scroll {
-    overflow-y: hidden !important; /* فقط عند فتح القائمة */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* منع السكرول الأفقي فقط عند فتح القائمة */
+body.menu-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
 
 /* =====================================================
