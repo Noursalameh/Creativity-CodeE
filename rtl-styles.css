@@ -74,21 +74,32 @@ body.rtl header {
     direction: rtl;
 }
 
-/* Navigation Container */
 body.rtl nav {
     display: flex;
-    flex-direction: row-reverse;
+    position: relative;
+    flex-direction: row;     /* صح */
     justify-content: space-between;
     align-items: center;
     direction: rtl;
-    max-width: 1400px;
-    margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+    body.rtl .menu-toggle {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        z-index: 1001;
+    }
+}
+
+
 
 /* /* Logo with Text */
 body.rtl .logo {
     display: flex !important;
-    flex-direction: row-reverse !important;
+    /* flex-direction: row-reverse !important; */
     align-items: center !important;
     gap: 12px !important;
     cursor: pointer !important;
@@ -216,15 +227,12 @@ body.rtl nav > .lang-btn:hover {
 
 /* Mobile Menu Toggle */
 body.rtl .menu-toggle {
-    right: auto;
-    left: 20px;
-    order: 0;
-    display: none;
-    cursor: pointer;
-    z-index: 1001;
-    flex-direction: column;
-    gap: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+
 
 body.rtl .menu-toggle span {
     display: block;
@@ -822,6 +830,16 @@ body.rtl .float-end {
 /* =====================================================
    RESPONSIVE DESIGN - MOBILE (max-width: 768px)
 ===================================================== */
+@media (max-width: 768px) {
+    body.rtl .nav-links {
+        right: -100%;
+        left: auto;
+    }
+
+    body.rtl .nav-links.active {
+        right: 0;
+    }
+}
 
 @media (max-width: 768px) {
     
@@ -829,7 +847,7 @@ body.rtl .float-end {
     body.rtl .menu-toggle {
         display: flex;
         right: auto;
-        left: 15px;
+      
         z-index: 1001;
     }
     
