@@ -734,3 +734,20 @@ body, html {
      white-space: normal;
  }
 }
+@media (max-width: 768px) {
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-section a {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section a {
+        font-size: 0.85rem;
+    } .footer-section a .icon {
+        font-size: 1.2em;
+    }
+}

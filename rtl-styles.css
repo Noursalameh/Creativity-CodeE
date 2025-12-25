@@ -129,7 +129,12 @@ body.rtl .logo-text {
 body.rtl .logo:hover .logo-text {
     color: #d4b877 !important;
 }
-
+@media (max-width: 768px) {
+    body.rtl .footer-section a {
+        justify-content: center;
+        text-align: center;
+    }
+}
 /* موبايل */
 @media (max-width: 768px) {
     body.rtl .logo-text {
