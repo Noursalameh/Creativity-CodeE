@@ -24,16 +24,19 @@ function openWhatsApp() {
         });
     }
 }
+let isInitialLoad = true;
 
-// ===== Page Navigation =====
 function showPage(pageName) {
     // Hide all pages
     document.querySelectorAll('.page-content').forEach(page => {
         page.classList.remove('active');
     });
-    if (location.hash !== '#' + pageName) {
+
+    // ✅ pushState فقط لو مش تحميل أول
+    if (!isInitialLoad && location.hash !== '#' + pageName) {
         history.pushState({ page: pageName }, '', '#' + pageName);
     }
+
     // Show target page
     const targetPage = document.getElementById(pageName + '-page');
     if (targetPage) {
@@ -44,7 +47,7 @@ function showPage(pageName) {
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.remove('active');
     });
-    
+
     const navLink = document.getElementById('nav-' + pageName);
     if (navLink) {
         navLink.classList.add('active');
@@ -63,10 +66,11 @@ function showPage(pageName) {
     if (typeof gtag !== 'undefined') {
         gtag('event', 'page_view', {
             'page_title': pageName,
-            'page_location': window.location.href + '#' + pageName
+            'page_location': window.location.href
         });
     }
 }
+
 
 // ===== Scroll to About Section (FIXED) =====
 function scrollToAbout() {
@@ -617,17 +621,14 @@ window.filterGallery = filterGallery;
 window.openWhatsApp = openWhatsApp;
 
 console.log('📦 J.js loaded successfully!');
-// ===============================
-// Browser Back / Forward Support
+
 // ===============================
 window.addEventListener('popstate', (event) => {
-    if (event.state && event.state.page) {
+    if (event.state?.page) {
         showPage(event.state.page);
     }
 });
-// ===============================
-// Load page from URL hash
-// ===============================
+
 window.addEventListener('load', () => {
     const pageFromHash = location.hash.replace('#', '');
     if (pageFromHash) {
@@ -635,4 +636,5 @@ window.addEventListener('load', () => {
     } else {
         showPage('home');
     }
+    isInitialLoad = false;
 });
