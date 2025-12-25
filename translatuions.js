@@ -8,7 +8,10 @@ const translations = {
             products: "PRODUCTS",
             gallery: "GALLERY",
             blogs: "BLOGS",
-            langBtn: "AR"
+            langBtn: "AR",
+            logoText: "Creativity Code"  
+
+
         },
         hero: {
             badge: "WPC Solutions",
@@ -123,7 +126,8 @@ const translations = {
             products: "المنتجات",
             gallery: "المعرض",
             blogs: "المقالات",
-            langBtn: "EN"
+            langBtn: "EN",
+            logoText:"رمز الابداع "
         },
         hero: {
             badge: "حلول WPC المتقدمة",
@@ -314,6 +318,10 @@ class LanguageManager {
         
         const langBtn = document.querySelector('.lang-btn');
         if (langBtn) langBtn.textContent = t.nav.langBtn;
+        
+        // ✅ إضافة ترجمة اسم الشركة في اللوجو
+        const logoText = document.querySelector('.logo-text');
+        if (logoText) logoText.textContent = t.nav.logoText;
     }
     
     updateHeroSection(t) {
