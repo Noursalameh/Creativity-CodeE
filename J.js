@@ -31,7 +31,9 @@ function showPage(pageName) {
     document.querySelectorAll('.page-content').forEach(page => {
         page.classList.remove('active');
     });
-
+    if (location.hash !== '#' + pageName) {
+        history.pushState({ page: pageName }, '', '#' + pageName);
+    }
     // Show target page
     const targetPage = document.getElementById(pageName + '-page');
     if (targetPage) {
@@ -615,3 +617,22 @@ window.filterGallery = filterGallery;
 window.openWhatsApp = openWhatsApp;
 
 console.log('📦 J.js loaded successfully!');
+// ===============================
+// Browser Back / Forward Support
+// ===============================
+window.addEventListener('popstate', (event) => {
+    if (event.state && event.state.page) {
+        showPage(event.state.page);
+    }
+});
+// ===============================
+// Load page from URL hash
+// ===============================
+window.addEventListener('load', () => {
+    const pageFromHash = location.hash.replace('#', '');
+    if (pageFromHash) {
+        showPage(pageFromHash);
+    } else {
+        showPage('home');
+    }
+});
