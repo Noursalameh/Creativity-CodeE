@@ -644,18 +644,18 @@ function initImageLightbox() {
     
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImage');
+    const closeBtn = modal?.querySelector('.close-modal');
 
     if (!modal || !modalImg) {
         console.warn('⚠️ Image modal not found in HTML');
         return;
     }
 
-    // ✅ شمول كل صور المشاريع والمعرض
+    // ✅ شمول صور الـ Gallery الكاملة + المشاريع فقط (بدون Gallery Preview)
     const clickableImages = document.querySelectorAll(
-        '.gallery-item img, ' +
-        '.gallery-preview-item img, ' +
-        '.project-section .grid-image img, ' +  // ← الإضافة المهمة
-        '.project-section .main-image img, ' +   // ← الإضافة المهمة
+        '.gallery-item img, ' +  // صور صفحة الـ Gallery فقط
+        '.project-section .grid-image img, ' +
+        '.project-section .main-image img, ' +
         '#project-page img'
     );
 
@@ -664,7 +664,6 @@ function initImageLightbox() {
     clickableImages.forEach((img) => {
         img.style.cursor = 'zoom-in';
         
-        // ✅ منع أي onclick من الـ parent
         img.onclick = function(e) {
             e.preventDefault();
             e.stopPropagation();
@@ -674,74 +673,132 @@ function initImageLightbox() {
             
             modal.classList.add('active');
             modalImg.src = this.src;
-            modalImg.alt = this.alt || 'Project Image';
+            modalImg.alt = this.alt || 'Image';
             document.body.style.overflow = 'hidden';
             
             return false;
         };
     });
 
-    // إغلاق الـ modal
+    // دالة الإغلاق
     function closeModal() {
         modal.classList.remove('active');
         document.body.style.overflow = '';
         modalImg.src = '';
+        console.log('✅ Modal closed');
     }
 
+    // إغلاق عند الضغط على الخلفية
     modal.addEventListener('click', function(e) {
-        if (e.target === modal || e.target.classList.contains('close-modal')) {
+        if (e.target === modal) {
             closeModal();
         }
     });
 
+    // إغلاق عند الضغط على زر X
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            closeModal();
+            return false;
+        });
+    }
+
+    // إغلاق بزر Escape
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
         }
     });
-}// دالة الإغلاق من HTML
-function closeImageModal() {
-    const modal = document.getElementById('imageModal');
-    if (modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = '';
-        document.getElementById('modalImage').src = '';
-    }
-}// ===== Navigate to Specific Project =====
-function goToProject(projectId) {
-    // روح على صفحة المشاريع
-    showPage('project');
-    
-    // استنى شوي لحد ما الصفحة تحمّل
-    setTimeout(() => {
-        // لاقي المشروع المطلوب
-        const projectElement = document.getElementById(projectId);
-        
-        if (projectElement) {
-            // احسب الموقع مع offset
-            const offsetTop = projectElement.offsetTop - 100;
-            
-            // اسكرول بشكل سلس
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-            
-            // إضافة highlight effect
-            projectElement.style.animation = 'highlightProject 2s ease';
-            
-            // Track event
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'navigate_to_project', {
-                    'event_category': 'Navigation',
-                    'event_label': projectId
-                });
-            }
-        } else {
-            console.warn('⚠️ Project not found:', projectId);
-        }
-    }, 300);
 }
+// function initImageLightbox() {
+//     console.log('🚀 Initializing Image Lightbox...');
+    
+//     const modal = document.getElementById('imageModal');
+//     const modalImg = document.getElementById('modalImage');
+//     const closeBtn = modal?.querySelector('.close-modal');
 
-// Export للاستخدام في HTML
-window.goToProject = goToProject;
+//     if (!modal || !modalImg) {
+//         console.warn('⚠️ Image modal not found in HTML');
+//         return;
+//     }
+
+//     const clickableImages = document.querySelectorAll(
+//         '.gallery-item img, ' +  // ✅ بس صور صفحة الـ Gallery
+//         '.project-section .grid-image img, ' +
+//         '.project-section .main-image img, ' +
+//         '#project-page img'
+//     );
+
+//     console.log(`✅ Found ${clickableImages.length} images for lightbox`);
+
+//     clickableImages.forEach((img) => {
+//         img.style.cursor = 'zoom-in';
+        
+//         img.onclick = function(e) {
+//             e.preventDefault();
+//             e.stopPropagation();
+//             e.stopImmediatePropagation();
+            
+//             console.log('🖼️ Opening image:', this.src);
+            
+//             modal.classList.add('active');
+//             modalImg.src = this.src;
+//             modalImg.alt = this.alt || 'Project Image';
+//             document.body.style.overflow = 'hidden';
+            
+//             return false;
+//         };
+//     });
+
+//     // دالة الإغلاق
+//     function closeModal() {
+//         modal.classList.remove('active');
+//         document.body.style.overflow = '';
+//         modalImg.src = '';
+//         console.log('✅ Modal closed');
+//     }
+
+//     // إغلاق عند الضغط على الخلفية
+//     modal.addEventListener('click', function(e) {
+//         if (e.target === modal) {
+//             console.log('🖱️ Clicked background');
+//             closeModal();
+//         }
+//     });
+
+//     // إغلاق عند الضغط على زر X - مهم جداً!
+//     if (closeBtn) {
+//         closeBtn.addEventListener('click', function(e) {
+//             e.preventDefault();
+//             e.stopPropagation();
+//             e.stopImmediatePropagation();
+//             console.log('❌ Clicked close button');
+//             closeModal();
+//             return false;
+//         });
+//     }
+
+//     // إغلاق بزر Escape
+//     document.addEventListener('keydown', function(e) {
+//         if (e.key === 'Escape' && modal.classList.contains('active')) {
+//             console.log('⌨️ Pressed Escape');
+//             closeModal();
+//         }
+//     });
+// }
+
+// // دالة الإغلاق من HTML (backup)
+// function closeImageModal() {
+//     const modal = document.getElementById('imageModal');
+//     if (modal) {
+//         modal.classList.remove('active');
+//         document.body.style.overflow = '';
+//         document.getElementById('modalImage').src = '';
+//     }
+// }
+
+// // Export
+// window.closeImageModal = closeImageModal;
