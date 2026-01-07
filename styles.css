@@ -1392,8 +1392,123 @@ footer {
     max-width: 1400px;
     margin: 0 auto;
 }
+/* =====================================================
+   GALLERY PREVIEW HOME - ALWAYS VISIBLE LABELS
+===================================================== */
 
 .gallery-preview-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: pointer;
+}
+
+.gallery-preview-item img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.gallery-preview-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(201, 169, 97, 0.3);
+}
+
+.gallery-preview-item:hover img {
+    transform: scale(1.1);
+}
+
+/* ✅ الـ Overlay - ظاهر دايماً بدون transform */
+.gallery-preview-overlay {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: linear-gradient(
+        to top, 
+        rgba(0, 0, 0, 0.85) 0%, 
+        rgba(0, 0, 0, 0.5) 60%, 
+        transparent 100%
+    ) !important;
+    padding: 2.5rem 1.5rem 1.5rem !important;
+    transform: translateY(0) !important; /* ← دايماً ظاهر! */
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    z-index: 10 !important;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+/* عند الـ hover يصير اللون ذهبي */
+.gallery-preview-item:hover .gallery-preview-overlay {
+    background: linear-gradient(
+        to top, 
+        rgba(201, 169, 97, 0.95) 0%, 
+        rgba(201, 169, 97, 0.7) 60%, 
+        transparent 100%
+    ) !important;
+}
+
+/* ✅ النص - واضح وظاهر دايماً */
+.gallery-preview-category {
+    color: white !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.8px !important;
+    text-transform: uppercase !important;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.9) !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    font-family: 'Tajawal', 'Segoe UI', sans-serif;
+    line-height: 1.4;
+    transition: all 0.3s ease;
+}
+
+/* عند الـ hover النص يكبر شوي */
+.gallery-preview-item:hover .gallery-preview-category {
+    transform: translateY(-5px) scale(1.08);
+    text-shadow: 3px 3px 15px rgba(0,0,0,1);
+    letter-spacing: 2px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .gallery-preview-overlay {
+        padding: 2rem 1rem 1rem !important;
+    }
+    
+    .gallery-preview-category {
+        font-size: 1rem !important;
+        letter-spacing: 1.2px !important;
+    }
+    
+    .gallery-preview-item img {
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-preview-category {
+        font-size: 0.9rem !important;
+        letter-spacing: 1px !important;
+    }
+    
+    .gallery-preview-item img {
+        height: 240px;
+    }
+    
+    .gallery-preview-overlay {
+        padding: 1.5rem 0.8rem 0.8rem !important;
+    }
+}
+
+/* .gallery-preview-item {
     position: relative;
     overflow: hidden;
     border-radius: 16px;
@@ -1435,10 +1550,10 @@ footer {
     transform: translateY(100%);
     transition: transform 0.4s ease;
 }
-
-.gallery-preview-item:hover .gallery-preview-overlay {
+ */
+/* .gallery-preview-item:hover .gallery-preview-overlay {
     transform: translateY(0);
-}
+} */
 
 .gallery-preview-category {
     color: white;
