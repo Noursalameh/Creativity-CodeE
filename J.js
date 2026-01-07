@@ -570,15 +570,16 @@ function init() {
         
         // Initialize gallery filter
         filterGallery('all');
+
+        // ← أضف هذا السطر الجديد هنا ↓
+        initImageLightbox();
         
         console.log('✅ Website initialized successfully!');
         
     } catch (error) {
         console.error('❌ Error initializing website:', error);
     }
-}
-
-// ===== DOM Content Loaded =====
+}// ===== DOM Content Loaded =====
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
 } else {
@@ -638,3 +639,109 @@ window.addEventListener('load', () => {
     }
     isInitialLoad = false;
 });
+function initImageLightbox() {
+    console.log('🚀 Initializing Image Lightbox...');
+    
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+
+    if (!modal || !modalImg) {
+        console.warn('⚠️ Image modal not found in HTML');
+        return;
+    }
+
+    // ✅ شمول كل صور المشاريع والمعرض
+    const clickableImages = document.querySelectorAll(
+        '.gallery-item img, ' +
+        '.gallery-preview-item img, ' +
+        '.project-section .grid-image img, ' +  // ← الإضافة المهمة
+        '.project-section .main-image img, ' +   // ← الإضافة المهمة
+        '#project-page img'
+    );
+
+    console.log(`✅ Found ${clickableImages.length} images for lightbox`);
+
+    clickableImages.forEach((img) => {
+        img.style.cursor = 'zoom-in';
+        
+        // ✅ منع أي onclick من الـ parent
+        img.onclick = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            
+            console.log('🖼️ Opening image:', this.src);
+            
+            modal.classList.add('active');
+            modalImg.src = this.src;
+            modalImg.alt = this.alt || 'Project Image';
+            document.body.style.overflow = 'hidden';
+            
+            return false;
+        };
+    });
+
+    // إغلاق الـ modal
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        modalImg.src = '';
+    }
+
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal || e.target.classList.contains('close-modal')) {
+            closeModal();
+        }
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+}// دالة الإغلاق من HTML
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+        document.getElementById('modalImage').src = '';
+    }
+}// ===== Navigate to Specific Project =====
+function goToProject(projectId) {
+    // روح على صفحة المشاريع
+    showPage('project');
+    
+    // استنى شوي لحد ما الصفحة تحمّل
+    setTimeout(() => {
+        // لاقي المشروع المطلوب
+        const projectElement = document.getElementById(projectId);
+        
+        if (projectElement) {
+            // احسب الموقع مع offset
+            const offsetTop = projectElement.offsetTop - 100;
+            
+            // اسكرول بشكل سلس
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+            
+            // إضافة highlight effect
+            projectElement.style.animation = 'highlightProject 2s ease';
+            
+            // Track event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'navigate_to_project', {
+                    'event_category': 'Navigation',
+                    'event_label': projectId
+                });
+            }
+        } else {
+            console.warn('⚠️ Project not found:', projectId);
+        }
+    }, 300);
+}
+
+// Export للاستخدام في HTML
+window.goToProject = goToProject;

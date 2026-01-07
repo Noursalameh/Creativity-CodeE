@@ -1985,3 +1985,142 @@ body.rtl .whatsapp-float {
     bottom: 80px;
     font-size: 18px;
 }
+/* =====================================================
+   Image Lightbox Modal - تكبير الصور
+===================================================== */
+
+.image-modal {
+    display: none; /* مخفي افتراضيًا */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.90);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.image-modal.active {
+    display: flex;
+}
+
+.image-modal img {
+    max-width: 92%;
+    max-height: 92vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    object-fit: contain;
+    transition: transform 0.4s ease;
+    touch-action: pan-x pan-y pinch-zoom; /* يدعم الزوم بالأصابع على الموبايل */
+}
+
+.image-modal img:hover {
+    transform: scale(1.03);
+}
+
+/* زر الإغلاق */
+.close-modal {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+    z-index: 10000;
+}
+
+.close-modal:hover {
+    color: #c9a961;
+    transform: scale(1.1);
+}
+
+/* أنيميشن الفتح */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* تحسينات للموبايل */
+@media (max-width: 768px) {
+    .image-modal img {
+        max-width: 96%;
+        max-height: 85vh;
+        border-radius: 8px;
+    }
+
+    .close-modal {
+        top: 15px;
+        right: 15px;
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .close-modal {
+        font-size: 2.2rem;
+    }
+}#project-page .main-image img, #project-page .project-grid img {
+    cursor: zoom-in;
+}/* =====================================================
+   PROJECT IMAGES LIGHTBOX - تكبير صور المشاريع
+===================================================== */
+
+/* السماح بالضغط على الصور داخل المشاريع */
+#project-page .grid-image img,
+#project-page .main-image img,
+.project-section img {
+    cursor: zoom-in !important;
+    position: relative;
+    z-index: 100 !important;
+    pointer-events: auto !important;
+}
+
+/* منع الـ onclick من الـ parent */
+#project-page .grid-image,
+#project-page .main-image,
+.project-section .images-side {
+    pointer-events: none !important;
+}
+
+/* السماح بالضغط على الصور فقط */
+#project-page .grid-image img,
+#project-page .main-image img {
+    pointer-events: auto !important;
+}
+
+/* تحسين الـ hover effect */
+#project-page .grid-image:hover img,
+#project-page .main-image:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 10px 40px rgba(201, 169, 97, 0.4);
+}
+
+/* منع التعارض مع project-card onclick */
+.project-card {
+    pointer-events: auto;
+}
+
+.project-card img {
+    pointer-events: none; /* ← مهم: صور الـ cards ما تتضغط */
+}
+
+/* ✅ بس صور صفحة المشاريع الكاملة */
+#project-page img {
+    pointer-events: auto !important;
+}/* في styles.css */
+.page-content {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -61,8 +61,37 @@ const translations = {
                 name: "Chalet Teresa",
                 desc: "Supply and installation of shading systems, exterior facades, and outdoor works. A complete outdoor solution designed to enhance aesthetics, privacy, and durability. The project blends modern exterior finishes with functional shading elements to create a comfortable and visually refined chalet environment.",
                 tags: ["Outdoor Solutions", "Residential", "Premium WPC"]
+                
+            },
+          
+            project4: {
+                name: "German Jordanian University",
+                desc: "Supply and installation of WPC cladding over existing steel canopies across campus walkways and outdoor spaces. The solution delivers long-lasting weather protection, modern appearance, and low-maintenance performance tailored to the university’s contemporary architectural style.",
+                tags: ["Education", "Canopy Cladding", "WPC Systems"]
+            },
+            project5: {
+                name: "Qasr Al-Hallabat Palace",
+                desc: "Supply and installation of elegant WPC entrance canopies for this historic Umayyad desert palace. The design harmoniously blends modern materials with ancient architecture, offering durable shading while preserving the site’s cultural and archaeological integrity.",
+                tags: ["Heritage Site", "Entrance Canopy", "Restoration"]
+            },
+            project6: {
+                name: "United Nations Facility",
+                desc: "Supply and installation of premium WPC solutions for outdoor areas, providing sustainable, weather-resistant structures that meet international standards. A reliable and aesthetically refined enhancement for functional and representative spaces.",
+                tags: ["International Organization", "WPC Structures", "Sustainable Design"]
+            },
+            project7: {
+                name: "Al-Mashreq Schools",
+                desc: "Supply and installation of shaded benches, tables, and canopy systems using durable WPC materials. Creating comfortable and safe outdoor learning and recreation spaces designed to withstand heavy student use and Jordan’s climate.",
+                tags: ["Education", "Outdoor Furniture", "Shaded Areas"]
+            },
+            project8: {
+                name: "Royal Diving Club",
+                desc: "Supply and installation of a marine pier constructed entirely from durable WPC (Wood Plastic Composite). Engineered to withstand harsh saltwater conditions, this elevated walkway provides safe and elegant access over the Red Sea, blending functionality with coastal aesthetics.",
+                tags: ["Marine", "WPC Decking", "Coastal Project"]
             }
+        
         },
+
         products: {
             featuredTitle: "Featured Products",
             featuredSubtitle: "Check out latest updates",
@@ -177,7 +206,35 @@ const translations = {
                 name: "شاليه تيريزا",
                 desc: "تنفيذ متكامل لأعمال المظلات والواجهات والتشطيبات الخارجية، صُمم ليعزز جمال المساحات المفتوحة ويوفّر الخصوصية والراحة. يجمع المشروع بين حلول تظليل عملية ولمسات معمارية عصرية، باستخدام مواد WPC متينة ومقاومة للعوامل الجوية، لخلق بيئة خارجية أنيقة ومستدامة تناسب أجواء الشاليه الهادئة.",
                 tags: ["شاليهات", "مظلات", "أعمال خارجية"]
+            },
+          
+            
+         
+            project4: {
+                name: "الجامعة الألمانية الأردنية",
+                desc: "توريد وتركيب تكسية خشب صناعي WPC على مظلات حديدية موجودة في ممرات ومساحات الحرم الجامعي. حل يوفر حماية طويلة الأمد من الطقس مع مظهر عصري وصيانة منخفضة يتناسب مع الطراز المعماري الحديث للجامعة.",
+                tags: ["تعليم", "تكسية مظلات", "أنظمة WPC"]
+            },
+            project5: {
+                name: "قصر الحلابات",
+                desc: "توريد وتركيب مظلات مدخل أنيقة من الخشب الصناعي WPC لهذا القصر الأموي الصحراوي التاريخي. يجمع التصميم بين المواد الحديثة والتراث المعماري القديم لتوفير تظليل متين مع الحفاظ على الطابع الثقافي والأثري للموقع.",
+                tags: ["موقع تراثي", "مظلة مدخل", "ترميم"]
+            },
+            project6: {
+                name: "منشأة الأمم المتحدة",
+                desc: "توريد وتركيب حلول خشب صناعي WPC متميزة للمساحات الخارجية، توفر هياكل مستدامة ومقاومة للعوامل الجوية تلبي المعايير الدولية مع تعزيز جمالي وعملي للمساحات التمثيلية.",
+                tags: ["منظمة دولية", "هياكل WPC", "تصميم مستدام"]
+            },
+            project7: {
+                name: "مدارس المشرق",
+                desc: "توريد وتركيب بنشات وطاولات مظللة وأنظمة مظلات باستخدام مواد WPC متينة. إنشاء مساحات خارجية مريحة وآمنة للتعلم والترفيه تتحمل الاستخدام اليومي الشديد ومناخ الأردن.",
+                tags: ["تعليم", "أثاث خارجي", "مساحات مظللة"]
+            },   project8: {
+                name: "نادي الغوص الملكي",
+                desc: "توريد وتركيب جسر بحري قائم فوق البحر باستخدام مادة الخشب الصناعي WPC بالكامل. حل متين يتحمل ظروف البحر القاسية، يوفر ممرًا آمنًا وأنيقًا فوق البحر الأحمر مع تصميم يتناغم مع الجمال الساحلي.",
+                tags: ["بحري", "أرضيات WPC", "مشروع ساحلي"]
             }
+        
         },
         products: {
             featuredTitle: "منتجات مميزة",
@@ -410,7 +467,12 @@ class LanguageManager {
             const projectsData = [
                 t.projects.project1,
                 t.projects.project2,
-                t.projects.project3
+                t.projects.project3,
+                t.projects.project4,
+                t.projects.project5,
+                t.projects.project6,
+                t.projects.project7,
+                t.projects.project8
             ];
 
             projectSections.forEach((section, i) => {

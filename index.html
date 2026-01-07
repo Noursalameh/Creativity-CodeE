@@ -50,7 +50,8 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="icon.png">
-    
+    <!-- في <head> -->
+<link rel="icon" href="icon.png" type="image/png">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="rtl-styles.css">
@@ -218,28 +219,29 @@
             </div>
             
             <div class="grid">
-                <div class="card project-card" onclick="showPage('project')">
+                <div class="card project-card" onclick="goToProject('project-guest-house')">
                     <div class="card-image">
                         <img data-src="Projects/IMG-20230302-WA0021.jpg" alt="Guest House Project">
                         <div class="project-label">Guest House Project</div>
                     </div>
                 </div>
-                <div class="card project-card" onclick="showPage('project')">
+                <div class="card project-card" onclick="goToProject('project-blessed-tree')">
                     <div class="card-image">
-                        <img data-src="Projects/IMG-20240117-WA0003.jpg"   src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23f0f0f0' width='400' height='300'/%3E%3C/svg%3E"
-                        loading="lazy" alt="The Blessed Tree">
+                        <img data-src="Projects/IMG-20240117-WA0003.jpg" 
+                             src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23f0f0f0' width='400' height='300'/%3E%3C/svg%3E"
+                             loading="lazy" alt="The Blessed Tree">
                         <div class="project-label">The Blessed Tree – Awqaf</div>
                     </div>
                 </div>
-                <div class="card project-card" onclick="showPage('project')">
+                <div class="card project-card" onclick="goToProject('project-chalet-teresa')">
                     <div class="card-image">
-                        <img data-src="Projects/WhatsApp Image 2025-12-04 at 09.50.11_47e9c4f9.jpg"    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23f0f0f0' width='400' height='300'/%3E%3C/svg%3E"
-                        loading="lazy"alt="Crowne Plaza">
+                        <img data-src="Projects/WhatsApp Image 2025-12-04 at 09.50.11_47e9c4f9.jpg"
+                             src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23f0f0f0' width='400' height='300'/%3E%3C/svg%3E"
+                             loading="lazy" alt="Chalet Teresa">
                         <div class="project-label">Chalet Teresa</div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </div>        </section>
 
 <!-- Products Preview Section -->
 <section class="products-section" aria-label="Featured products">
@@ -355,7 +357,7 @@
         <!-- Projects Wrapper -->
         <div class="projects-wrapper">
                        <!-- Project 1: Guest House Petra -->
-                       <article class="project-section">
+                       <article class="project-section"id="project-guest-house">
                         <div class="decorative-circle" aria-hidden="true"></div>
                         <div class="images-side">
                             <div class="project-grid">
@@ -386,7 +388,7 @@
                         </div>
                     </article>
                     <!-- Project 2: Blessed Tree -->
-            <article class="project-section">
+            <article class="project-section" id="project-blessed-tree">
                 <div class="decorative-circle" aria-hidden="true"></div>
                 <div class="​​​​​​​​​​​​​​​​
 images-side">
@@ -417,39 +419,8 @@ images-side">
                 </div>
             </article>
 
-            <!-- Project 1: Royal Diving Club -->
-            <!-- <article class="project-section">
-                <div class="decorative-circle" aria-hidden="true"></div>
-                <div class="images-side">
-                    <div class="project-grid">
-                        <div class="grid-image">
-                            <img src="Projects/royal-diving.jpg" alt="Royal Diving Club overview">
-                        </div>
-                        <div class="grid-image">
-                            <img src="Projects/IMG-20230302-WA0021.jpg" alt="Royal Diving Club bridge detail">
-                        </div>
-                        <div class="grid-image">
-                            <img src="Projects/IMG-20230302-WA0022.jpg" alt="Royal Diving Club pathway">
-                        </div>
-                        <div class="grid-image">
-                            <img src="Projects/IMG-20230302-WA0023.jpg" alt="Royal Diving Club complete view">
-                        </div>
-                    </div>
-                </div>
-                <div class="content-side">
-                    <div class="project-number">Project 01</div>
-                    <h2 class="project-title">Royal Diving Club</h2>
-                    <p class="project-description">An architectural masterpiece over the Red Sea. We engineered and installed a stunning over-water bridge using premium WPC materials, creating a seamless connection between land and sea. This marine-grade structure combines natural wood aesthetics with cutting-edge durability, designed to withstand harsh saltwater conditions while offering visitors a breathtaking pathway above the crystal waters.</p>
-                    <div class="project-tags">
-                        <span class="tag">Marine Construction</span>
-                        <span class="tag">WPC Bridge</span>
-                        <span class="tag">Saltwater Resistant</span>
-                    </div>
-                </div>
-            </article> -->
-
             <!-- Project 2: Public Security Chalets -->
-            <article class="project-section">
+            <article class="project-section" id="project-chalet-teresa">
                 <div class="decorative-circle" aria-hidden="true"></div>
                 <div class="images-side">
                     <div class="project-grid">
@@ -480,7 +451,158 @@ images-side">
                 </div>
             </article>
 
- 
+ <!-- Project 4: German Jordanian University -->
+<article class="project-section">
+    <div class="decorative-circle" aria-hidden="true"></div>
+    <div class="images-side">
+        <div class="project-grid">
+            <div class="grid-image">
+                <img src="Projects/GU 1.jpg" alt="German Jordanian University canopy overview">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/GU 2.jpg" alt="German Jordanian University WPC cladding">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/GU 3.jpg" alt="German Jordanian University shaded area">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/GU 4.jpg" alt="German Jordanian University completed canopies">
+            </div>
+        </div>
+    </div>
+    <div class="content-side">
+        <div class="project-number">Project 04</div>
+        <h2 class="project-title">German Jordanian University</h2>
+        <p class="project-description">Supply and installation of WPC cladding over existing steel canopies across campus walkways and outdoor spaces. The solution delivers long-lasting weather protection, modern appearance, and low-maintenance performance tailored to the university’s contemporary architectural style.</p>
+        <div class="project-tags">
+            <span class="tag">Education</span>
+            <span class="tag">Canopy Cladding</span>
+            <span class="tag">WPC Systems</span>
+        </div>
+    </div>
+</article>
+<!-- Project 5: Qasr Al-Hallabat Palace -->
+<article class="project-section">
+    <div class="decorative-circle" aria-hidden="true"></div>
+    <div class="images-side">
+        <div class="project-grid">
+            <div class="grid-image">
+                <img src="Projects/halabat 1.jpg" alt="Qasr Al-Hallabat entrance canopy">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/halabat 2.jpg" alt="Qasr Al-Hallabat WPC detail">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/halabat 3.jpg" alt="Qasr Al-Hallabat heritage integration">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/halabat 4.jpg" alt="Qasr Al-Hallabat completed entrance">
+            </div>
+        </div>
+    </div>
+    <div class="content-side">
+        <div class="project-number">Project 05</div>
+        <h2 class="project-title">Qasr Al-Hallabat Palace</h2>
+        <p class="project-description">Supply and installation of elegant WPC entrance canopies for this historic Umayyad desert palace. The design harmoniously blends modern materials with ancient architecture, offering durable shading while preserving the site’s cultural and archaeological integrity.</p>
+        <div class="project-tags">
+            <span class="tag">Heritage Site</span>
+            <span class="tag">Entrance Canopy</span>
+            <span class="tag">Restoration</span>
+        </div>
+    </div>
+</article>
+<!-- Project 6: United Nations -->
+<article class="project-section">
+    <div class="decorative-circle" aria-hidden="true"></div>
+    <div class="images-side">
+        <div class="project-grid">
+            <div class="grid-image">
+                <img src="Projects/UN 1.jpg" alt="United Nations facility overview">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/UN 2.jpg" alt="United Nations WPC installation">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/UN 3.jpg" alt="United Nations outdoor area">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/UN 4.jpg" alt="United Nations completed project">
+            </div>
+        </div>
+    </div>
+    <div class="content-side">
+        <div class="project-number">Project 06</div>
+        <h2 class="project-title">United Nations Facility</h2>
+        <p class="project-description">Supply and installation of premium WPC solutions for outdoor areas, providing sustainable, weather-resistant structures that meet international standards. A reliable and aesthetically refined enhancement for functional and representative spaces.</p>
+        <div class="project-tags">
+            <span class="tag">International Organization</span>
+            <span class="tag">WPC Structures</span>
+            <span class="tag">Sustainable Design</span>
+        </div>
+    </div>
+</article>
+<!-- Project 7: Al-Mashreq Schools -->
+<article class="project-section">
+    <div class="decorative-circle" aria-hidden="true"></div>
+    <div class="images-side">
+        <div class="project-grid">
+            <div class="grid-image">
+                <img src="Projects/mashreq-1.jpg" alt="Al-Mashreq Schools benches and tables">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/mashreq-2.jpg" alt="Al-Mashreq Schools shaded seating">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/mashreq-3.jpg" alt="Al-Mashreq Schools canopy detail">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/mashreq-4.jpg" alt="Al-Mashreq Schools outdoor learning area">
+            </div>
+        </div>
+    </div>
+    <div class="content-side">
+        <div class="project-number">Project 07</div>
+        <h2 class="project-title">Al-Mashreq Schools</h2>
+        <p class="project-description">Supply and installation of shaded benches, tables, and canopy systems using durable WPC materials. Creating comfortable and safe outdoor learning and recreation spaces designed to withstand heavy student use and Jordan’s climate.</p>
+        <div class="project-tags">
+            <span class="tag">Education</span>
+            <span class="tag">Outdoor Furniture</span>
+            <span class="tag">Shaded Areas</span>
+        </div>
+    </div>
+</article>
+<!-- Project 8: Royal Diving Club -->
+<article class="project-section">
+    <div class="decorative-circle" aria-hidden="true"></div>
+    <div class="images-side">
+        <div class="project-grid">
+            <div class="grid-image">
+                <img src="Projects/royal-diving-1.jpg" alt="Royal Diving Club pier overview">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/royal-diving-2.jpg" alt="Royal Diving Club WPC decking">
+            </div>
+            <div class="grid-image">
+                <img src="Projects/royal-diving-3.jpg" alt="Royal Diving Club sea view">
+            </div>
+    <div class="grid-image">
+                <img src="Projects/royal-diving-4.jpg" alt="Royal Diving Club completed pier">
+            </div> 
+        </div>
+    </div>
+    <div class="content-side">
+        <div class="project-number">Project 08</div>
+        <h2 class="project-title">Royal Diving Club</h2>
+        <p class="project-description">Supply and installation of a marine pier constructed entirely from durable WPC (Wood Plastic Composite). Engineered to withstand harsh saltwater conditions, this elevated walkway provides safe and elegant access over the Red Sea, blending functionality with coastal aesthetics.</p>
+        <div class="project-tags">
+            <span class="tag">Marine</span>
+            <span class="tag">WPC Decking</span>
+            <span class="tag">Coastal Project</span>
+        </div>
+    </div>
+</article>
+
+
 
         </div>
     </div>
@@ -1676,5 +1798,15 @@ images-side">
       
         </div>
     </footer>
+    <!-- Image Lightbox Modal
+<div class="image-modal" id="imageModal">
+    <span class="close-modal" onclick="closeImageModal()">&times;</span>
+    <img id="modalImage" src="" alt="Enlarged Image">
+</div> -->
+<!-- Image Lightbox Modal -->
+<div id="imageModal" class="image-modal">
+    <span class="close-modal" onclick="closeImageModal()">&times;</span>
+    <img id="modalImage" src="" alt="">
+</div>
 </body>
 </html>
