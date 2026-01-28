@@ -802,3 +802,66 @@ function initImageLightbox() {
 
 // // Export
 // window.closeImageModal = closeImageModal;
+// ========================================
+// Project Categories Filter Function
+// ========================================
+
+function filterProjects(category) {
+    // Get all category buttons
+    const buttons = document.querySelectorAll('.category-btn');
+    const sections = document.querySelectorAll('.projects-category-section');
+    
+    // Remove active class from all buttons
+    buttons.forEach(btn => btn.classList.remove('active'));
+    
+    // Add active class to clicked button
+    event.target.closest('.category-btn').classList.add('active');
+    
+    // Show/hide project sections based on selected category
+    sections.forEach(section => {
+        const sectionCategory = section.getAttribute('data-category');
+        
+        if (category === 'all') {
+            // Show all sections
+            section.style.display = 'block';
+            // Add fade-in animation
+            section.style.animation = 'fadeIn 0.5s ease';
+        } else if (sectionCategory === category) {
+            // Show matching category
+            section.style.display = 'block';
+            section.style.animation = 'fadeIn 0.5s ease';
+        } else {
+            // Hide non-matching categories
+            section.style.display = 'none';
+        }
+    });
+    
+    // Scroll to projects section smoothly
+    const projectsWrapper = document.querySelector('.projects-wrapper');
+    if (projectsWrapper) {
+        const headerOffset = 100;
+        const elementPosition = projectsWrapper.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Add fade-in animation keyframes if not already in CSS
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+`;
+document.head.appendChild(style);
