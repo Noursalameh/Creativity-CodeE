@@ -632,7 +632,7 @@ text-align: left;
         font-weight: 300;
         font-style: italic;
         line-height: 1.3;
-        color: #e0d9b9;
+        color: #222;
         margin-bottom: 1.5rem;
         letter-spacing: -1px;
     }
@@ -2494,4 +2494,27 @@ body.rtl .whatsapp-float {
 /* Apply fade-in to category sections when shown */
 .projects-category-section {
     animation: fadeIn 0.5s ease;
+}
+.projects-category-section .category-header {
+    text-align: center;          /* يركز كل المحتوى أفقياً */
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* يضمن تركيز العناصر الأفقية */
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;              /* إذا كان في padding أو margin خارجي */
+}
+
+.category-title {
+    text-align: center;          /* تأكيد إضافي للنص نفسه */
+    margin: 0 auto;              /* لو كان العنوان عريض، يركزه */
+    width: fit-content;          /* يخلي العرض حسب طول النص فقط */
+}
+
+.category-divider {
+    width: 80px;                 /* أو أي عرض تحبيه */
+    height: 3px;
+    background-color: #c9a961; /* لون الخط */
+    margin: 15px auto 0;         /* يركز الـ divider تحت العنوان */
+    border-radius: 2px;          /* اختياري */
 }

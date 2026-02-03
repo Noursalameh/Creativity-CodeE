@@ -88,8 +88,21 @@ const translations = {
                 name: "Royal Diving Club",
                 desc: "Supply and installation of a marine pier constructed entirely from durable WPC (Wood Plastic Composite). Engineered to withstand harsh saltwater conditions, this elevated walkway provides safe and elegant access over the Red Sea, blending functionality with coastal aesthetics.",
                 tags: ["Marine", "WPC Decking", "Coastal Project"]
-            }
-        
+            },
+            project9: {
+                name: "Lijam Hotel",
+                desc: "Complete rehabilitation of the entire exterior facade using premium WPC cladding systems. This transformation revitalized the hotel's appearance in Shafa Badran, Amman, delivering durable, weather-resistant surfaces with modern elegance and improved thermal performance while maintaining a welcoming and sophisticated hospitality character.",
+                tags: ["Hospitality", "Facade Rehabilitation", "Exterior Cladding"]
+            },
+            project10: {
+                name: "K9",
+                desc: "Design, supply, and installation of the primary entrance canopy using high-performance WPC materials. This key feature provides reliable weather protection, a bold modern statement, and superior durability at the main administration entrance, combining functional shelter with strong visual impact and long-term performance.",
+                tags: ["Entrance Canopy", "WPC Structures", "Administrative"]
+            },
+                 
+                        categories: {
+                            interiorExterior: "Interior & Exterior Designs"
+                        }
         },
 
         products: {
@@ -233,6 +246,19 @@ const translations = {
                 name: "نادي الغوص الملكي",
                 desc: "توريد وتركيب جسر بحري قائم فوق البحر باستخدام مادة الخشب الصناعي WPC بالكامل. حل متين يتحمل ظروف البحر القاسية، يوفر ممرًا آمنًا وأنيقًا فوق البحر الأحمر مع تصميم يتناغم مع الجمال الساحلي.",
                 tags: ["بحري", "أرضيات WPC", "مشروع ساحلي"]
+            },
+            project9: {
+                name: "فندق اللجام",
+                desc: "إعادة تأهيل كاملة للواجهة الخارجية باستخدام أنظمة تكسية WPC متميزة. هذا المشروع أعاد إحياء مظهر الفندق في شفا بدران - عمان، مع توفير أسطح متينة مقاومة للعوامل الجوية، أناقة عصرية، صيانة منخفضة، وأداء حراري محسن، مع الحفاظ على طابع الضيافة الترحيبي والراقي.",
+                tags: ["ضيافة", "إعادة تأهيل الواجهة", "تكسية خارجية"]
+            },
+            project10: {
+                name: "K9 ",
+                desc: "تصميم وتوريد وتركيب المظلة الرئيسية لمدخل الإدارة باستخدام مواد WPC عالية الأداء. هذه الميزة البارزة توفر حماية فعالة من الطقس، مظهراً عصرياً جريئاً، ومتانة فائقة عند المدخل الإداري الرئيسي، تجمع بين الوظيفية والتأثير البصري القوي والأداء طويل الأمد.",
+                tags: ["مظلة مدخل", "هياكل WPC", "إداري"]
+            },
+            categories: {
+                interiorExterior: "التصاميم الداخلية والخارجية"
             }
         
         },
@@ -472,7 +498,9 @@ class LanguageManager {
                 t.projects.project5,
                 t.projects.project6,
                 t.projects.project7,
-                t.projects.project8
+                t.projects.project8,
+                t.projects.project9,
+                t.projects.project10
             ];
 
             projectSections.forEach((section, i) => {
@@ -508,6 +536,10 @@ class LanguageManager {
                 }
             });
         }
+        const interiorTitle = document.getElementById('category-interior-exterior');
+if (interiorTitle) {
+    interiorTitle.textContent = t.projects.categories.interiorExterior;
+}
     }
     
     updateProductsSection(t) {
